@@ -120,22 +120,30 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard 
-              title="Shri Hari Vatika"
+              title="Shri Hari Vatika Phase-1"
               description="Exclusive residential plots with modern amenities"
               image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
-              plotSizes="1000 - 2500 sq.ft"
-              priceRange="₹50L - ₹1.5Cr"
+              plotSizes="100 Gaj"
+              priceRange="₹16 Lac*"
               id="shri-hari-vatika"
             />
             <ProjectCard 
               title="Harishyam Township"
               description="Integrated township with world-class facilities"
               image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
-              plotSizes="1500 - 3000 sq.ft"
-              priceRange="₹75L - ₹2Cr"
+              plotSizes="100 Gaj"
+              priceRange="₹16 Lac*"
               id="harishyam-township"
+            />
+            <ProjectCard 
+              title="Keshav Puram Township"
+              description="Premium township with affordable pricing"
+              image="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80"
+              plotSizes="100 Gaj"
+              priceRange="₹12 Lac*"
+              id="keshav-puram-township"
             />
           </div>
         </div>

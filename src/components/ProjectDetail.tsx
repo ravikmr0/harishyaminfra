@@ -11,26 +11,58 @@ import ProjectFloorPlans from '@/components/project/ProjectFloorPlans';
 
 const projectData: Record<string, any> = {
   'shri-hari-vatika': {
-    title: 'Shri Hari Vatika',
+    title: 'Shri Hari Vatika Phase-1',
     subtitle: 'Exclusive Residential Plots',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
     description: 'Experience luxury living with our premium residential plots designed for modern families.',
-    plotSizes: '1000 - 2500 sq.ft',
-    priceRange: '₹50L - ₹1.5Cr',
+    plotSizes: '100 Gaj',
+    priceRange: '₹16 Lac*',
+    ratePerGaj: '₹16 Lac / 100 Gaj',
     location: 'Prime Location, City Center',
     totalPlots: 250,
     availablePlots: 45,
+    paymentPlan: {
+      registry: '60%',
+      emiPeriod: '20 Months',
+      emiAmount: '₹30,000',
+      rentalIncome: '₹10,000/month'
+    }
   },
   'harishyam-township': {
     title: 'Harishyam Township',
     subtitle: 'Integrated Township Development',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
     description: 'A complete township with world-class amenities and infrastructure.',
-    plotSizes: '1500 - 3000 sq.ft',
-    priceRange: '₹75L - ₹2Cr',
+    plotSizes: '100 Gaj',
+    priceRange: '₹16 Lac*',
+    ratePerGaj: '₹16 Lac / 100 Gaj',
     location: 'Suburban Excellence',
     totalPlots: 500,
     availablePlots: 120,
+    paymentPlan: {
+      registry: '60%',
+      emiPeriod: '20 Months',
+      emiAmount: '₹30,000',
+      rentalIncome: '₹10,000/month'
+    }
+  },
+  'keshav-puram-township': {
+    title: 'Keshav Puram Township',
+    subtitle: 'Premium Affordable Living',
+    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+    description: 'Premium township development with affordable pricing and easy payment plans.',
+    plotSizes: '100 Gaj',
+    priceRange: '₹12 Lac*',
+    ratePerGaj: '₹12 Lac / 100 Gaj',
+    location: 'Emerging Locality',
+    totalPlots: 350,
+    availablePlots: 180,
+    paymentPlan: {
+      registry: '60%',
+      emiPeriod: '30 Months',
+      emiAmount: '₹16,000',
+      rentalIncome: '₹6,000/month'
+    }
   }
 };
 
@@ -76,12 +108,12 @@ export default function ProjectDetail() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="grid md:grid-cols-4 gap-6">
             <div>
-              <p className="text-sm text-gray-600 mb-1">Plot Sizes</p>
+              <p className="text-sm text-gray-600 mb-1">Plot Size</p>
               <p className="text-xl font-bold text-[#1a2332]">{project.plotSizes}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 mb-1">Price Range</p>
-              <p className="text-xl font-bold text-[#d4af37]">{project.priceRange}</p>
+              <p className="text-sm text-gray-600 mb-1">Rate</p>
+              <p className="text-xl font-bold text-[#d4af37]">{project.ratePerGaj}</p>
             </div>
             <div>
               <p className="text-sm text-gray-600 mb-1">Available Plots</p>
@@ -94,6 +126,31 @@ export default function ProjectDetail() {
               </p>
             </div>
           </div>
+
+          {/* Payment Plan Highlight */}
+          {project.paymentPlan && (
+            <div className="mt-6 p-6 bg-white rounded-lg border-2 border-[#d4af37]">
+              <h3 className="text-lg font-bold text-[#1a2332] mb-4">Payment Plan</h3>
+              <div className="grid md:grid-cols-4 gap-4">
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-1">Registry</p>
+                  <p className="text-2xl font-bold text-[#d4af37]">{project.paymentPlan.registry}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-1">EMI Period</p>
+                  <p className="text-2xl font-bold text-[#1a2332]">{project.paymentPlan.emiPeriod}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-1">Monthly EMI</p>
+                  <p className="text-2xl font-bold text-[#1a2332]">{project.paymentPlan.emiAmount}</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-1">Rental Income</p>
+                  <p className="text-2xl font-bold text-green-600">{project.paymentPlan.rentalIncome}</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 

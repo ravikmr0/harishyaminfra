@@ -21,7 +21,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+91 98765 43210',
+      details: '+91 9540074200',
       subtext: 'Mon - Fri, 9 AM - 6 PM'
     },
     {
@@ -33,7 +33,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Address',
-      details: 'City Center, India',
+      details: 'Office Tower-A, Bhutani Alphathum, Sector 90, Noida, UP 201304',
       subtext: 'Visit our office'
     },
     {
@@ -159,7 +159,8 @@ export default function Contact() {
                 <div className="text-center">
                   <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-600 font-semibold">Google Maps Integration</p>
-                  <p className="text-gray-500 text-sm">City Center, India</p>
+                  <p className="text-gray-500 text-sm">Office Tower-A, Bhutani Alphathum</p>
+                  <p className="text-gray-500 text-sm">Sector 90, Noida, UP 201304</p>
                 </div>
               </div>
             </div>
