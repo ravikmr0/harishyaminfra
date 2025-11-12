@@ -1,6 +1,9 @@
 import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-[#1a2332] text-white">
       {/* Main Footer */}
@@ -34,21 +37,23 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-400 hover:text-[#d4af37] transition-colors">Home</a></li>
-              <li><a href="/projects" className="text-gray-400 hover:text-[#d4af37] transition-colors">Projects</a></li>
-              <li><a href="/about" className="text-gray-400 hover:text-[#d4af37] transition-colors">About Us</a></li>
-              <li><a href="/contact" className="text-gray-400 hover:text-[#d4af37] transition-colors">Contact</a></li>
+              <li><button onClick={() => navigate('/')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Home</button></li>
+              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Projects</button></li>
+              <li><button onClick={() => navigate('/services')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Services</button></li>
+              <li><button onClick={() => navigate('/about')} className="text-gray-400 hover:text-[#d4af37] transition-colors">About Us</button></li>
+              <li><button onClick={() => navigate('/contact')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Contact</button></li>
             </ul>
           </div>
 
-          {/* Projects */}
+          {/* Resources */}
           <div>
-            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Our Projects</h4>
+            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Resources</h4>
             <ul className="space-y-2">
-              <li><a href="/project/shri-hari-vatika" className="text-gray-400 hover:text-[#d4af37] transition-colors">Shri Hari Vatika</a></li>
-              <li><a href="/project/harishyam-township" className="text-gray-400 hover:text-[#d4af37] transition-colors">Harishyam Township</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors">Upcoming Projects</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-[#d4af37] transition-colors">Completed Projects</a></li>
+              <li><button onClick={() => navigate('/amenities')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Amenities</button></li>
+              <li><button onClick={() => navigate('/testimonials')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Testimonials</button></li>
+              <li><button onClick={() => navigate('/brochures')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Brochures</button></li>
+              <li><button onClick={() => navigate('/agents')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Our Team</button></li>
+              <li><button onClick={() => navigate('/careers')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Careers</button></li>
             </ul>
           </div>
 
@@ -78,9 +83,9 @@ export default function Footer() {
             <div>
               <p>&copy; 2024 Harishyam Infra. All rights reserved.</p>
             </div>
-            <div className="flex gap-6 md:justify-end">
-              <a href="#" className="hover:text-[#d4af37] transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-[#d4af37] transition-colors">Terms & Conditions</a>
+            <div className="flex gap-6 md:justify-end flex-wrap">
+              <button onClick={() => navigate('/privacy-policy')} className="hover:text-[#d4af37] transition-colors">Privacy Policy</button>
+              <button onClick={() => navigate('/terms-conditions')} className="hover:text-[#d4af37] transition-colors">Terms & Conditions</button>
               <a href="#" className="hover:text-[#d4af37] transition-colors">Disclaimer</a>
             </div>
           </div>

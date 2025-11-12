@@ -100,26 +100,83 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4 bg-[#f8f9fa]">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-12 font-playfair">Leadership Team</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-4 font-playfair">Leadership Team</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Meet the visionary leaders driving Harishyam Infra's success with decades of combined expertise</p>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a227] mx-auto mt-6"></div>
+          </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((member) => (
-              <div key={member} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="bg-gray-300 h-64 flex items-center justify-center">
-                  <img 
-                    src={`https://api.dicebear.com/7.x/avataaars/svg?seed=member${member}`}
-                    alt={`Team Member ${member}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-[#1a2332] mb-1">Team Member {member}</h3>
-                  <p className="text-[#d4af37] font-semibold mb-2">Executive Position</p>
-                  <p className="text-gray-600 text-sm">Experienced professional with expertise in real estate development.</p>
+            {/* Team Member 1 */}
+            <div className="group h-full">
+              <div className="relative mb-6 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80"
+                  alt="Rajesh Kumar"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                  <p className="text-white text-sm leading-relaxed font-light">Visionary leader with proven track record in premium real estate development</p>
                 </div>
               </div>
-            ))}
+              <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#d4af37] hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Rajesh Kumar</h3>
+                <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-xs mb-4 pb-4 border-b border-gray-200">Founder & Chairman</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">With 20+ years of real estate expertise, Rajesh has pioneered innovative residential developments across premium locations.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Real Estate</span>
+                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Strategy</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Member 2 */}
+            <div className="group h-full">
+              <div className="relative mb-6 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80"
+                  alt="Priya Sharma"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                  <p className="text-white text-sm leading-relaxed font-light">Operations excellence and customer satisfaction focused leader</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#d4af37] hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Priya Sharma</h3>
+                <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-xs mb-4 pb-4 border-b border-gray-200">Managing Director</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">Priya leads operations with a focus on customer satisfaction and project excellence, ensuring every development exceeds expectations.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Operations</span>
+                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Quality</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Member 3 */}
+            <div className="group h-full">
+              <div className="relative mb-6 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80"
+                  alt="Amit Patel"
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                  <p className="text-white text-sm leading-relaxed font-light">Financial strategist driving sustainable growth and profitability</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#d4af37] hover:shadow-xl transition-shadow duration-300">
+                <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Amit Patel</h3>
+                <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-xs mb-4 pb-4 border-b border-gray-200">Chief Financial Officer</p>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">Amit brings financial acumen and strategic planning expertise, ensuring sustainable growth and transparent financial management.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Finance</span>
+                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Growth</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

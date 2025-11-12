@@ -4,7 +4,7 @@ import ProjectTimeline from './ProjectTimeline';
 
 export default function TrustSection() {
   const certifications = [
-    { icon: Award, label: 'RERA Approved', value: 'All Projects' },
+    { icon: Award, label: 'Government Approved', value: 'All Projects' },
     { icon: CheckCircle, label: 'ISO Certified', value: 'Quality Assured' },
     { icon: Users, label: '5000+', value: 'Happy Customers' },
     { icon: TrendingUp, label: '15+ Years', value: 'Industry Experience' },

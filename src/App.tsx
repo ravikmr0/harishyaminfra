@@ -8,6 +8,14 @@ import ProjectDetail from "@/components/ProjectDetail";
 import Projects from "@/pages/Projects";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import Services from "@/pages/Services";
+import Amenities from "@/pages/Amenities";
+import Testimonials from "@/pages/Testimonials";
+import Careers from "@/pages/Careers";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsAndConditions from "@/pages/TermsAndConditions";
+import BrochureDownloads from "@/pages/BrochureDownloads";
+import AgentsTeam from "@/pages/AgentsTeam";
 
 function App() {
   return (
@@ -21,6 +29,14 @@ function App() {
             <Route path="/project/:id" element={<ProjectDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/amenities" element={<Amenities />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsAndConditions />} />
+            <Route path="/brochures" element={<BrochureDownloads />} />
+            <Route path="/agents" element={<AgentsTeam />} />
           </Routes>
         </main>
         <Footer />
