@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import ProjectCard from './ProjectCard';
 import TrustSection from './TrustSection';
 import ProjectConnectivity from './ProjectConnectivity';
+import InvestmentSection from './InvestmentSection';
 import StickyInquiryBar from './StickyInquiryBar';
 import ScheduleVisitForm from './forms/ScheduleVisitForm';
 
@@ -151,6 +152,11 @@ export default function Home() {
 
       {/* Trust Section */}
       <TrustSection />
+
+      {/* Investment Section */}
+      <section className="py-20 px-4 bg-white">
+        <InvestmentSection />
+      </section>
 
       {/* Project Connectivity Section */}
       <section className="py-20 px-4 bg-[#f8f9fa]">

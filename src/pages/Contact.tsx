@@ -155,13 +155,17 @@ export default function Contact() {
             {/* Map */}
             <div>
               <h2 className="text-3xl font-bold text-[#1a2332] mb-8 font-playfair">Find Us</h2>
-              <div className="bg-gray-300 rounded-lg h-96 flex items-center justify-center overflow-hidden">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-600 font-semibold">Google Maps Integration</p>
-                  <p className="text-gray-500 text-sm">Office Tower-A, Bhutani Alphathum</p>
-                  <p className="text-gray-500 text-sm">Sector 90, Noida, UP 201304</p>
-                </div>
+              <div className="rounded-lg overflow-hidden shadow-lg h-96">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5234567890123!2d77.3!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sBhutani%20Alphathum%2C%20Sector%2090%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -183,8 +187,8 @@ export default function Contact() {
                 a: 'The booking process typically takes 2-3 days after document verification.'
               },
               {
-                q: 'Are the projects RERA approved?',
-                a: 'Yes, all our projects are RERA approved and registered with the authorities.'
+                q: 'Are the projects Government approved?',
+                a: 'Yes, all our projects are Government approved and registered with the authorities.'
               },
               {
                 q: 'What is the possession timeline?',

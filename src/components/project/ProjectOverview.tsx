@@ -7,7 +7,7 @@ interface ProjectOverviewProps {
 
 export default function ProjectOverview({ project }: ProjectOverviewProps) {
   const highlights = [
-    'RERA Approved',
+    'Government Approved',
     'Flexible Payment Plans',
     'Modern Infrastructure',
     ' Green Spaces',

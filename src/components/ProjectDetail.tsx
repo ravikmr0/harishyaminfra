@@ -7,7 +7,6 @@ import ProjectOverview from '@/components/project/ProjectOverview';
 import ProjectAmenities from '@/components/project/ProjectAmenities';
 import ProjectLocation from '@/components/project/ProjectLocation';
 import ProjectGallery from '@/components/project/ProjectGallery';
-import ProjectFloorPlans from '@/components/project/ProjectFloorPlans';
 
 const projectData: Record<string, any> = {
   'shri-hari-vatika': {
@@ -75,7 +74,7 @@ export default function ProjectDetail() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#1a2332] mb-4">Project Not Found</h1>
+          <h1 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">Project Not Found</h1>
           <Button onClick={() => navigate('/')}>Back to Home</Button>
         </div>
       </div>
@@ -96,10 +95,10 @@ export default function ProjectDetail() {
           <ArrowLeft className="h-6 w-6 text-[#1a2332]" />
         </button>
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-2">
+          <h1 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-2">
             {project.title}
           </h1>
-          <p className="text-xl text-gray-200">{project.subtitle}</p>
+          <p className="text-lg text-gray-100 font-light">{project.subtitle}</p>
         </div>
       </div>
 
@@ -108,20 +107,20 @@ export default function ProjectDetail() {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="grid md:grid-cols-4 gap-6">
             <div>
-              <p className="text-sm text-gray-600 mb-1">Plot Size</p>
-              <p className="text-xl font-bold text-[#1a2332]">{project.plotSizes}</p>
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Plot Size</p>
+              <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.plotSizes}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 mb-1">Rate</p>
-              <p className="text-xl font-bold text-[#d4af37]">{project.ratePerGaj}</p>
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Rate</p>
+              <p className="text-2xl font-bold text-[#d4af37] font-playfair">{project.ratePerGaj}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 mb-1">Available Plots</p>
-              <p className="text-xl font-bold text-[#1a2332]">{project.availablePlots} / {project.totalPlots}</p>
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Available Plots</p>
+              <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.availablePlots} / {project.totalPlots}</p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 mb-1">Location</p>
-              <p className="text-xl font-bold text-[#1a2332] flex items-center gap-1">
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Location</p>
+              <p className="text-lg font-bold text-[#1a2332] flex items-center gap-1">
                 <MapPin className="h-5 w-5" /> {project.location}
               </p>
             </div>
@@ -130,23 +129,23 @@ export default function ProjectDetail() {
           {/* Payment Plan Highlight */}
           {project.paymentPlan && (
             <div className="mt-6 p-6 bg-white rounded-lg border-2 border-[#d4af37]">
-              <h3 className="text-lg font-bold text-[#1a2332] mb-4">Payment Plan</h3>
+              <h3 className="text-lg font-bold text-[#1a2332] mb-4 font-playfair">Payment Plan</h3>
               <div className="grid md:grid-cols-4 gap-4">
                 <div className="text-center">
-                  <p className="text-sm text-gray-600 mb-1">Registry</p>
-                  <p className="text-2xl font-bold text-[#d4af37]">{project.paymentPlan.registry}</p>
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Registry</p>
+                  <p className="text-2xl font-bold text-[#d4af37] font-playfair">{project.paymentPlan.registry}</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-gray-600 mb-1">EMI Period</p>
-                  <p className="text-2xl font-bold text-[#1a2332]">{project.paymentPlan.emiPeriod}</p>
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">EMI Period</p>
+                  <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.paymentPlan.emiPeriod}</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-gray-600 mb-1">Monthly EMI</p>
-                  <p className="text-2xl font-bold text-[#1a2332]">{project.paymentPlan.emiAmount}</p>
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Monthly EMI</p>
+                  <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.paymentPlan.emiAmount}</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-gray-600 mb-1">Rental Income</p>
-                  <p className="text-2xl font-bold text-green-600">{project.paymentPlan.rentalIncome}</p>
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Rental Income</p>
+                  <p className="text-2xl font-bold text-green-600 font-playfair">{project.paymentPlan.rentalIncome}</p>
                 </div>
               </div>
             </div>
@@ -157,12 +156,11 @@ export default function ProjectDetail() {
       {/* Tabs */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="amenities">Amenities</TabsTrigger>
             <TabsTrigger value="location">Location</TabsTrigger>
             <TabsTrigger value="gallery">Gallery</TabsTrigger>
-            <TabsTrigger value="floorplans">Floor Plans</TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview">
@@ -179,10 +177,6 @@ export default function ProjectDetail() {
 
           <TabsContent value="gallery">
             <ProjectGallery />
-          </TabsContent>
-
-          <TabsContent value="floorplans">
-            <ProjectFloorPlans />
           </TabsContent>
         </Tabs>
       </div>
