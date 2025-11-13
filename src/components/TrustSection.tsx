@@ -1,6 +1,5 @@
 import { Award, CheckCircle, Users, TrendingUp } from 'lucide-react';
 import TestimonialCarousel from './TestimonialCarousel';
-import ProjectTimeline from './ProjectTimeline';
 
 export default function TrustSection() {
   const certifications = [
@@ -37,19 +36,11 @@ export default function TrustSection() {
         </div>
 
         {/* Testimonials */}
-        <div className="mb-20">
+        <div>
           <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-12 font-playfair">
             Client Testimonials
           </h2>
           <TestimonialCarousel />
-        </div>
-
-        {/* Timeline */}
-        <div>
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-12 font-playfair">
-            Project Progress
-          </h2>
-          <ProjectTimeline />
         </div>
       </div>
     </section>

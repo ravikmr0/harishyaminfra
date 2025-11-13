@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import ProjectCard from './ProjectCard';
@@ -18,6 +19,7 @@ const heroImages = [
 export default function Home() {
   const [showScheduleForm, setShowScheduleForm] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,6 +66,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold shadow-lg"
+                onClick={() => navigate('/projects')}
               >
                 Explore Projects <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
@@ -71,7 +74,7 @@ export default function Home() {
                 size="lg" 
                 variant="outline"
                 className="border-white text-white hover:bg-white/10 shadow-lg"
-                onClick={() => setShowScheduleForm(true)}
+                onClick={() => navigate('/contact')}
               >
                 Schedule Site Visit
               </Button>

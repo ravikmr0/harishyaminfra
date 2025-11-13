@@ -1,4 +1,4 @@
-import { Award, Users, TrendingUp, Heart } from 'lucide-react';
+import { Award, Users, TrendingUp, Heart, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function About() {
@@ -100,82 +100,135 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f8f9fa]">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-4 font-playfair">Leadership Team</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Meet the visionary leaders driving Harishyam Infra's success with decades of combined expertise</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-4 font-playfair">Meet Our Team</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a227] mx-auto mt-6"></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12">
             {/* Team Member 1 */}
-            <div className="group h-full">
-              <div className="relative mb-6 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+            <div className="flex flex-col items-center text-center group">
+              <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80"
                   alt="Rajesh Kumar"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <p className="text-white text-sm leading-relaxed font-light">Visionary leader with proven track record in premium real estate development</p>
-                </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#d4af37] hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Rajesh Kumar</h3>
-                <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-xs mb-4 pb-4 border-b border-gray-200">Founder & Chairman</p>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">With 20+ years of real estate expertise, Rajesh has pioneered innovative residential developments across premium locations.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Real Estate</span>
-                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Strategy</span>
-                </div>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Rajesh Kumar</h3>
+              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Founder & CEO</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">Driving Tech Vexor's vision with a focus on technology, brand building, and sustainable business expansion.</p>
+              <div className="flex gap-4 justify-center">
+                <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
+                  <Linkedin className="h-6 w-6" />
+                </button>
+                <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
+                  <Mail className="h-6 w-6" />
+                </button>
               </div>
             </div>
 
             {/* Team Member 2 */}
-            <div className="group h-full">
-              <div className="relative mb-6 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+            <div className="flex flex-col items-center text-center group">
+              <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
                   src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80"
                   alt="Priya Sharma"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <p className="text-white text-sm leading-relaxed font-light">Operations excellence and customer satisfaction focused leader</p>
-                </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#d4af37] hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Priya Sharma</h3>
-                <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-xs mb-4 pb-4 border-b border-gray-200">Managing Director</p>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">Priya leads operations with a focus on customer satisfaction and project excellence, ensuring every development exceeds expectations.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Operations</span>
-                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Quality</span>
-                </div>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Priya Sharma</h3>
+              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Co-Founder & Director</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">Leading business growth through strategic leadership and fund management at Tech Vexor.</p>
+              <div className="flex gap-4 justify-center">
+                <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
+                  <Linkedin className="h-6 w-6" />
+                </button>
+                <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
+                  <Mail className="h-6 w-6" />
+                </button>
               </div>
             </div>
 
             {/* Team Member 3 */}
-            <div className="group h-full">
-              <div className="relative mb-6 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500">
+            <div className="flex flex-col items-center text-center group">
+              <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80"
-                  alt="Amit Patel"
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Neha Sharma"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                  <p className="text-white text-sm leading-relaxed font-light">Financial strategist driving sustainable growth and profitability</p>
-                </div>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-[#d4af37] hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Amit Patel</h3>
-                <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-xs mb-4 pb-4 border-b border-gray-200">Chief Financial Officer</p>
-                <p className="text-gray-700 text-sm leading-relaxed mb-4">Amit brings financial acumen and strategic planning expertise, ensuring sustainable growth and transparent financial management.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Finance</span>
-                  <span className="bg-gradient-to-r from-[#d4af37]/10 to-[#c9a227]/10 text-[#d4af37] px-3 py-1 rounded-full border border-[#d4af37]/30 text-xs font-semibold">Growth</span>
-                </div>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Neha Sharma</h3>
+              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Chief Technology Officer</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">Driving innovation and technology strategy to accelerate business growth and digital transformation.</p>
+              <div className="flex gap-4 justify-center">
+                <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
+                  <Linkedin className="h-6 w-6" />
+                </button>
+                <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
+                  <Mail className="h-6 w-6" />
+                </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Grid Boxes Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white via-[#f8f9fa] to-white relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-4 font-playfair">Why Choose Us</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Discover what sets Harishyam Infra apart in the real estate industry</p>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a227] mx-auto mt-6"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Box 1 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-b-4 border-[#d4af37] hover:border-l-8 hover:border-b-8 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#d4af37]/10 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="h-16 w-16 bg-gradient-to-br from-[#d4af37]/30 to-[#c9a227]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#d4af37]/50 group-hover:to-[#c9a227]/40 transition-all duration-300 shadow-md relative z-10">
+                <span className="text-4xl">🏆</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#1a2332] mb-3 group-hover:text-[#d4af37] transition-colors duration-300 font-playfair relative z-10">Award Winning</h3>
+              <p className="text-gray-600 text-sm leading-relaxed relative z-10">Recognized for excellence and innovation in real estate development across multiple platforms.</p>
+            </div>
+
+            {/* Box 2 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-b-4 border-[#d4af37] hover:border-l-8 hover:border-b-8 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#d4af37]/10 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="h-16 w-16 bg-gradient-to-br from-[#d4af37]/30 to-[#c9a227]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#d4af37]/50 group-hover:to-[#c9a227]/40 transition-all duration-300 shadow-md relative z-10">
+                <span className="text-4xl">✓</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#1a2332] mb-3 group-hover:text-[#d4af37] transition-colors duration-300 font-playfair relative z-10">Quality Assured</h3>
+              <p className="text-gray-600 text-sm leading-relaxed relative z-10">Every project undergoes rigorous quality checks to ensure premium standards and customer satisfaction.</p>
+            </div>
+
+            {/* Box 3 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-b-4 border-[#d4af37] hover:border-l-8 hover:border-b-8 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#d4af37]/10 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="h-16 w-16 bg-gradient-to-br from-[#d4af37]/30 to-[#c9a227]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#d4af37]/50 group-hover:to-[#c9a227]/40 transition-all duration-300 shadow-md relative z-10">
+                <span className="text-4xl">🚀</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#1a2332] mb-3 group-hover:text-[#d4af37] transition-colors duration-300 font-playfair relative z-10">Innovation First</h3>
+              <p className="text-gray-600 text-sm leading-relaxed relative z-10">Leveraging cutting-edge technology and sustainable practices in all our developments.</p>
+            </div>
+
+            {/* Box 4 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-l-4 border-b-4 border-[#d4af37] hover:border-l-8 hover:border-b-8 hover:scale-105 hover:-translate-y-3 overflow-hidden">
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#d4af37]/10 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="h-16 w-16 bg-gradient-to-br from-[#d4af37]/30 to-[#c9a227]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:from-[#d4af37]/50 group-hover:to-[#c9a227]/40 transition-all duration-300 shadow-md relative z-10">
+                <span className="text-4xl">💎</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#1a2332] mb-3 group-hover:text-[#d4af37] transition-colors duration-300 font-playfair relative z-10">Premium Living</h3>
+              <p className="text-gray-600 text-sm leading-relaxed relative z-10">Offering luxury amenities and world-class facilities for an elevated lifestyle experience.</p>
             </div>
           </div>
         </div>
