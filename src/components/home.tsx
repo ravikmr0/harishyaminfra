@@ -33,8 +33,8 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      {/* Hero Section with Image Slider */}
-      <section className="relative h-screen bg-cover bg-center overflow-hidden">
+      {/* Hero Section with Image Slider - Device-Friendly Heights */}
+      <section className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[85vh] xl:h-screen bg-cover bg-center overflow-hidden">
         {/* Image Slider */}
         {heroImages.map((image, idx) => (
           <div
@@ -56,24 +56,24 @@ export default function Home() {
         {/* Content */}
         <div className="relative h-full flex flex-col items-center justify-center text-center px-4 z-10">
           <div className="animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 font-playfair drop-shadow-lg">
-              Premium Residential Plots
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 md:mb-4 font-playfair drop-shadow-lg leading-tight">
+              Your Dream Home Awaits
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-2xl mx-auto drop-shadow-md">
-              Invest in luxury living with Harishyam Infra's exclusive townships
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 md:mb-8 max-w-2xl mx-auto drop-shadow-md px-4">
+              Discover premium residential plots in prime locations with world-class amenities
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
               <Button 
                 size="lg" 
-                className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold shadow-lg"
+                className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold shadow-lg text-sm md:text-base"
                 onClick={() => navigate('/projects')}
               >
-                Explore Projects <ChevronRight className="ml-2 h-5 w-5" />
+                Explore Projects <ChevronRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 shadow-lg"
+                className="border-white text-white hover:bg-white/10 shadow-lg text-sm md:text-base"
                 onClick={() => navigate('/contact')}
               >
                 Schedule Site Visit
@@ -82,31 +82,34 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Left Arrow */}
+        {/* Left Arrow - Responsive Sizing */}
         <button
           onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-3 transition-all z-20 backdrop-blur-sm"
+          className="absolute left-2 sm:left-3 md:left-4 lg:left-6 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-1.5 sm:p-2 md:p-2.5 lg:p-3 transition-all z-20 backdrop-blur-sm"
+          aria-label="Previous slide"
         >
-          <ChevronLeft className="h-8 w-8 text-white" />
+          <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 text-white" />
         </button>
 
-        {/* Right Arrow */}
+        {/* Right Arrow - Responsive Sizing */}
         <button
           onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-3 transition-all z-20 backdrop-blur-sm"
+          className="absolute right-2 sm:right-3 md:right-4 lg:right-6 top-1/2 transform -translate-y-1/2 bg-white/30 hover:bg-white/50 rounded-full p-1.5 sm:p-2 md:p-2.5 lg:p-3 transition-all z-20 backdrop-blur-sm"
+          aria-label="Next slide"
         >
-          <ChevronRight className="h-8 w-8 text-white" />
+          <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 text-white" />
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
           {heroImages.map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentSlide(idx)}
-              className={`h-3 rounded-full transition-all ${
-                idx === currentSlide ? 'bg-[#d4af37] w-8' : 'bg-white/50 w-3'
+              className={`h-2 md:h-3 rounded-full transition-all ${
+                idx === currentSlide ? 'bg-[#d4af37] w-6 md:w-8' : 'bg-white/50 w-2 md:w-3'
               }`}
+              aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
         </div>
