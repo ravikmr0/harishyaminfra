@@ -44,11 +44,12 @@ export default function Header() {
             }}
             className="cursor-pointer flex-shrink-0 hover:opacity-90 transition-all"
           >
-            <div className="relative w-28 h-10 sm:w-32 sm:h-11 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div className="relative w-28 h-10 sm:w-32 sm:h-11 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white p-1">
               <img 
                 src="/logo .jpg" 
                 alt="Harishyam Infra Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain object-center"
+                style={{ imageRendering: 'crisp-edges' }}
               />
             </div>
           </button>
@@ -95,11 +96,12 @@ export default function Header() {
             }}
             className="cursor-pointer flex-shrink-0 hover:opacity-90 transition-all"
           >
-            <div className="relative w-40 h-12 xl:w-44 xl:h-14 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+            <div className="relative w-36 h-12 xl:w-40 xl:h-13 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all bg-white p-1.5">
               <img 
                 src="/logo .jpg" 
                 alt="Harishyam Infra Logo" 
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain object-center"
+                style={{ imageRendering: 'crisp-edges' }}
               />
             </div>
           </button>
