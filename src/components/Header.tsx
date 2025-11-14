@@ -26,26 +26,30 @@ export default function Header() {
     }
   };
 
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/919540074200', '_blank');
+  };
+
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       {/* Main Navigation */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
-        {/* Mobile/Tablet Header - Logo, Company Name, Search, Menu */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        {/* Mobile/Tablet Header - Logo, Search, Menu */}
         <div className="lg:hidden flex items-center justify-between gap-2 sm:gap-3">
-          {/* Logo & Company Name */}
+          {/* Logo Only */}
           <button
             onClick={() => {
               navigate('/');
               setIsOpen(false);
             }}
-            className="flex items-center gap-2 cursor-pointer flex-shrink-0 hover:opacity-80 transition-opacity"
+            className="cursor-pointer flex-shrink-0 hover:opacity-90 transition-all"
           >
-            <div className="w-9 sm:w-10 h-9 sm:h-10 bg-gradient-to-br from-[#d4af37] to-[#c9a227] rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm hover:shadow-md transition-shadow">
-              <span className="font-bold text-[#1a2332] text-xs sm:text-sm">HI</span>
-            </div>
-            <div className="min-w-0">
-              <p className="font-bold text-[#1a2332] font-playfair text-sm sm:text-base leading-tight">Harishyam Infra</p>
-              <p className="text-xs text-gray-500 leading-tight">Real Estate</p>
+            <div className="relative w-28 h-10 sm:w-32 sm:h-11 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <img 
+                src="/logo .jpg" 
+                alt="Harishyam Infra Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
           </button>
 
@@ -83,20 +87,20 @@ export default function Header() {
 
         {/* Desktop Header */}
         <div className="hidden lg:flex items-center justify-between gap-4 sm:gap-6">
-          {/* Logo & Company Name */}
+          {/* Logo Only */}
           <button
             onClick={() => {
               navigate('/');
               setIsOpen(false);
             }}
-            className="flex items-center gap-2.5 sm:gap-3 cursor-pointer flex-shrink-0 hover:opacity-80 transition-opacity"
+            className="cursor-pointer flex-shrink-0 hover:opacity-90 transition-all"
           >
-            <div className="w-10 sm:w-11 h-10 sm:h-11 bg-gradient-to-br from-[#d4af37] to-[#c9a227] rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm hover:shadow-md transition-shadow">
-              <span className="font-bold text-[#1a2332] text-sm sm:text-base">HI</span>
-            </div>
-            <div className="min-w-0">
-              <p className="font-bold text-[#1a2332] font-playfair text-base sm:text-lg leading-tight">Harishyam Infra</p>
-              <p className="text-xs sm:text-sm text-gray-500 leading-tight">Real Estate</p>
+            <div className="relative w-40 h-12 xl:w-44 xl:h-14 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all">
+              <img 
+                src="/logo .jpg" 
+                alt="Harishyam Infra Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
           </button>
 
@@ -122,7 +126,7 @@ export default function Header() {
                 placeholder="Search projects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2.5 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37] focus:ring-opacity-20 transition-all text-sm bg-white"
+                className="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:border-[#d4af37] focus:ring-2 focus:ring-[#d4af37] focus:ring-opacity-20 transition-all text-sm bg-white"
               />
               <button
                 type="submit"
@@ -135,7 +139,10 @@ export default function Header() {
 
           {/* CTA Button - Desktop */}
           <div className="flex-shrink-0">
-            <Button className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold text-sm px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all">
+            <Button 
+              onClick={handleWhatsAppClick}
+              className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold text-sm px-6 py-2 rounded-lg shadow-sm hover:shadow-md transition-all"
+            >
               Inquire
             </Button>
           </div>
@@ -160,7 +167,10 @@ export default function Header() {
 
             {/* Mobile CTA Button */}
             <div className="px-2 pt-3 border-t mt-3">
-              <Button className="w-full bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold text-sm py-2.5 rounded-lg">
+              <Button 
+                onClick={handleWhatsAppClick}
+                className="w-full bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold text-sm py-2.5 rounded-lg"
+              >
                 Inquire Now
               </Button>
             </div>

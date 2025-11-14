@@ -8,16 +8,23 @@ export default function Footer() {
     <footer className="bg-[#1a2332] text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-[#d4af37] rounded-lg flex items-center justify-center">
-                <span className="font-bold text-[#1a2332] text-lg">HI</span>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-[#d4af37]/20 to-[#d4af37]/10 p-1.5">
+                <img 
+                  src="/logo .jpg" 
+                  alt="Harishyam Infra Logo" 
+                  className="w-full h-full object-cover rounded-md"
+                />
               </div>
-              <h3 className="font-bold text-lg font-playfair">Harishyam Infra</h3>
+              <div>
+                <h3 className="font-bold text-xl font-playfair leading-tight tracking-tight">Harishyam Infra</h3>
+                <p className="text-[10px] text-[#d4af37] font-semibold uppercase tracking-widest">Real Estate</p>
+              </div>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
               Premium real estate solutions with a commitment to excellence and customer satisfaction.
             </p>
             <div className="flex gap-3">
@@ -31,6 +38,16 @@ export default function Footer() {
                 <Instagram className="h-5 w-5 text-[#d4af37]" />
               </a>
             </div>
+          </div>
+
+          {/* Projects */}
+          <div>
+            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Projects</h4>
+            <ul className="space-y-2">
+              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors text-left">Shri Hari Vatika</button></li>
+              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors text-left">Harishyam Township</button></li>
+              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors text-left">Keshav Puram Township</button></li>
+            </ul>
           </div>
 
           {/* Quick Links */}
