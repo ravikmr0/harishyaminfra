@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 
 export default function About() {
   const stats = [
-    { icon: TrendingUp, label: '15+ Years', value: 'Industry Experience' },
-    { icon: Users, label: '5000+', value: 'Happy Customers' },
-    { icon: Award, label: '50+', value: 'Projects Completed' },
+    { icon: TrendingUp, label: '5+ Years', value: 'Industry Experience' },
+    { icon: Users, label: '500+', value: 'Happy Customers' },
+    { icon: Award, label: '10+', value: 'Projects Completed' },
     { icon: Heart, label: '100%', value: 'Customer Satisfaction' },
   ];
 
@@ -112,14 +112,14 @@ export default function About() {
             <div className="flex flex-col items-center text-center group">
               <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80"
-                  alt="Rajesh Kumar"
+                  src="/images/about/sudheer.jpg"
+                  alt="Sudheer Kumar"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Rajesh Kumar</h3>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Sudheer Kumar</h3>
               <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Founder & CEO</p>
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">Driving Tech Vexor's vision with a focus on technology, brand building, and sustainable business expansion.</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">Lead the organization’s vision, strategy, and overall direction from inception to growth.</p>
               <div className="flex gap-4 justify-center">
                 <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
                   <Linkedin className="h-6 w-6" />
@@ -134,14 +134,14 @@ export default function About() {
             <div className="flex flex-col items-center text-center group">
               <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&q=80"
-                  alt="Priya Sharma"
+                  src="/images/about/vikash.jpg"
+                  alt="Vikash Sharma"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Priya Sharma</h3>
-              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Co-Founder & Director</p>
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">Leading business growth through strategic leadership and fund management at Tech Vexor.</p>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Vikash Sharma</h3>
+              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Managing Director</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">Provide strategic leadership to drive the company’s growth and long-term vision.</p>
               <div className="flex gap-4 justify-center">
                 <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
                   <Linkedin className="h-6 w-6" />
@@ -156,14 +156,14 @@ export default function About() {
             <div className="flex flex-col items-center text-center group">
               <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80"
-                  alt="Neha Sharma"
+                  src="/images/about/ashish.jpg"
+                  alt="Ashish Chaudhary"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Neha Sharma</h3>
-              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Chief Technology Officer</p>
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">Driving innovation and technology strategy to accelerate business growth and digital transformation.</p>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Ashish Chaudhary</h3>
+              <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Team Leader's</p>
+              <p className="text-gray-700 text-sm leading-relaxed mb-6">Communicate clearly between team and management for seamless coordination.</p>
               <div className="flex gap-4 justify-center">
                 <button className="text-[#d4af37] hover:text-[#c9a227] transition-colors">
                   <Linkedin className="h-6 w-6" />

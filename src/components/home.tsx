@@ -73,7 +73,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 shadow-lg text-sm md:text-base"
+                className="border-white text-slate-800 hover:bg-white/10 shadow-lg text-sm md:text-base"
                 onClick={() => navigate('/contact')}
               >
                 Schedule Site Visit
@@ -131,7 +131,7 @@ export default function Home() {
             <ProjectCard 
               title="Shri Hari Vatika Phase-1"
               description="Exclusive residential plots with modern amenities"
-              image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
+              image="https://ideogram.ai/assets/image/lossless/response/XsAiU7ASTSCEF82qdAjgkQ"
               plotSizes="100 Gaj"
               priceRange="₹16 Lac*"
               id="shri-hari-vatika"
@@ -139,7 +139,7 @@ export default function Home() {
             <ProjectCard 
               title="Harishyam Township"
               description="Integrated township with world-class facilities"
-              image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80"
+              image="https://ideogram.ai/assets/image/lossless/response/do0coOFzQNmpkYRJU1DEww"
               plotSizes="100 Gaj"
               priceRange="₹16 Lac*"
               id="harishyam-township"
@@ -147,7 +147,7 @@ export default function Home() {
             <ProjectCard 
               title="Keshav Puram Township"
               description="Premium township with affordable pricing"
-              image="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80"
+              image="https://ideogram.ai/assets/image/lossless/response/MJxCca_KTs22U8ZH3jfK_w"
               plotSizes="100 Gaj"
               priceRange="₹12 Lac*"
               id="keshav-puram-township"

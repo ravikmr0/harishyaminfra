@@ -3,12 +3,14 @@ import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const galleryImages = [
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-  'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
-  'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-  'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-  'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
+  '/images/plots/shri-hari-vatika-6.jpg',
+  '/images/plots/shri-hari-vatika-4.jpg',
+  '/images/plots/shri-hari-vatika-3.jpg',
+  '/images/plots/shri-hari-vatika-2.jpg',
+  '/images/plots/shri-hari-vatika-5.jpg',
+  '/images/plots/shri-hari-vatika-1.jpg',
+  '/images/plots/shri-hari-vatika-7.jpg',
+  '/images/plots/shri-hari-vatika-8.jpg',
 ];
 
 export default function ProjectGallery() {

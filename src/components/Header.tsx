@@ -44,11 +44,13 @@ export default function Header() {
             }}
             className="cursor-pointer flex-shrink-0 hover:opacity-90 transition-all"
           >
-            <div className="relative w-28 h-10 sm:w-32 sm:h-11 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white p-1">
-              <img 
-                src="/logo .jpg" 
-                alt="Harishyam Infra Logo" 
+            <div className="relative w-18 h-12 sm:w-22 sm:h-11 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white p-1">
+              <img
+                src="/logoo.jpg"
+                alt="Harishyam Infra Logo"
                 className="w-full h-full object-contain object-center"
+                loading="eager"
+                decoding="async"
                 style={{ imageRendering: 'crisp-edges' }}
               />
             </div>
@@ -94,16 +96,20 @@ export default function Header() {
               navigate('/');
               setIsOpen(false);
             }}
+            aria-label="Go to home"
             className="cursor-pointer flex-shrink-0 hover:opacity-90 transition-all"
           >
-            <div className="relative w-36 h-12 xl:w-40 xl:h-13 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all bg-white p-1.5">
-              <img 
-                src="/logo .jpg" 
-                alt="Harishyam Infra Logo" 
-                className="w-full h-full object-contain object-center"
+            <div className="relative w-36 h-14 xl:w-30 xl:h-13 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-all bg-white p-1.5">
+              <img
+                src="/logoo.jpg"
+                alt="Harishyam Infra Logo"
+                className="w-full h-full object-cover object-center"
+                loading="eager"
+                decoding="async"
                 style={{ imageRendering: 'crisp-edges' }}
               />
             </div>
+
           </button>
 
           {/* Desktop Navigation */}

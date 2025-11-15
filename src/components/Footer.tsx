@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
@@ -12,9 +12,9 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-[#d4af37]/20 to-[#d4af37]/10 p-1.5">
+              <div className="relative w-20 h-13 rounded-lg overflow-hidden bg-gradient-to-br from-[#d4af37]/20 to-[#d4af37]/10 p-1.5">
                 <img 
-                  src="/logo .jpg" 
+                  src="/logoo.jpg" 
                   alt="Harishyam Infra Logo" 
                   className="w-full h-full object-cover rounded-md"
                 />
@@ -32,10 +32,13 @@ export default function Footer() {
                 <Facebook className="h-5 w-5 text-[#d4af37]" />
               </a>
               <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
-                <Linkedin className="h-5 w-5 text-[#d4af37]" />
+                <Instagram className="h-5 w-5 text-[#d4af37]" />
               </a>
               <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
-                <Instagram className="h-5 w-5 text-[#d4af37]" />
+                <Youtube className="h-5 w-5 text-[#d4af37]" />
+              </a>
+               <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
+                <Linkedin className="h-5 w-5 text-[#d4af37]" />
               </a>
             </div>
           </div>
@@ -98,7 +101,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-400">
             <div>
-              <p>&copy; 2024 Harishyam Infra. All rights reserved.</p>
+              <p>&copy; 2025 Harishyam Infra Pvt. Ltd. All rights reserved.</p>
             </div>
             <div className="flex gap-6 md:justify-end flex-wrap">
               <button onClick={() => navigate('/privacy-policy')} className="hover:text-[#d4af37] transition-colors">Privacy Policy</button>
