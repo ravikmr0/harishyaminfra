@@ -139,7 +139,7 @@ export default function About() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Vikash Sharma</h3>
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">Anubhav Sharma</h3>
               <p className="text-[#d4af37] font-semibold uppercase tracking-widest text-sm mb-4">Managing Director</p>
               <p className="text-gray-700 text-sm leading-relaxed mb-6">Provide strategic leadership to drive the company’s growth and long-term vision.</p>
               <div className="flex gap-4 justify-center">
