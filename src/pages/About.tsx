@@ -135,7 +135,7 @@ export default function About() {
               <div className="relative mb-8 w-48 h-48 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex-shrink-0 border-4 border-[#d4af37]/20 group-hover:border-[#d4af37] group-hover:scale-105">
                 <img 
                   src="/images/about/vikash.jpg"
-                  alt="Vikash Sharma"
+                  alt="Anubhav Sharma"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
