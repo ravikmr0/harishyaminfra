@@ -44,27 +44,27 @@ export default function Services() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white py-20 px-4">
+      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair">Our Services</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Our Services</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">Comprehensive real estate solutions tailored to meet your needs</p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 bg-white">
+      <section className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border-t-4 border-[#d4af37]">
-                  <div className="bg-gradient-to-br from-[#d4af37]/10 to-[#c9a227]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-[#d4af37]">
+                  <div className="bg-gradient-to-br from-[#d4af37]/10 to-[#c9a227]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-5">
                     <Icon className="h-8 w-8 text-[#d4af37]" />
                   </div>
                   <h3 className="text-2xl font-bold text-[#1a2332] mb-3 font-playfair">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
+                  <p className="text-gray-600 mb-5">{service.description}</p>
+                  <ul className="space-y-2 mb-5">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-gray-700">
                         <span className="w-2 h-2 bg-[#d4af37] rounded-full"></span>
@@ -83,10 +83,10 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#d4af37] to-[#c9a227] py-16 px-4">
+      <section className="section-shell-tight bg-gradient-to-r from-[#d4af37] to-[#c9a227]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-4 font-playfair">Ready to Get Started?</h2>
-          <p className="text-lg text-[#1a2332]/80 mb-8">Contact our team today to discuss your real estate needs</p>
+          <p className="text-lg text-[#1a2332]/80 mb-6">Contact our team today to discuss your real estate needs</p>
           <Button className="bg-[#1a2332] hover:bg-[#2c3e50] text-white font-semibold px-8 py-3 text-lg">
             Contact Us Now
           </Button>

@@ -43,22 +43,22 @@ export default function Testimonials() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white py-20 px-4">
+      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair">Client Testimonials</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Client Testimonials</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with Harishyam Infra</p>
         </div>
       </section>
 
       {/* Testimonials Carousel */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-6xl mx-auto">
           <Carousel className="w-full">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 h-full border-t-4 border-[#d4af37]">
-                    <div className="flex items-center gap-4 mb-6">
+                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 h-full border-t-4 border-[#d4af37]">
+                    <div className="flex items-center gap-4 mb-5">
                       <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full" />
                       <div>
                         <h3 className="font-bold text-[#1a2332]">{testimonial.name}</h3>
@@ -85,9 +85,9 @@ export default function Testimonials() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-[#1a2332] text-white">
+      <section className="section-shell-tight bg-[#1a2332] text-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-4 card-grid text-center">
             <div>
               <p className="text-4xl font-bold text-[#d4af37] mb-2">5000+</p>
               <p className="text-gray-300">Happy Customers</p>

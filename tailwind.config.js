@@ -18,9 +18,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        body: ['Inter', 'sans-serif'],
-        accent: ['Montserrat', 'sans-serif'],
+        display: ['Fraunces', 'serif'],
+        body: ['Manrope', 'sans-serif'],
+        accent: ['Plus Jakarta Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

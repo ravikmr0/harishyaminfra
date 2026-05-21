@@ -2,18 +2,18 @@ export default function TermsAndConditions() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white py-20 px-4">
+      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair">Terms & Conditions</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Terms & Conditions</h1>
           <p className="text-xl text-gray-300">Last updated: January 2024</p>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="section-shell bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
-            <div className="space-y-8">
+            <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">1. Agreement to Terms</h2>
                 <p className="text-gray-700 leading-relaxed">

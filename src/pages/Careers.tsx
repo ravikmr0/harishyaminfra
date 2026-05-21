@@ -56,18 +56,18 @@ export default function Careers() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white py-20 px-4">
+      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair">Join Our Team</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Join Our Team</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">Build your career with India's leading real estate developer</p>
         </div>
       </section>
 
       {/* Why Join Us */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#1a2332] mb-12 text-center font-playfair">Why Join Harishyam Infra?</h2>
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <h2 className="text-4xl font-bold text-[#1a2332] mb-8 md:mb-10 text-center font-playfair">Why Join Harishyam Infra?</h2>
+          <div className="grid md:grid-cols-4 card-grid">
             <div className="text-center">
               <div className="bg-gradient-to-br from-[#d4af37]/10 to-[#c9a227]/10 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-[#d4af37]" />
@@ -101,12 +101,12 @@ export default function Careers() {
       </section>
 
       {/* Open Positions */}
-      <section className="py-20 px-4 bg-white">
+      <section className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#1a2332] mb-12 text-center font-playfair">Open Positions</h2>
-          <div className="grid gap-6">
+          <h2 className="text-4xl font-bold text-[#1a2332] mb-8 md:mb-10 text-center font-playfair">Open Positions</h2>
+          <div className="grid gap-5 md:gap-6">
             {jobs.map((job, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-[#d4af37]">
+              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border-l-4 border-[#d4af37]">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">{job.title}</h3>
@@ -137,10 +137,10 @@ export default function Careers() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#d4af37] to-[#c9a227] py-16 px-4">
+      <section className="section-shell-tight bg-gradient-to-r from-[#d4af37] to-[#c9a227]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-4 font-playfair">Don't see your role?</h2>
-          <p className="text-lg text-[#1a2332]/80 mb-8">Send us your resume and we'll keep it on file for future opportunities</p>
+          <p className="text-lg text-[#1a2332]/80 mb-6">Send us your resume and we'll keep it on file for future opportunities</p>
           <Button className="bg-[#1a2332] hover:bg-[#2c3e50] text-white font-semibold px-8 py-3 text-lg">
             Send Your Resume
           </Button>

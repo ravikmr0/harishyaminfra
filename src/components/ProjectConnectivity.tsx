@@ -55,10 +55,10 @@ const connectivityData: ConnectivityItem[] = [
 
 export default function ProjectConnectivity() {
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-4 font-playfair">
+    <section className="section-shell bg-[#f8f9fa]">
+      <div className="max-w-7xl mx-auto">
+        <div className="section-heading">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-3 md:mb-4 font-playfair">
             Project Connectivity
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -66,11 +66,11 @@ export default function ProjectConnectivity() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
           {connectivityData.map((item, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-[#f8f9fa] to-white p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-[#d4af37] transition-all duration-300"
+              className="bg-gradient-to-br from-[#f8f9fa] to-white p-5 md:p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-[#d4af37] transition-all duration-300"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 bg-[#1a2332]/10 p-3 rounded-lg">
@@ -98,13 +98,13 @@ export default function ProjectConnectivity() {
         </div>
 
         {/* Map Section */}
-        <div className="mt-16 bg-gradient-to-r from-[#1a2332] to-[#2d3e50] rounded-lg overflow-hidden shadow-lg">
+        <div className="mt-10 md:mt-12 bg-gradient-to-r from-[#1a2332] to-[#2d3e50] rounded-lg overflow-hidden shadow-lg">
           <div className="grid md:grid-cols-2">
-            <div className="p-8 text-white flex flex-col justify-center">
+            <div className="p-6 md:p-8 text-white flex flex-col justify-center">
               <h3 className="text-3xl font-bold mb-4 font-playfair">
                 Prime Location Advantage
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2.5">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"></div>
                   <span>Direct access to Noida International Airport</span>
@@ -132,6 +132,6 @@ export default function ProjectConnectivity() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

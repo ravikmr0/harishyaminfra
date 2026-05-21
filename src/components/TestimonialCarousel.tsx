@@ -43,7 +43,7 @@ export default function TestimonialCarousel() {
   return (
     <div className="relative bg-white">
       <div className="bg-gradient-to-br from-[#f8f9fa] to-white rounded-xl shadow-lg overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center gap-12 p-8 md:p-16">
+        <div className="flex flex-col md:flex-row items-center gap-6 p-6 md:p-8">
           {/* Image */}
           <div className="flex-shrink-0 relative">
             <div className="absolute -inset-2 bg-gradient-to-br from-[#d4af37] to-[#c9a227] rounded-full opacity-20 blur-lg"></div>
@@ -76,7 +76,7 @@ export default function TestimonialCarousel() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-center items-center gap-6 mt-10">
+      <div className="flex justify-center items-center gap-5 mt-8">
         <Button
           variant="outline"
           size="icon"

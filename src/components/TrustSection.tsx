@@ -10,21 +10,21 @@ export default function TrustSection() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-[#f8f9fa]">
+    <section className="section-shell bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto">
         {/* Certifications */}
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-12 font-playfair">
+        <div className="mb-12 md:mb-14">
+          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-8 md:mb-10 font-playfair">
             Why Trust Harishyam Infra
           </h2>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 card-grid">
             {certifications.map((cert, idx) => {
               const Icon = cert.icon;
               return (
                 <div 
                   key={idx}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all text-center"
+                  className="bg-white p-5 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-all text-center"
                 >
                   <Icon className="h-12 w-12 text-[#d4af37] mx-auto mb-4" />
                   <h3 className="font-bold text-[#1a2332] mb-2">{cert.label}</h3>
@@ -37,7 +37,7 @@ export default function TrustSection() {
 
         {/* Testimonials */}
         <div>
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-12 font-playfair">
+          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-8 md:mb-10 font-playfair">
             Client Testimonials
           </h2>
           <TestimonialCarousel />

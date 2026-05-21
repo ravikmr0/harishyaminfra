@@ -40,11 +40,11 @@ export default function InvestmentSection() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white py-20 px-4">
+    <section className="section-shell bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-4 font-playfair">
+        <div className="section-heading">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-3 md:mb-4 font-playfair">
             Why Invest With Us?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -53,9 +53,9 @@ export default function InvestmentSection() {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 card-grid mb-10">
           {benefits.map((benefit, idx) => (
-            <Card key={idx} className="p-6 bg-gradient-to-br from-white to-[#f8f9fa] border border-gray-200 hover:shadow-lg transition-shadow">
+            <Card key={idx} className="p-5 md:p-6 bg-gradient-to-br from-white to-[#f8f9fa] border border-gray-200 hover:shadow-lg transition-shadow">
               <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#d4af37] to-[#c9a227] text-white mb-4">
                 {benefit.icon}
               </div>
@@ -73,11 +73,11 @@ export default function InvestmentSection() {
         </div>
 
         {/* Investment Comparison */}
-        <div className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] rounded-xl p-8 md:p-12 text-white">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 font-playfair">
+        <div className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] rounded-xl p-6 md:p-8 text-white">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 font-playfair">
             Investment Comparison
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 content-grid">
             <div className="border-l-4 border-[#d4af37] pl-6">
               <p className="text-sm uppercase tracking-widest text-gray-300 mb-2 font-semibold">Initial Investment</p>
               <p className="text-3xl font-bold font-playfair">₹9.6 Lac</p>
@@ -97,8 +97,8 @@ export default function InvestmentSection() {
         </div>
 
         {/* Key Highlights */}
-        <div className="mt-12 grid md:grid-cols-2 gap-8">
-          <div className="bg-[#f8f9fa] rounded-lg p-8 border-l-4 border-[#d4af37]">
+        <div className="mt-10 grid md:grid-cols-2 content-grid">
+          <div className="bg-[#f8f9fa] rounded-lg p-6 md:p-7 border-l-4 border-[#d4af37]">
             <h4 className="text-xl font-bold text-[#1a2332] mb-4 font-playfair">
               Why Choose Harishyam Infra?
             </h4>
@@ -122,7 +122,7 @@ export default function InvestmentSection() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-[#d4af37] to-[#c9a227] rounded-lg p-8 text-white">
+          <div className="bg-gradient-to-br from-[#d4af37] to-[#c9a227] rounded-lg p-6 md:p-7 text-white">
             <h4 className="text-xl font-bold mb-4 font-playfair">
               Ready to Invest?
             </h4>
@@ -138,6 +138,6 @@ export default function InvestmentSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -21,7 +21,7 @@ export default function ProjectGallery() {
   const prev = () => setCurrent((current - 1 + galleryImages.length) % galleryImages.length);
 
   return (
-    <div className="space-y-8">
+    <div className="content-stack">
       <h2 className="text-3xl font-bold text-[#1a2332] font-playfair">Project Gallery</h2>
 
       {/* Main Image */}
@@ -63,7 +63,7 @@ export default function ProjectGallery() {
       {/* Thumbnail Grid */}
       <div>
         <h3 className="text-lg font-semibold text-[#1a2332] mb-4">All Images</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
           {galleryImages.map((img, idx) => (
             <button
               key={idx}
@@ -79,7 +79,7 @@ export default function ProjectGallery() {
       </div>
 
       {/* Virtual Tour */}
-      <div className="bg-[#f8f9fa] p-8 rounded-lg text-center">
+      <div className="bg-[#f8f9fa] p-6 rounded-lg text-center">
         <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">360° Virtual Tour</h3>
         <p className="text-gray-600 mb-6">Experience the project in immersive 360° panoramic view</p>
         <Button className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold">

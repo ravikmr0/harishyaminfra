@@ -16,10 +16,10 @@ export default function ProjectOverview({ project }: ProjectOverviewProps) {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="content-stack">
       <div>
-        <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">Project Overview</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        <h2 className="text-3xl font-bold text-[#1a2332] mb-3 font-playfair">Project Overview</h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4">
           {project.description}
         </p>
         <p className="text-gray-600 leading-relaxed">
@@ -28,8 +28,8 @@ export default function ProjectOverview({ project }: ProjectOverviewProps) {
       </div>
 
       <div>
-        <h3 className="text-2xl font-bold text-[#1a2332] mb-6 font-playfair">Key Highlights</h3>
-        <div className="grid md:grid-cols-2 gap-4">
+        <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Key Highlights</h3>
+        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
           {highlights.map((highlight, idx) => (
             <div key={idx} className="flex items-center gap-3 p-4 bg-[#f8f9fa] rounded-lg">
               <CheckCircle className="h-6 w-6 text-[#d4af37] flex-shrink-0" />
@@ -39,9 +39,9 @@ export default function ProjectOverview({ project }: ProjectOverviewProps) {
         </div>
       </div>
 
-      <div className="bg-[#f8f9fa] p-8 rounded-lg">
+      <div className="bg-[#f8f9fa] p-6 rounded-lg">
         <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Investment Opportunity</h3>
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 mb-5">
           This is an excellent investment opportunity with strong appreciation potential. The location's proximity to upcoming commercial hubs and infrastructure projects makes it an ideal choice for both residential and investment purposes.
         </p>
         <Button className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold">

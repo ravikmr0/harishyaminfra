@@ -147,7 +147,7 @@ export default function Projects() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a2332] to-[#2d3e50] text-white py-16 px-4">
+      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2d3e50] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 font-display">Our Projects</h1>
           <p className="text-xl text-gray-300">Explore our premium residential and commercial developments</p>
@@ -155,7 +155,7 @@ export default function Projects() {
       </section>
 
       {/* Filters */}
-      <section className="py-8 px-4 bg-[#f8f9fa] border-b">
+      <section className="px-4 py-6 md:py-8 bg-[#f8f9fa] border-b">
         <div className="max-w-7xl mx-auto space-y-6">
           {/* Property Type Filter */}
           <div>
@@ -252,10 +252,10 @@ export default function Projects() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 px-4">
+      <section className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
           {filteredProjects.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
               {filteredProjects.map((project) => (
                 <ProjectCard
                   key={project.id}
@@ -269,7 +269,7 @@ export default function Projects() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
+            <div className="text-center py-12">
               <p className="text-xl text-gray-600">No projects match your filters</p>
               <Button 
                 onClick={() => {

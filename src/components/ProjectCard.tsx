@@ -51,16 +51,16 @@ export default function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-5 md:p-6">
         <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">
           {title}
         </h3>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 mb-3 md:mb-4">
           {description}
         </p>
 
         {/* Quick Stats */}
-        <div className={`grid grid-cols-2 gap-4 mb-6 transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-75'}`}>
+        <div className={`grid grid-cols-2 gap-3 mb-5 transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-75'}`}>
           <div className="bg-[#f8f9fa] p-3 rounded">
             <p className="text-xs text-gray-500 mb-1">Plot Sizes</p>
             <p className="font-semibold text-[#1a2332]">{plotSizes}</p>
@@ -72,7 +72,7 @@ export default function ProjectCard({
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3">
+        <div className="flex gap-2.5 md:gap-3">
           <Button 
             className="flex-1 bg-[#1a2332] hover:bg-[#0f1419] text-white"
             onClick={() => navigate(`/project/${id}`)}

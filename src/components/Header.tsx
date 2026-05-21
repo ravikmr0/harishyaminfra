@@ -113,7 +113,7 @@ export default function Header() {
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="flex items-center gap-8 xl:gap-10">
+          <nav className="flex items-center gap-5 xl:gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.href}

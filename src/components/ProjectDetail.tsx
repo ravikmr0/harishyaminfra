@@ -84,7 +84,7 @@ export default function ProjectDetail() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <div className="relative h-96 bg-cover bg-center" style={{
+      <div className="relative h-80 md:h-96 bg-cover bg-center" style={{
         backgroundImage: `url(${project.image})`
       }}>
         <div className="absolute inset-0 bg-black/30"></div>
@@ -94,7 +94,7 @@ export default function ProjectDetail() {
         >
           <ArrowLeft className="h-6 w-6 text-[#1a2332]" />
         </button>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-8">
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 md:p-8">
           <h1 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-2">
             {project.title}
           </h1>
@@ -104,8 +104,8 @@ export default function ProjectDetail() {
 
       {/* Quick Stats */}
       <div className="bg-[#f8f9fa] border-b">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          <div className="grid md:grid-cols-4 gap-6">
+        <div className="max-w-7xl mx-auto px-4 py-6 md:py-8">
+          <div className="grid md:grid-cols-4 gap-4 md:gap-6">
             <div>
               <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Plot Size</p>
               <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.plotSizes}</p>
@@ -128,7 +128,7 @@ export default function ProjectDetail() {
 
           {/* Payment Plan Highlight */}
           {project.paymentPlan && (
-            <div className="mt-6 p-6 bg-white rounded-lg border-2 border-[#d4af37]">
+            <div className="mt-5 p-5 md:p-6 bg-white rounded-lg border-2 border-[#d4af37]">
               <h3 className="text-lg font-bold text-[#1a2332] mb-4 font-playfair">Payment Plan</h3>
               <div className="grid md:grid-cols-4 gap-4">
                 <div className="text-center">
@@ -154,9 +154,9 @@ export default function ProjectDetail() {
       </div>
 
       {/* Tabs */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-4 mb-6">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="amenities">Amenities</TabsTrigger>
             <TabsTrigger value="location">Location</TabsTrigger>

@@ -42,13 +42,13 @@ const amenities: Amenity[] = [
 export default function ProjectAmenities() {
   return (
     <div>
-      <h2 className="text-3xl font-bold text-[#1a2332] mb-8 font-playfair">World-Class Amenities</h2>
+      <h2 className="text-3xl font-bold text-[#1a2332] mb-6 font-playfair">World-Class Amenities</h2>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
         {amenities.map((amenity, idx) => {
           const Icon = amenity.icon;
           return (
-            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-lg transition-shadow">
               <Icon className="h-12 w-12 text-[#d4af37] mb-4" />
               <h3 className="text-xl font-bold text-[#1a2332] mb-2">{amenity.name}</h3>
               <p className="text-gray-600">{amenity.description}</p>

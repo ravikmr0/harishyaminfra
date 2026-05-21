@@ -68,17 +68,17 @@ export default function AgentsTeam() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white py-20 px-4">
+      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-playfair">Our Sales Team</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Our Sales Team</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">Meet our experienced agents ready to assist you</p>
         </div>
       </section>
 
       {/* Team Grid */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
             {agents.map((agent, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#d4af37]">
                 {/* Image Section */}
@@ -87,11 +87,11 @@ export default function AgentsTeam() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6">
+                <div className="p-5 md:p-6">
                   <h3 className="text-2xl font-bold text-[#1a2332] mb-1 font-playfair">{agent.name}</h3>
                   <p className="text-[#d4af37] font-semibold text-sm mb-4">{agent.role}</p>
                   
-                  <div className="space-y-3 mb-6 pb-6 border-b border-gray-200">
+                  <div className="space-y-3 mb-5 pb-5 border-b border-gray-200">
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <Award className="h-4 w-4 text-[#d4af37]" />
                       <span>{agent.specialization}</span>
@@ -107,7 +107,7 @@ export default function AgentsTeam() {
                   </div>
 
                   {/* Contact Info */}
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-5">
                     <a href={`tel:${agent.phone}`} className="flex items-center gap-2 text-sm text-gray-700 hover:text-[#d4af37] transition-colors">
                       <Phone className="h-4 w-4" />
                       {agent.phone}
@@ -129,9 +129,9 @@ export default function AgentsTeam() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-[#1a2332] text-white">
+      <section className="section-shell-tight bg-[#1a2332] text-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-4 card-grid text-center">
             <div>
               <p className="text-4xl font-bold text-[#d4af37] mb-2">50+</p>
               <p className="text-gray-300">Expert Agents</p>
@@ -153,10 +153,10 @@ export default function AgentsTeam() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#d4af37] to-[#c9a227] py-16 px-4">
+      <section className="section-shell-tight bg-gradient-to-r from-[#d4af37] to-[#c9a227]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-4 font-playfair">Ready to Find Your Dream Property?</h2>
-          <p className="text-lg text-[#1a2332]/80 mb-8">Connect with our team today for personalized assistance</p>
+          <p className="text-lg text-[#1a2332]/80 mb-6">Connect with our team today for personalized assistance</p>
           <Button className="bg-[#1a2332] hover:bg-[#2c3e50] text-white font-semibold px-8 py-3 text-lg">
             Schedule a Consultation
           </Button>

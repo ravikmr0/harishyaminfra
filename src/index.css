@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -38,27 +38,70 @@
 
 body {
   @apply bg-white text-foreground;
-  font-family: 'Inter', 'Montserrat', sans-serif;
-  letter-spacing: -0.01em;
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: -0.014em;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Fraunces', serif;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
 }
 
 /* Premium typography utilities */
 .font-display {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Fraunces', serif;
 }
 
 .font-body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .font-accent {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Fraunces', serif;
+}
+
+@layer components {
+  .section-shell {
+    @apply px-4 py-10 md:py-12 lg:py-14;
+  }
+
+  .section-shell-tight {
+    @apply px-4 py-10 md:py-12;
+  }
+
+  .section-shell-hero {
+    @apply px-4 py-12 md:py-14;
+  }
+
+  .section-heading {
+    @apply mb-8 text-center md:mb-10;
+  }
+
+  .section-heading-left {
+    @apply mb-6 md:mb-8;
+  }
+
+  .content-grid {
+    @apply gap-6 md:gap-8;
+  }
+
+  .card-grid {
+    @apply gap-4 md:gap-6;
+  }
+
+  .content-stack {
+    @apply space-y-6 md:space-y-8;
+  }
 }
 
 /* Smooth animations */
