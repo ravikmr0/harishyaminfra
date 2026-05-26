@@ -21,6 +21,7 @@ module.exports = {
         display: ['Fraunces', 'serif'],
         body: ['Manrope', 'sans-serif'],
         accent: ['Plus Jakarta Sans', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -55,6 +56,32 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        // Premium color palette
+        gold: {
+          50: '#fffaf0',
+          100: '#fef5e7',
+          200: '#fdebd0',
+          300: '#fde4b6',
+          400: '#fcdc9d',
+          500: '#fcd384',
+          600: '#e8c588',
+          700: '#c9a961',
+          800: '#a87c3c',
+          900: '#8b6f47',
+        },
+        dark: {
+          50: '#f8f9fa',
+          100: '#f1f3f5',
+          200: '#e9ecef',
+          300: '#dee2e6',
+          400: '#ced4da',
+          500: '#adb5bd',
+          600: '#868e96',
+          700: '#495057',
+          800: '#343a40',
+          900: '#0f1419',
+          950: '#0a0c0f',
         },
       },
       borderRadius: {

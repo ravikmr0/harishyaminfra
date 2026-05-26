@@ -13,11 +13,11 @@ const projectData: Record<string, any> = {
     title: 'Shri Hari Vatika Phase-1',
     subtitle: 'Exclusive Residential Plots',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-    description: 'Experience luxury living with our premium residential plots designed for modern families.',
+    description: 'Experience luxury living with our premium residential plots designed for modern families. Located in a prime location with world-class amenities.',
     plotSizes: '100 Gaj',
     priceRange: '₹16 Lac*',
     ratePerGaj: '₹16 Lac / 100 Gaj',
-    location: 'Prime Location, City Center',
+    location: 'Prime Central Location',
     totalPlots: 250,
     availablePlots: 45,
     paymentPlan: {
@@ -27,40 +27,76 @@ const projectData: Record<string, any> = {
       rentalIncome: '₹10,000/month'
     }
   },
-  'harishyam-township': {
-    title: 'Harishyam Township',
-    subtitle: 'Integrated Township Development',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-    description: 'A complete township with world-class amenities and infrastructure.',
-    plotSizes: '100 Gaj',
-    priceRange: '₹16 Lac*',
-    ratePerGaj: '₹16 Lac / 100 Gaj',
-    location: 'Suburban Excellence',
-    totalPlots: 500,
+  'shri-hari-vatika-phase-2': {
+    title: 'Shri Hari Vatika Phase-2',
+    subtitle: 'Extended Luxury Development',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    description: 'Extended phase of our flagship project featuring enhanced infrastructure and premium facilities. Perfect for discerning homebuyers.',
+    plotSizes: '100-150 Gaj',
+    priceRange: '₹18 Lac*',
+    ratePerGaj: '₹18 Lac / 100 Gaj',
+    location: 'Prime Central Location - Extended',
+    totalPlots: 350,
     availablePlots: 120,
     paymentPlan: {
       registry: '60%',
       emiPeriod: '20 Months',
-      emiAmount: '₹30,000',
-      rentalIncome: '₹10,000/month'
+      emiAmount: '₹32,000',
+      rentalIncome: '₹12,000/month'
     }
   },
-  'keshav-puram-township': {
-    title: 'Keshav Puram Township',
-    subtitle: 'Premium Affordable Living',
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
-    description: 'Premium township development with affordable pricing and easy payment plans.',
-    plotSizes: '100 Gaj',
-    priceRange: '₹12 Lac*',
-    ratePerGaj: '₹12 Lac / 100 Gaj',
-    location: 'Emerging Locality',
-    totalPlots: 350,
+  'shri-hari-vatika-phase-3': {
+    title: 'Shri Hari Vatika Phase-3',
+    subtitle: 'Ultra-Premium Residential Community',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    description: 'Latest phase featuring ultra-premium plots with comprehensive world-class amenities, gated security, and 24/7 surveillance.',
+    plotSizes: '120-200 Gaj',
+    priceRange: '₹20 Lac*',
+    ratePerGaj: '₹20 Lac / 100 Gaj',
+    location: 'Prime Central Location - Premium',
+    totalPlots: 400,
     availablePlots: 180,
     paymentPlan: {
       registry: '60%',
-      emiPeriod: '30 Months',
-      emiAmount: '₹16,000',
-      rentalIncome: '₹6,000/month'
+      emiPeriod: '20 Months',
+      emiAmount: '₹35,000',
+      rentalIncome: '₹14,000/month'
+    }
+  },
+  'hari-shyam-township': {
+    title: 'Hari Shyam Township',
+    subtitle: 'Integrated Township Development',
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    description: 'A complete township with world-class amenities, premium infrastructure, and strategic connectivity. The perfect blend of comfort and convenience.',
+    plotSizes: '100-125 Gaj',
+    priceRange: '₹17 Lac*',
+    ratePerGaj: '₹17 Lac / 100 Gaj',
+    location: 'Suburban Excellence',
+    totalPlots: 500,
+    availablePlots: 140,
+    paymentPlan: {
+      registry: '60%',
+      emiPeriod: '20 Months',
+      emiAmount: '₹32,000',
+      rentalIncome: '₹11,000/month'
+    }
+  },
+  'mero-vrindavan-dham': {
+    title: 'Mero Vrindavan Dham',
+    subtitle: 'Community-Centric Living',
+    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+    description: 'An exclusive community-centric development blending modern living with cultural heritage. Create lasting memories in this serene residential haven.',
+    plotSizes: '90-110 Gaj',
+    priceRange: '₹15 Lac*',
+    ratePerGaj: '₹15 Lac / 100 Gaj',
+    location: 'Community Hub Area',
+    totalPlots: 300,
+    availablePlots: 95,
+    paymentPlan: {
+      registry: '60%',
+      emiPeriod: '24 Months',
+      emiAmount: '₹25,000',
+      rentalIncome: '₹8,000/month'
     }
   }
 };
@@ -84,68 +120,74 @@ export default function ProjectDetail() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <div className="relative h-80 md:h-96 bg-cover bg-center" style={{
+      <div className="relative h-96 md:h-[500px] bg-cover bg-center overflow-hidden" style={{
         backgroundImage: `url(${project.image})`
       }}>
-        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#c9a961] opacity-10 rounded-full blur-3xl"></div>
+        
         <button
           onClick={() => navigate('/')}
-          className="absolute top-6 left-6 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors z-10"
+          className="absolute top-6 left-6 bg-white/90 hover:bg-white rounded-full p-2.5 hover:shadow-lg transition-all z-10 backdrop-blur-sm"
         >
           <ArrowLeft className="h-6 w-6 text-[#1a2332]" />
         </button>
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6 md:p-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-white font-playfair mb-2">
+        
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 md:p-10">
+          <h1 className="text-5xl md:text-7xl font-bold text-white font-playfair mb-3 tracking-tight">
             {project.title}
           </h1>
-          <p className="text-lg text-gray-100 font-light">{project.subtitle}</p>
+          <p className="text-lg md:text-xl text-gray-100 font-light">{project.subtitle}</p>
         </div>
       </div>
 
       {/* Quick Stats */}
-      <div className="bg-[#f8f9fa] border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6 md:py-8">
-          <div className="grid md:grid-cols-4 gap-4 md:gap-6">
-            <div>
-              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Plot Size</p>
-              <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.plotSizes}</p>
+      <div className="bg-gradient-to-b from-[#f8f9fa] to-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
+          <div className="grid md:grid-cols-4 gap-4 md:gap-6 mb-8">
+            <div className="bg-white p-6 rounded-xl border border-gray-100 hover:border-[#c9a961]/30 hover:shadow-lg transition-all">
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-bold">Plot Size</p>
+              <p className="text-3xl font-bold text-[#1a2332] font-playfair">{project.plotSizes}</p>
             </div>
-            <div>
-              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Rate</p>
-              <p className="text-2xl font-bold text-[#d4af37] font-playfair">{project.ratePerGaj}</p>
+            <div className="bg-gradient-to-br from-[#fffaf0] to-[#fef5e7] p-6 rounded-xl border border-[#e8d5b7] hover:shadow-lg transition-all">
+              <p className="text-xs uppercase tracking-widest text-[#8b6f47] mb-2 font-bold">Premium Rate</p>
+              <p className="text-3xl font-bold text-[#c9a961] font-playfair">{project.ratePerGaj}</p>
             </div>
-            <div>
-              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Available Plots</p>
-              <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.availablePlots} / {project.totalPlots}</p>
+            <div className="bg-white p-6 rounded-xl border border-gray-100 hover:border-[#c9a961]/30 hover:shadow-lg transition-all">
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-bold">Available Plots</p>
+              <p className="text-3xl font-bold text-[#1a2332] font-playfair">{project.availablePlots} <span className="text-lg text-gray-500">/ {project.totalPlots}</span></p>
             </div>
-            <div>
-              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Location</p>
-              <p className="text-lg font-bold text-[#1a2332] flex items-center gap-1">
-                <MapPin className="h-5 w-5" /> {project.location}
+            <div className="bg-white p-6 rounded-xl border border-gray-100 hover:border-[#c9a961]/30 hover:shadow-lg transition-all">
+              <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-bold">Location</p>
+              <p className="text-lg font-bold text-[#1a2332] flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-[#c9a961]" /> {project.location}
               </p>
             </div>
           </div>
 
           {/* Payment Plan Highlight */}
           {project.paymentPlan && (
-            <div className="mt-5 p-5 md:p-6 bg-white rounded-lg border-2 border-[#d4af37]">
-              <h3 className="text-lg font-bold text-[#1a2332] mb-4 font-playfair">Payment Plan</h3>
-              <div className="grid md:grid-cols-4 gap-4">
-                <div className="text-center">
-                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Registry</p>
-                  <p className="text-2xl font-bold text-[#d4af37] font-playfair">{project.paymentPlan.registry}</p>
+            <div className="p-7 md:p-8 bg-gradient-to-br from-white to-[#fffaf0] rounded-2xl border-2 border-[#c9a961] shadow-lg hover:shadow-xl transition-all">
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-6 font-playfair">Payment Plan</h3>
+              <div className="grid md:grid-cols-4 gap-5">
+                <div className="text-center p-5 bg-white rounded-xl border border-gray-100 hover:border-[#c9a961] transition-all">
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-bold">Registry</p>
+                  <p className="text-3xl font-bold text-[#c9a961] font-playfair">{project.paymentPlan.registry}</p>
                 </div>
-                <div className="text-center">
-                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">EMI Period</p>
-                  <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.paymentPlan.emiPeriod}</p>
+                <div className="text-center p-5 bg-white rounded-xl border border-gray-100 hover:border-[#c9a961] transition-all">
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-bold">EMI Period</p>
+                  <p className="text-3xl font-bold text-[#1a2332] font-playfair">{project.paymentPlan.emiPeriod}</p>
                 </div>
-                <div className="text-center">
-                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Monthly EMI</p>
-                  <p className="text-2xl font-bold text-[#1a2332] font-playfair">{project.paymentPlan.emiAmount}</p>
+                <div className="text-center p-5 bg-white rounded-xl border border-gray-100 hover:border-[#c9a961] transition-all">
+                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-bold">Monthly EMI</p>
+                  <p className="text-3xl font-bold text-[#1a2332] font-playfair">{project.paymentPlan.emiAmount}</p>
                 </div>
-                <div className="text-center">
-                  <p className="text-xs uppercase tracking-widest text-gray-600 mb-2 font-semibold">Rental Income</p>
-                  <p className="text-2xl font-bold text-green-600 font-playfair">{project.paymentPlan.rentalIncome}</p>
+                <div className="text-center p-5 bg-gradient-to-br from-[#d4edda] to-[#c3e6cb] rounded-xl border border-[#28a745] hover:shadow-lg transition-all">
+                  <p className="text-xs uppercase tracking-widest text-green-700 mb-2 font-bold">Rental Income</p>
+                  <p className="text-3xl font-bold text-green-700 font-playfair">{project.paymentPlan.rentalIncome}</p>
                 </div>
               </div>
             </div>
@@ -154,28 +196,28 @@ export default function ProjectDetail() {
       </div>
 
       {/* Tabs */}
-      <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-6">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="amenities">Amenities</TabsTrigger>
-            <TabsTrigger value="location">Location</TabsTrigger>
-            <TabsTrigger value="gallery">Gallery</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-4 mb-8 bg-gradient-to-r from-[#f8f9fa] to-white p-1 border border-gray-200 rounded-xl">
+            <TabsTrigger value="overview" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#c9a961] data-[state=active]:to-[#e0c088] data-[state=active]:text-white data-[state=active]:shadow-lg transition-all">Overview</TabsTrigger>
+            <TabsTrigger value="amenities" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#c9a961] data-[state=active]:to-[#e0c088] data-[state=active]:text-white data-[state=active]:shadow-lg transition-all">Amenities</TabsTrigger>
+            <TabsTrigger value="location" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#c9a961] data-[state=active]:to-[#e0c088] data-[state=active]:text-white data-[state=active]:shadow-lg transition-all">Location</TabsTrigger>
+            <TabsTrigger value="gallery" className="rounded-lg data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#c9a961] data-[state=active]:to-[#e0c088] data-[state=active]:text-white data-[state=active]:shadow-lg transition-all">Gallery</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="overview">
+          <TabsContent value="overview" className="mt-6">
             <ProjectOverview project={project} />
           </TabsContent>
 
-          <TabsContent value="amenities">
+          <TabsContent value="amenities" className="mt-6">
             <ProjectAmenities />
           </TabsContent>
 
-          <TabsContent value="location">
+          <TabsContent value="location" className="mt-6">
             <ProjectLocation />
           </TabsContent>
 
-          <TabsContent value="gallery">
+          <TabsContent value="gallery" className="mt-6">
             <ProjectGallery />
           </TabsContent>
         </Tabs>

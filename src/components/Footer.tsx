@@ -1,112 +1,131 @@
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, Youtube } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Mail, MapPin, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+import BrandMark from "@/components/BrandMark";
+import { Button } from "@/components/ui/button";
+
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" },
+  { label: "Amenities", href: "/amenities" },
+];
+
+const exploreLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "Brochures", href: "/brochures" },
+  { label: "Our Team", href: "/agents" },
+];
 
 export default function Footer() {
   const navigate = useNavigate();
 
   return (
-    <footer className="bg-[#1a2332] text-white">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 py-10 md:py-12">
-        <div className="grid md:grid-cols-5 gap-5 md:gap-6 mb-8 md:mb-10">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="relative w-20 h-13 rounded-lg overflow-hidden bg-gradient-to-br from-[#d4af37]/20 to-[#d4af37]/10 p-1.5">
-                <img 
-                  src="/logoo.jpg" 
-                  alt="Harishyam Infra Logo" 
-                  className="w-full h-full object-cover rounded-md"
-                />
-              </div>
-              <div>
-                <h3 className="font-bold text-xl font-playfair leading-tight tracking-tight">Harishyam Infra</h3>
-                <p className="text-[10px] text-[#d4af37] font-semibold uppercase tracking-widest">Real Estate</p>
-              </div>
-            </div>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-              Premium real estate solutions with a commitment to excellence and customer satisfaction.
+    <footer className="px-4 pb-4 pt-10 md:pt-14">
+      <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/8 bg-[linear-gradient(160deg,_rgba(31,44,43,0.98),_rgba(40,71,66,0.96)_45%,_rgba(141,74,51,0.94))] text-white shadow-[0_40px_120px_-70px_rgba(0,0,0,0.85)]">
+        <div className="grid gap-10 px-6 py-10 md:px-10 md:py-12 lg:grid-cols-[1.2fr,0.8fr,0.8fr,1fr]">
+          <div className="space-y-5">
+            <BrandMark inverted />
+            <p className="max-w-md text-sm leading-7 text-white/70">
+              Thoughtful plotted developments, stronger infrastructure choices, and a buying
+              journey designed to feel clear from first call to final site visit.
             </p>
-            <div className="flex gap-3">
-              <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
-                <Facebook className="h-5 w-5 text-[#d4af37]" />
-              </a>
-              <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
-                <Instagram className="h-5 w-5 text-[#d4af37]" />
-              </a>
-              <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
-                <Youtube className="h-5 w-5 text-[#d4af37]" />
-              </a>
-               <a href="#" className="bg-[#d4af37]/20 hover:bg-[#d4af37]/30 p-2 rounded transition-colors">
-                <Linkedin className="h-5 w-5 text-[#d4af37]" />
-              </a>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Button
+                className="bg-white text-[color:var(--brand-ink)] hover:bg-white/90"
+                onClick={() => window.open("https://wa.me/919540074200", "_blank")}
+              >
+                Start on WhatsApp
+              </Button>
+              <Button
+                className="border-white/20 bg-white/10 text-white hover:bg-white/16"
+                onClick={() => (window.location.href = "tel:+919540074200")}
+                variant="outline"
+              >
+                Call Sales
+              </Button>
             </div>
           </div>
 
-          {/* Projects */}
           <div>
-            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Projects</h4>
-            <ul className="space-y-2">
-              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors text-left">Shri Hari Vatika</button></li>
-              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors text-left">Harishyam Township</button></li>
-              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors text-left">Keshav Puram Township</button></li>
-            </ul>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-white/55">
+              Quick Links
+            </p>
+            <div className="grid gap-2">
+              {quickLinks.map((link) => (
+                <button
+                  key={link.href}
+                  className="text-left text-sm text-white/72 transition-colors hover:text-white"
+                  onClick={() => navigate(link.href)}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><button onClick={() => navigate('/')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Home</button></li>
-              <li><button onClick={() => navigate('/projects')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Projects</button></li>
-              <li><button onClick={() => navigate('/services')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Services</button></li>
-              <li><button onClick={() => navigate('/about')} className="text-gray-400 hover:text-[#d4af37] transition-colors">About Us</button></li>
-              <li><button onClick={() => navigate('/contact')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Contact</button></li>
-            </ul>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-white/55">
+              Explore
+            </p>
+            <div className="grid gap-2">
+              {exploreLinks.map((link) => (
+                <button
+                  key={link.href}
+                  className="text-left text-sm text-white/72 transition-colors hover:text-white"
+                  onClick={() => navigate(link.href)}
+                >
+                  {link.label}
+                </button>
+              ))}
+              <button
+                className="text-left text-sm text-white/72 transition-colors hover:text-white"
+                onClick={() => navigate("/careers")}
+              >
+                Careers
+              </button>
+            </div>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Resources</h4>
-            <ul className="space-y-2">
-              <li><button onClick={() => navigate('/amenities')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Amenities</button></li>
-              <li><button onClick={() => navigate('/testimonials')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Testimonials</button></li>
-              <li><button onClick={() => navigate('/brochures')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Brochures</button></li>
-              <li><button onClick={() => navigate('/agents')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Our Team</button></li>
-              <li><button onClick={() => navigate('/careers')} className="text-gray-400 hover:text-[#d4af37] transition-colors">Careers</button></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-bold text-lg mb-4 text-[#d4af37]">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400">+91 9540074200</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400">info@harishyaminfra.com</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-[#d4af37] flex-shrink-0 mt-0.5" />
-                <span className="text-gray-400">Office Tower-A, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201304, India</span>
-              </li>
-            </ul>
+          <div className="surface-card-dark">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-white/55">
+              Visit Office
+            </p>
+            <div className="space-y-4 text-sm text-white/72">
+              <div className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-4 w-4 text-[color:var(--brand-soft)]" />
+                <span>+91 9540074200</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail className="mt-0.5 h-4 w-4 text-[color:var(--brand-soft)]" />
+                <span>info@harishyaminfra.com</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 text-[color:var(--brand-soft)]" />
+                <span>
+                  Tower-A, Bhutani Alphathum,
+                  <br />
+                  Sector 90, Noida, Uttar Pradesh 201304
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-700 pt-6">
-          <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-400">
-            <div>
-              <p>&copy; 2025 Harishyam Infra Pvt. Ltd. All rights reserved.</p>
-            </div>
-            <div className="flex gap-6 md:justify-end flex-wrap">
-              <button onClick={() => navigate('/privacy-policy')} className="hover:text-[#d4af37] transition-colors">Privacy Policy</button>
-              <button onClick={() => navigate('/terms-conditions')} className="hover:text-[#d4af37] transition-colors">Terms & Conditions</button>
-              <a href="#" className="hover:text-[#d4af37] transition-colors">Disclaimer</a>
+        <div className="border-t border-white/10 px-6 py-4 md:px-10">
+          <div className="flex flex-col gap-3 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
+            <p>&copy; 2026 Harishyam Infra. Crafted for confident property decisions.</p>
+            <div className="flex flex-wrap gap-5">
+              <button onClick={() => navigate("/privacy-policy")} className="transition-colors hover:text-white">
+                Privacy Policy
+              </button>
+              <button onClick={() => navigate("/terms-conditions")} className="transition-colors hover:text-white">
+                Terms & Conditions
+              </button>
+              <button onClick={() => navigate("/contact")} className="transition-colors hover:text-white">
+                Contact Support
+              </button>
             </div>
           </div>
         </div>

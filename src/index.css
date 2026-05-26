@@ -4,56 +4,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --muted: 222.2 84% 4.9%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 212.7 26.8% 83.9%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --ring: 212.7 26.8% 83.9%;
-  --radius: 0.5rem;
+@layer base {
+  :root {
+    --background: 36 48% 96%;
+    --foreground: 184 18% 16%;
+    --card: 40 56% 99%;
+    --card-foreground: 184 18% 16%;
+    --popover: 40 56% 99%;
+    --popover-foreground: 184 18% 16%;
+    --primary: 18 46% 46%;
+    --primary-foreground: 42 60% 97%;
+    --secondary: 171 27% 29%;
+    --secondary-foreground: 42 60% 97%;
+    --muted: 36 34% 90%;
+    --muted-foreground: 184 12% 36%;
+    --accent: 34 56% 82%;
+    --accent-foreground: 184 18% 16%;
+    --destructive: 0 78% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 34 24% 82%;
+    --input: 34 24% 82%;
+    --ring: 18 46% 46%;
+    --radius: 1.25rem;
 
-  /* Premium Real Estate Colors */
-  --navy: #1a2332;
-  --gold: #d4af37;
-  --light-bg: #f8f9fa;
-  --text-dark: #2c3e50;
-  --text-light: #7f8c8d;
+    --brand: #b26243;
+    --brand-deep: #8d4a33;
+    --brand-soft: #e7c7a6;
+    --brand-ink: #1f2c2b;
+    --brand-forest: #284742;
+    --brand-cream: #fbf7f1;
+    --brand-sand: #efe3d3;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-foreground;
+    background:
+      radial-gradient(circle at top left, rgba(178, 98, 67, 0.16), transparent 34%),
+      radial-gradient(circle at top right, rgba(40, 71, 66, 0.12), transparent 28%),
+      linear-gradient(180deg, #fbf7f1 0%, #f6f0e6 100%);
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: -0.014em;
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: rgba(178, 98, 67, 0.24);
+    color: var(--brand-ink);
+  }
 }
 
-* {
-  @apply border-border;
-}
-
-body {
-  @apply bg-white text-foreground;
-  font-family: 'Manrope', sans-serif;
-  letter-spacing: -0.014em;
-  line-height: 1.55;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 1.02;
-}
-
-/* Premium typography utilities */
 .font-display {
   font-family: 'Fraunces', serif;
 }
@@ -72,44 +106,140 @@ h1, h2, h3, h4, h5, h6 {
 
 @layer components {
   .section-shell {
-    @apply px-4 py-10 md:py-12 lg:py-14;
+    @apply px-4 py-14 md:py-16 lg:py-20;
   }
 
   .section-shell-tight {
-    @apply px-4 py-10 md:py-12;
+    @apply px-4 py-12 md:py-14 lg:py-16;
   }
 
   .section-shell-hero {
-    @apply px-4 py-12 md:py-14;
+    @apply px-4 py-12 md:py-16 lg:py-20;
   }
 
   .section-heading {
-    @apply mb-8 text-center md:mb-10;
+    @apply mb-10 text-center md:mb-12;
   }
 
   .section-heading-left {
-    @apply mb-6 md:mb-8;
+    @apply mb-8 md:mb-10;
   }
 
   .content-grid {
-    @apply gap-6 md:gap-8;
+    @apply gap-6 md:gap-8 lg:gap-10;
   }
 
   .card-grid {
-    @apply gap-4 md:gap-6;
+    @apply gap-5 md:gap-6 lg:gap-7;
   }
 
   .content-stack {
     @apply space-y-6 md:space-y-8;
   }
+
+  .site-page {
+    @apply relative min-h-screen overflow-hidden;
+  }
+
+  .page-hero {
+    @apply relative overflow-hidden rounded-[2rem] border border-white/50 px-6 py-10 shadow-[0_40px_120px_-70px_rgba(31,44,43,0.8)] md:px-10 md:py-14 lg:px-14 lg:py-16;
+    background: linear-gradient(140deg, rgba(31, 44, 43, 0.98) 0%, rgba(40, 71, 66, 0.96) 42%, rgba(178, 98, 67, 0.94) 100%);
+  }
+
+  .page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 28%),
+      radial-gradient(circle at bottom left, rgba(231, 199, 166, 0.18), transparent 26%),
+      linear-gradient(120deg, rgba(255, 255, 255, 0.02) 10%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .page-hero-soft {
+    @apply relative overflow-hidden rounded-[2rem] border border-[rgba(90,78,62,0.12)] bg-[rgba(255,253,248,0.84)] shadow-[0_28px_80px_-55px_rgba(31,44,43,0.45)] backdrop-blur-sm;
+  }
+
+  .surface-card {
+    @apply rounded-[1.5rem] border border-[rgba(90,78,62,0.14)] bg-[rgba(255,253,248,0.9)] p-6 shadow-[0_26px_80px_-60px_rgba(31,44,43,0.5)] backdrop-blur-sm md:p-7;
+  }
+
+  .surface-card-dark {
+    @apply rounded-[1.5rem] border border-white/10 bg-[rgba(31,44,43,0.9)] p-6 text-white shadow-[0_26px_80px_-60px_rgba(0,0,0,0.9)] backdrop-blur-sm md:p-7;
+  }
+
+  .stat-card {
+    @apply rounded-[1.35rem] border border-white/60 bg-white/75 p-5 shadow-[0_22px_60px_-48px_rgba(31,44,43,0.55)] backdrop-blur-sm;
+  }
+
+  .page-kicker {
+    @apply inline-flex items-center rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em];
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: rgba(255, 248, 240, 0.92);
+  }
+
+  .page-kicker-light {
+    @apply inline-flex items-center rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[color:var(--brand-ink)];
+    background: rgba(231, 199, 166, 0.34);
+    border: 1px solid rgba(178, 98, 67, 0.18);
+  }
+
+  .page-title {
+    @apply text-4xl font-semibold text-white md:text-5xl lg:text-6xl;
+  }
+
+  .page-title-dark {
+    @apply text-4xl font-semibold text-[color:var(--brand-ink)] md:text-5xl lg:text-6xl;
+  }
+
+  .page-copy {
+    @apply max-w-3xl text-base text-white/76 md:text-lg;
+  }
+
+  .page-copy-dark {
+    @apply max-w-3xl text-base text-[rgba(31,44,43,0.78)] md:text-lg;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold text-[color:var(--brand-ink)] md:text-4xl lg:text-[2.8rem];
+  }
+
+  .section-copy {
+    @apply mx-auto max-w-3xl text-base text-[rgba(31,44,43,0.72)] md:text-lg;
+  }
+
+  .label-chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em];
+    background: rgba(178, 98, 67, 0.11);
+    color: var(--brand-deep);
+  }
+
+  .cta-band {
+    @apply relative overflow-hidden rounded-[2rem] border border-[rgba(90,78,62,0.12)] px-6 py-8 shadow-[0_30px_80px_-60px_rgba(31,44,43,0.5)] md:px-8 md:py-10;
+    background: linear-gradient(135deg, rgba(231, 199, 166, 0.6) 0%, rgba(255, 253, 248, 0.96) 48%, rgba(223, 184, 145, 0.58) 100%);
+  }
+
+  .fine-grid {
+    background-image:
+      linear-gradient(rgba(31, 44, 43, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 44, 43, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .soft-divider {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent 0%, rgba(178, 98, 67, 0.24) 20%, rgba(40, 71, 66, 0.24) 80%, transparent 100%);
+  }
 }
 
-/* Smooth animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(22px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -120,6 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -128,8 +259,9 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-24px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -137,13 +269,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.7s ease-out;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.7s ease-out;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
+  animation: slideInLeft 0.7s ease-out;
 }
