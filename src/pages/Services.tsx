@@ -1,4 +1,4 @@
-import { Building2, Home, TrendingUp, Users, Shield, Zap } from 'lucide-react';
+﻿import { Building2, Home, TrendingUp, Users, Shield, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Services() {
@@ -46,8 +46,8 @@ export default function Services() {
       {/* Hero Section */}
       <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Our Services</h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">Comprehensive real estate solutions tailored to meet your needs</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Our Services</h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">Comprehensive real estate solutions tailored to meet your needs</p>
         </div>
       </section>
 
@@ -58,21 +58,21 @@ export default function Services() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border-t-4 border-[#d4af37]">
-                  <div className="bg-gradient-to-br from-[#d4af37]/10 to-[#c9a227]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-5">
-                    <Icon className="h-8 w-8 text-[#d4af37]" />
+                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-5 border-t-4 border-[#b26243]">
+                  <div className="bg-gradient-to-br from-[#b26243]/10 to-[#8d4a33]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="h-8 w-8 text-[#b26243]" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#1a2332] mb-3 font-playfair">{service.title}</h3>
-                  <p className="text-gray-600 mb-5">{service.description}</p>
-                  <ul className="space-y-2 mb-5">
+                  <h3 className="text-xl font-bold text-[#1a2332] mb-2 font-playfair">{service.title}</h3>
+                  <p className="text-gray-600 mb-4 text-sm">{service.description}</p>
+                  <ul className="space-y-1 mb-4">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-[#d4af37] rounded-full"></span>
+                      <li key={idx} className="flex items-center gap-2 text-xs text-gray-700">
+                        <span className="w-2 h-2 bg-[#b26243] rounded-full"></span>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold">
+                  <Button className="w-full bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold">
                     Learn More
                   </Button>
                 </div>
@@ -83,10 +83,10 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-shell-tight bg-gradient-to-r from-[#d4af37] to-[#c9a227]">
+      <section className="section-shell-tight bg-gradient-to-r from-[#b26243] to-[#8d4a33]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#1a2332] mb-4 font-playfair">Ready to Get Started?</h2>
-          <p className="text-lg text-[#1a2332]/80 mb-6">Contact our team today to discuss your real estate needs</p>
+          <h2 className="text-4xl font-bold text-[#1a2332] mb-3 font-playfair">Ready to Get Started?</h2>
+          <p className="text-base text-[#1a2332]/80 mb-5">Contact our team today to discuss your real estate needs</p>
           <Button className="bg-[#1a2332] hover:bg-[#2c3e50] text-white font-semibold px-8 py-3 text-lg">
             Contact Us Now
           </Button>
@@ -95,3 +95,5 @@ export default function Services() {
     </div>
   );
 }
+
+

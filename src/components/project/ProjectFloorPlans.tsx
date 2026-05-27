@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 
 const floorPlans = [
   {
@@ -6,28 +6,28 @@ const floorPlans = [
     image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80',
     bedrooms: 2,
     bathrooms: 2,
-    price: '₹50L - ₹75L'
+    price: 'â‚¹50L - â‚¹75L'
   },
   {
     name: '1500 sq.ft',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80',
     bedrooms: 3,
     bathrooms: 2,
-    price: '₹75L - ₹1Cr'
+    price: 'â‚¹75L - â‚¹1Cr'
   },
   {
     name: '2000 sq.ft',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80',
     bedrooms: 3,
     bathrooms: 3,
-    price: '₹1Cr - ₹1.25Cr'
+    price: 'â‚¹1Cr - â‚¹1.25Cr'
   },
   {
     name: '2500 sq.ft',
     image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80',
     bedrooms: 4,
     bathrooms: 3,
-    price: '₹1.25Cr - ₹1.5Cr'
+    price: 'â‚¹1.25Cr - â‚¹1.5Cr'
   },
 ];
 
@@ -63,7 +63,7 @@ export default function ProjectFloorPlans() {
           </div>
           <div>
             <p className="text-sm text-gray-600 mb-1">Price Range</p>
-            <p className="text-2xl font-bold text-[#d4af37]">{floorPlans[selectedPlan].price}</p>
+            <p className="text-2xl font-bold text-[#b26243]">{floorPlans[selectedPlan].price}</p>
           </div>
         </div>
       </div>
@@ -78,13 +78,13 @@ export default function ProjectFloorPlans() {
               onClick={() => setSelectedPlan(idx)}
               className={`p-4 rounded-lg border-2 transition-all text-left ${
                 idx === selectedPlan
-                  ? 'border-[#d4af37] bg-[#d4af37]/10'
+                  ? 'border-[#b26243] bg-[#b26243]/10'
                   : 'border-gray-200 bg-white hover:border-gray-300'
               }`}
             >
               <p className="font-semibold text-[#1a2332]">{plan.name}</p>
               <p className="text-sm text-gray-600 mt-1">{plan.bedrooms} BHK</p>
-              <p className="text-sm font-semibold text-[#d4af37] mt-2">{plan.price}</p>
+              <p className="text-sm font-semibold text-[#b26243] mt-2">{plan.price}</p>
             </button>
           ))}
         </div>
@@ -92,3 +92,4 @@ export default function ProjectFloorPlans() {
     </div>
   );
 }
+

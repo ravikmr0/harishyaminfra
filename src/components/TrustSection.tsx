@@ -1,4 +1,4 @@
-import { Award, CheckCircle, Users, TrendingUp } from 'lucide-react';
+﻿import { Award, CheckCircle, Users, TrendingUp } from 'lucide-react';
 import TestimonialCarousel from './TestimonialCarousel';
 
 export default function TrustSection() {
@@ -13,8 +13,8 @@ export default function TrustSection() {
     <section className="section-shell bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto">
         {/* Certifications */}
-        <div className="mb-12 md:mb-14">
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-8 md:mb-10 font-playfair">
+        <div className="mb-9 md:mb-10">
+          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-5 md:mb-6 font-playfair">
             Why Trust Harishyam Infra
           </h2>
           
@@ -24,11 +24,11 @@ export default function TrustSection() {
               return (
                 <div 
                   key={idx}
-                  className="bg-white p-5 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-all text-center"
+                  className="bg-white p-4 md:p-5 rounded-lg shadow-md hover:shadow-lg transition-all text-center"
                 >
-                  <Icon className="h-12 w-12 text-[#d4af37] mx-auto mb-4" />
-                  <h3 className="font-bold text-[#1a2332] mb-2">{cert.label}</h3>
-                  <p className="text-gray-600 text-sm">{cert.value}</p>
+                  <Icon className="h-12 w-12 text-[#b26243] mx-auto mb-3" />
+                  <h3 className="font-bold text-[#1a2332] text-sm mb-1">{cert.label}</h3>
+                  <p className="text-gray-600 text-xs">{cert.value}</p>
                 </div>
               );
             })}
@@ -37,7 +37,7 @@ export default function TrustSection() {
 
         {/* Testimonials */}
         <div>
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-8 md:mb-10 font-playfair">
+          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-5 md:mb-6 font-playfair">
             Client Testimonials
           </h2>
           <TestimonialCarousel />
@@ -46,3 +46,4 @@ export default function TrustSection() {
     </section>
   );
 }
+

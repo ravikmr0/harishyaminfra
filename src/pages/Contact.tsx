@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -49,8 +49,8 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2d3e50] text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-playfair">Contact Us</h1>
-          <p className="text-xl text-gray-300">Get in touch with our team</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 font-playfair">Contact Us</h1>
+          <p className="text-lg text-gray-300">Get in touch with our team</p>
         </div>
       </section>
 
@@ -61,11 +61,11 @@ export default function Contact() {
             {contactInfo.map((info, idx) => {
               const Icon = info.icon;
               return (
-                <div key={idx} className="bg-[#f8f9fa] p-5 md:p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                  <Icon className="h-10 w-10 text-[#d4af37] mx-auto mb-4" />
-                  <h3 className="font-bold text-[#1a2332] mb-2">{info.title}</h3>
-                  <p className="font-semibold text-[#1a2332] mb-1">{info.details}</p>
-                  <p className="text-sm text-gray-600">{info.subtext}</p>
+                <div key={idx} className="bg-[#f8f9fa] p-4 md:p-5 rounded-lg text-center hover:shadow-lg transition-shadow">
+                  <Icon className="h-10 w-10 text-[#b26243] mx-auto mb-3" />
+                  <h3 className="font-bold text-[#1a2332] mb-1 text-sm">{info.title}</h3>
+                  <p className="font-semibold text-[#1a2332] text-sm mb-1">{info.details}</p>
+                  <p className="text-xs text-gray-600">{info.subtext}</p>
                 </div>
               );
             })}
@@ -79,15 +79,15 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 content-grid">
             {/* Form */}
             <div>
-              <h2 className="text-3xl font-bold text-[#1a2332] mb-6 font-playfair">Send us a Message</h2>
+              <h2 className="text-2xl font-bold text-[#1a2332] mb-3 font-playfair">Send us a Message</h2>
               
               {submitted && (
-                <div className="bg-green-50 border border-green-200 text-green-700 p-4 rounded-lg mb-6">
+                <div className="bg-green-50 border border-green-200 text-green-700 p-3 rounded-lg mb-4 text-sm">
                   Thank you! We'll get back to you soon.
                 </div>
               )}
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Full Name</Label>
@@ -146,7 +146,7 @@ export default function Contact() {
                   {errors.message && <p className="text-red-500 text-sm mt-1">{String(errors.message.message)}</p>}
                 </div>
 
-                <Button type="submit" className="w-full bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold py-3">
+                <Button type="submit" className="w-full bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold py-3">
                   Send Message
                 </Button>
               </form>
@@ -154,8 +154,8 @@ export default function Contact() {
 
             {/* Map */}
             <div>
-              <h2 className="text-3xl font-bold text-[#1a2332] mb-6 font-playfair">Find Us</h2>
-              <div className="rounded-lg overflow-hidden shadow-lg h-96">
+              <h2 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Find Us</h2>
+              <div className="rounded-lg overflow-hidden shadow-lg h-80">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5234567890123!2d77.3!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5c5c5c5c5c5%3A0x5c5c5c5c5c5c5c5c!2sBhutani%20Alphathum%2C%20Sector%2090%2C%20Noida!5e0!3m2!1sen!2sin!4v1234567890"
                   width="100%"
@@ -175,7 +175,7 @@ export default function Contact() {
       {/* FAQ Section */}
       <section className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-8 md:mb-10 font-playfair">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-5 md:mb-6 font-playfair">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 card-grid">
             {[
               {
@@ -195,9 +195,9 @@ export default function Contact() {
                 a: 'Possession timelines vary by project. Please contact us for specific details.'
               },
             ].map((faq, idx) => (
-              <div key={idx} className="bg-[#f8f9fa] p-5 md:p-6 rounded-lg">
-                <h3 className="font-bold text-[#1a2332] mb-3">{faq.q}</h3>
-                <p className="text-gray-700">{faq.a}</p>
+              <div key={idx} className="bg-[#f8f9fa] p-4 md:p-5 rounded-lg">
+                <h3 className="font-bold text-[#1a2332] text-sm mb-2">{faq.q}</h3>
+                <p className="text-gray-700 text-xs">{faq.a}</p>
               </div>
             ))}
           </div>
@@ -206,3 +206,5 @@ export default function Contact() {
     </div>
   );
 }
+
+

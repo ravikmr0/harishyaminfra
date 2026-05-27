@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+﻿import { Button } from '@/components/ui/button';
 import { CheckCircle } from 'lucide-react';
 
 interface ProjectOverviewProps {
@@ -32,7 +32,7 @@ export default function ProjectOverview({ project }: ProjectOverviewProps) {
         <div className="grid md:grid-cols-2 gap-4 md:gap-5">
           {highlights.map((highlight, idx) => (
             <div key={idx} className="flex items-center gap-3 p-4 bg-[#f8f9fa] rounded-lg">
-              <CheckCircle className="h-6 w-6 text-[#d4af37] flex-shrink-0" />
+              <CheckCircle className="h-6 w-6 text-[#b26243] flex-shrink-0" />
               <span className="text-gray-700 font-medium">{highlight}</span>
             </div>
           ))}
@@ -44,10 +44,12 @@ export default function ProjectOverview({ project }: ProjectOverviewProps) {
         <p className="text-gray-700 mb-5">
           This is an excellent investment opportunity with strong appreciation potential. The location's proximity to upcoming commercial hubs and infrastructure projects makes it an ideal choice for both residential and investment purposes.
         </p>
-        <Button className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold">
+        <Button className="bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold">
           Inquire Now
         </Button>
       </div>
     </div>
   );
 }
+
+

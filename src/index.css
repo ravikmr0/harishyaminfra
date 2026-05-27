@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -34,6 +34,13 @@
     --brand-forest: #284742;
     --brand-cream: #fbf7f1;
     --brand-sand: #efe3d3;
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-ui: 'Plus Jakarta Sans', sans-serif;
+    --text-strong: #182524;
+    --text-body: rgba(24, 37, 36, 0.86);
+    --text-muted: rgba(24, 37, 36, 0.66);
+    --text-soft: rgba(24, 37, 36, 0.48);
   }
 
   * {
@@ -50,12 +57,15 @@
       radial-gradient(circle at top left, rgba(178, 98, 67, 0.16), transparent 34%),
       radial-gradient(circle at top right, rgba(40, 71, 66, 0.12), transparent 28%),
       linear-gradient(180deg, #fbf7f1 0%, #f6f0e6 100%);
-    font-family: 'Manrope', sans-serif;
-    letter-spacing: -0.014em;
-    line-height: 1.55;
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    letter-spacing: -0.011em;
+    line-height: 1.68;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-synthesis-weight: none;
   }
 
   #root {
@@ -64,14 +74,58 @@
 
   h1,
   h2,
+  .font-display,
+  .font-playfair {
+    font-family: var(--font-heading);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    letter-spacing: -0.034em;
+    line-height: 1.04;
+    text-wrap: balance;
+  }
+
   h3,
   h4,
   h5,
   h6 {
-    font-family: 'Fraunces', serif;
+    color: var(--text-strong);
+    font-family: var(--font-ui);
+    font-weight: 700;
+    letter-spacing: -0.022em;
+    line-height: 1.16;
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  dd,
+  dt {
+    color: var(--text-body);
+  }
+
+  strong,
+  b {
     font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.02;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select,
+  label {
+    font-family: var(--font-ui);
+  }
+
+  input,
+  textarea,
+  select {
+    color: var(--text-body);
+  }
+
+  ::selection {
+    background: rgba(178, 98, 67, 0.24);
+    color: var(--brand-ink);
   }
 
   button,
@@ -81,60 +135,142 @@
   select {
     -webkit-tap-highlight-color: transparent;
   }
-
-  ::selection {
-    background: rgba(178, 98, 67, 0.24);
-    color: var(--brand-ink);
-  }
 }
 
 .font-display {
-  font-family: 'Fraunces', serif;
+  font-family: var(--font-heading);
 }
 
 .font-body {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-body);
 }
 
 .font-accent {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-ui);
 }
 
 .font-playfair {
-  font-family: 'Fraunces', serif;
+  font-family: var(--font-heading);
 }
 
 @layer components {
+  .type-hero {
+    font-family: var(--font-heading);
+    font-size: clamp(2.9rem, 5vw, 5.85rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+    text-wrap: balance;
+  }
+
+  .type-page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.45rem, 4vw, 4.85rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .type-section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.06;
+    text-wrap: balance;
+  }
+
+  .type-card-title {
+    font-family: var(--font-ui);
+    font-size: clamp(1.16rem, 1rem + 0.45vw, 1.55rem);
+    font-weight: 700;
+    letter-spacing: -0.022em;
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+
+  .type-subtitle {
+    font-family: var(--font-ui);
+    font-size: clamp(1rem, 0.96rem + 0.16vw, 1.12rem);
+    font-weight: 600;
+    letter-spacing: -0.016em;
+    line-height: 1.35;
+  }
+
+  .type-body-lg {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    line-height: 1.8;
+    color: var(--text-body);
+  }
+
+  .type-body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.72;
+    color: var(--text-body);
+  }
+
+  .type-body-sm {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.68;
+    color: var(--text-muted);
+  }
+
+  .type-ui-label {
+    font-family: var(--font-ui);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .type-nav {
+    font-family: var(--font-ui);
+    font-size: 0.94rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .type-button {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.012em;
+  }
+
   .section-shell {
-    @apply px-4 py-14 md:py-16 lg:py-20;
+    @apply px-4 py-10 md:py-12 lg:py-14;
   }
 
   .section-shell-tight {
-    @apply px-4 py-12 md:py-14 lg:py-16;
+    @apply px-4 py-9 md:py-11 lg:py-12;
   }
 
   .section-shell-hero {
-    @apply px-4 py-12 md:py-16 lg:py-20;
+    @apply px-4 py-10 md:py-12 lg:py-14;
   }
 
   .section-heading {
-    @apply mb-10 text-center md:mb-12;
+    @apply mb-6 text-center md:mb-8;
   }
 
   .section-heading-left {
-    @apply mb-8 md:mb-10;
+    @apply mb-5 md:mb-6;
   }
 
   .content-grid {
-    @apply gap-6 md:gap-8 lg:gap-10;
+    @apply gap-4 md:gap-5 lg:gap-6;
   }
 
   .card-grid {
-    @apply gap-5 md:gap-6 lg:gap-7;
+    @apply gap-4 md:gap-5 lg:gap-6;
   }
 
   .content-stack {
-    @apply space-y-6 md:space-y-8;
+    @apply space-y-4 md:space-y-5;
   }
 
   .site-page {
@@ -175,6 +311,7 @@
 
   .page-kicker {
     @apply inline-flex items-center rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em];
+    font-family: var(--font-ui);
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.22);
     color: rgba(255, 248, 240, 0.92);
@@ -182,36 +319,53 @@
 
   .page-kicker-light {
     @apply inline-flex items-center rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[color:var(--brand-ink)];
+    font-family: var(--font-ui);
     background: rgba(231, 199, 166, 0.34);
     border: 1px solid rgba(178, 98, 67, 0.18);
   }
 
   .page-title {
     @apply text-4xl font-semibold text-white md:text-5xl lg:text-6xl;
+    font-family: var(--font-heading);
+    letter-spacing: -0.036em;
+    line-height: 1.03;
   }
 
   .page-title-dark {
     @apply text-4xl font-semibold text-[color:var(--brand-ink)] md:text-5xl lg:text-6xl;
+    font-family: var(--font-heading);
+    letter-spacing: -0.036em;
+    line-height: 1.03;
   }
 
   .page-copy {
-    @apply max-w-3xl text-base text-white/76 md:text-lg;
+    @apply max-w-3xl text-base text-white/75 md:text-lg;
+    font-family: var(--font-body);
+    line-height: 1.78;
   }
 
   .page-copy-dark {
     @apply max-w-3xl text-base text-[rgba(31,44,43,0.78)] md:text-lg;
+    font-family: var(--font-body);
+    line-height: 1.74;
   }
 
   .section-title {
     @apply text-3xl font-semibold text-[color:var(--brand-ink)] md:text-4xl lg:text-[2.8rem];
+    font-family: var(--font-heading);
+    letter-spacing: -0.034em;
+    line-height: 1.08;
   }
 
   .section-copy {
     @apply mx-auto max-w-3xl text-base text-[rgba(31,44,43,0.72)] md:text-lg;
+    font-family: var(--font-body);
+    line-height: 1.8;
   }
 
   .label-chip {
     @apply inline-flex items-center rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em];
+    font-family: var(--font-ui);
     background: rgba(178, 98, 67, 0.11);
     color: var(--brand-deep);
   }
@@ -268,6 +422,18 @@
   }
 }
 
+@keyframes showcaseProgress {
+  from {
+    opacity: 0.8;
+    transform: scaleX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.7s ease-out;
 }
@@ -278,4 +444,9 @@
 
 .animate-slide-in-left {
   animation: slideInLeft 0.7s ease-out;
+}
+
+.animate-showcase-progress {
+  animation: showcaseProgress linear both;
+  transform-origin: left center;
 }

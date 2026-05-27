@@ -10,6 +10,7 @@ export interface Project {
   title: string;
   subtitle: string;
   description: string;
+  highlights: string[];
   image: string;
   heroImage: string;
   plotSizes: string;
@@ -31,6 +32,14 @@ export const projects: Project[] = [
     subtitle: "Approved plotted addresses with fast corridor access",
     description:
       "A gated plotted community shaped for families and investors who want cleaner planning, better access, and a location positioned for long-term growth.",
+    highlights: [
+      "Wide Roads",
+      "Registry Available",
+      "Near Expressway",
+      "Gated Community",
+      "Investment Hotspot",
+      "Water & Electricity",
+    ],
     image: "/images/plots/shri-hari-vatika-4.jpg",
     heroImage: "/images/plots/shri-hari-vatika-6.jpg",
     plotSizes: "100 Gaj",
@@ -55,6 +64,14 @@ export const projects: Project[] = [
     subtitle: "An expanded release with larger plot options",
     description:
       "The second phase builds on the flagship community with wider choices, smoother circulation, and a more premium residential rhythm.",
+    highlights: [
+      "Wide Roads",
+      "Future Growth Zone",
+      "Registry Available",
+      "Near Expressway",
+      "Loan Facility Available",
+      "Green Surroundings",
+    ],
     image: "/images/plots/shri-hari-vatika-2.jpg",
     heroImage: "/images/plots/shri-hari-vatika-5.jpg",
     plotSizes: "100-150 Gaj",
@@ -79,6 +96,14 @@ export const projects: Project[] = [
     subtitle: "Larger edge plots in a premium release",
     description:
       "A more elevated plotted release designed around larger parcels, open edges, and a sharper community identity for premium buyers.",
+    highlights: [
+      "Premium Edge Plots",
+      "Future Growth Zone",
+      "Near Expressway",
+      "Gated Community",
+      "Water & Electricity",
+      "Loan Facility Available",
+    ],
     image: "/images/plots/shri-hari-vatika-7.jpg",
     heroImage: "/images/plots/shri-hari-vatika-8.jpg",
     plotSizes: "120-200 Gaj",
@@ -103,6 +128,14 @@ export const projects: Project[] = [
     subtitle: "A larger township canvas for future-ready living",
     description:
       "A full township format with strong internal infrastructure, neighborhood amenities, and a layout designed for balanced daily living.",
+    highlights: [
+      "Integrated Township",
+      "Wide Roads",
+      "Near Expressway",
+      "Gated Community",
+      "Water & Electricity",
+      "Investment Hotspot",
+    ],
     image: "/images/plots/shri-hari-vatika-1.jpg",
     heroImage: "/images/plots/shri-hari-vatika-3.jpg",
     plotSizes: "100-125 Gaj",
@@ -127,6 +160,14 @@ export const projects: Project[] = [
     subtitle: "Community-first plotted living with a calmer tone",
     description:
       "A quieter plotted neighborhood that blends investment practicality with a more rooted community feel and livable site planning.",
+    highlights: [
+      "Green Surroundings",
+      "Community Living",
+      "Registry Available",
+      "Future Growth Zone",
+      "Loan Facility Available",
+      "Water & Electricity",
+    ],
     image: "/images/plots/shri-hari-vatika-3.jpg",
     heroImage: "/images/plots/shri-hari-vatika-4.jpg",
     plotSizes: "90-110 Gaj",
@@ -151,6 +192,14 @@ export const projects: Project[] = [
     subtitle: "Street-facing plots for high-visibility retail activity",
     description:
       "Commercial parcels planned for better frontage, stronger access, and visibility suited to retail, office, and mixed-use buyers.",
+    highlights: [
+      "Retail Frontage",
+      "Near Expressway",
+      "Wide Roads",
+      "Investment Hotspot",
+      "Water & Electricity",
+      "Loan Facility Available",
+    ],
     image: "/images/plots/shri-hari-vatika-5.jpg",
     heroImage: "/images/plots/shri-hari-vatika-2.jpg",
     plotSizes: "150 Gaj",
@@ -171,6 +220,6 @@ export const projects: Project[] = [
   },
 ];
 
-export const featuredProjects = projects.slice(0, 3);
+export const featuredProjects = projects.filter((project) => project.type === "Residential").slice(0, 5);
 
 export const projectMap = Object.fromEntries(projects.map((project) => [project.id, project]));

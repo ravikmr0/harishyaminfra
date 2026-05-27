@@ -37,10 +37,10 @@ export default function PageHero({
             align === "center" && "mx-auto text-center",
           )}
         >
-          {eyebrow && <p className="page-kicker mb-5">{eyebrow}</p>}
-          <h1 className="page-title mb-4">{title}</h1>
+          {eyebrow && <p className="page-kicker mb-3">{eyebrow}</p>}
+          <h1 className="page-title mb-3">{title}</h1>
           <p className={cn("page-copy", align === "center" && "mx-auto")}>{description}</p>
-          {children ? <div className="mt-8">{children}</div> : null}
+          {children ? <div className="mt-5">{children}</div> : null}
         </div>
       </div>
     </section>

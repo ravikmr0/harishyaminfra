@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { MapPin, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -29,21 +29,21 @@ export default function ProjectLocation() {
           <h3 className="text-xl font-bold text-[#1a2332] mb-4">Nearby Landmarks</h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
-              <span className="text-[#d4af37] font-bold">•</span>
+              <span className="text-[#b26243] font-bold">â€¢</span>
               <div>
                 <p className="font-semibold text-[#1a2332]">International Airport</p>
                 <p className="text-sm text-gray-600">15 km away</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-[#d4af37] font-bold">•</span>
+              <span className="text-[#b26243] font-bold">â€¢</span>
               <div>
                 <p className="font-semibold text-[#1a2332]">Business District</p>
                 <p className="text-sm text-gray-600">8 km away</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-[#d4af37] font-bold">•</span>
+              <span className="text-[#b26243] font-bold">â€¢</span>
               <div>
                 <p className="font-semibold text-[#1a2332]">Shopping Mall</p>
                 <p className="text-sm text-gray-600">3 km away</p>
@@ -56,21 +56,21 @@ export default function ProjectLocation() {
           <h3 className="text-xl font-bold text-[#1a2332] mb-4">Connectivity</h3>
           <ul className="space-y-3">
             <li className="flex items-start gap-3">
-              <span className="text-[#d4af37] font-bold">•</span>
+              <span className="text-[#b26243] font-bold">â€¢</span>
               <div>
                 <p className="font-semibold text-[#1a2332]">Metro Station</p>
                 <p className="text-sm text-gray-600">2 km away</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-[#d4af37] font-bold">•</span>
+              <span className="text-[#b26243] font-bold">â€¢</span>
               <div>
                 <p className="font-semibold text-[#1a2332]">Highway Access</p>
                 <p className="text-sm text-gray-600">Direct access</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-[#d4af37] font-bold">•</span>
+              <span className="text-[#b26243] font-bold">â€¢</span>
               <div>
                 <p className="font-semibold text-[#1a2332]">Public Transport</p>
                 <p className="text-sm text-gray-600">Excellent connectivity</p>
@@ -101,3 +101,4 @@ export default function ProjectLocation() {
     </div>
   );
 }
+

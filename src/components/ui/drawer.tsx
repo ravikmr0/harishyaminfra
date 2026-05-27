@@ -82,7 +82,7 @@ const DrawerTitle = React.forwardRef<
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
-      "text-lg font-semibold leading-none tracking-tight",
+      "font-accent text-[1.08rem] font-semibold leading-tight tracking-[-0.015em] text-[color:var(--brand-ink)]",
       className
     )}
     {...props}
@@ -96,7 +96,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("font-body text-sm leading-7 text-muted-foreground", className)}
     {...props}
   />
 ))

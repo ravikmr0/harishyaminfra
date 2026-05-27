@@ -1,11 +1,11 @@
-export default function TermsAndConditions() {
+﻿export default function TermsAndConditions() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
       <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-playfair">Terms & Conditions</h1>
-          <p className="text-xl text-gray-300">Last updated: January 2024</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Terms & Conditions</h1>
+          <p className="text-base text-gray-300">Last updated: January 2024</p>
         </div>
       </section>
 
@@ -13,20 +13,20 @@ export default function TermsAndConditions() {
       <section className="section-shell bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div>
-                <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">1. Agreement to Terms</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">1. Agreement to Terms</h2>
+                <p className="text-gray-700 leading-relaxed text-sm">
                   By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">2. Use License</h2>
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <h2 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">2. Use License</h2>
+                <p className="text-gray-700 leading-relaxed mb-3 text-sm">
                   Permission is granted to temporarily download one copy of the materials (information or software) on Harishyam Infra's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
                   <li>Modifying or copying the materials</li>
                   <li>Using the materials for any commercial purpose or for any public display</li>
                   <li>Attempting to decompile or reverse engineer any software contained on the website</li>
@@ -36,15 +36,15 @@ export default function TermsAndConditions() {
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">3. Disclaimer</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">3. Disclaimer</h2>
+                <p className="text-gray-700 leading-relaxed text-sm">
                   The materials on Harishyam Infra's website are provided on an 'as is' basis. Harishyam Infra makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">4. Limitations</h2>
-                <p className="text-gray-700 leading-relaxed">
+                <h2 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">4. Limitations</h2>
+                <p className="text-gray-700 leading-relaxed text-sm">
                   In no event shall Harishyam Infra or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Harishyam Infra's website.
                 </p>
               </div>
@@ -82,7 +82,7 @@ export default function TermsAndConditions() {
                 <p className="text-gray-700 leading-relaxed">
                   If you have any questions about these Terms and Conditions, please contact us at:
                 </p>
-                <div className="bg-[#f8f9fa] p-6 rounded-lg mt-4 border-l-4 border-[#d4af37]">
+                <div className="bg-[#f8f9fa] p-6 rounded-lg mt-4 border-l-4 border-[#b26243]">
                   <p className="text-gray-700"><strong>Harishyam Infra</strong></p>
                   <p className="text-gray-700">Email: legal@harishyaminfra.com</p>
                   <p className="text-gray-700">Phone: +91 9540074200</p>
@@ -96,3 +96,4 @@ export default function TermsAndConditions() {
     </div>
   );
 }
+

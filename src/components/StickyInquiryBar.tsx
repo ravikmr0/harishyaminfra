@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -35,7 +35,7 @@ export default function StickyInquiryBar() {
             </Button>
             <Button
               size="sm"
-              className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold"
+              className="bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold"
               onClick={() => setShowCallback(true)}
             >
               Request Callback
@@ -48,7 +48,7 @@ export default function StickyInquiryBar() {
       <Dialog open={showCallback} onOpenChange={setShowCallback}>
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-playfair">Request a Callback</DialogTitle>
+            <DialogTitle className="font-display text-2xl">Request a Callback</DialogTitle>
           </DialogHeader>
           <CallbackForm onClose={() => setShowCallback(false)} />
         </DialogContent>
@@ -56,3 +56,4 @@ export default function StickyInquiryBar() {
     </>
   );
 }
+

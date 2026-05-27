@@ -12,6 +12,7 @@ interface ProjectCardProps {
   priceRange: string;
   id: string;
   badge?: string;
+  locationLabel?: string;
 }
 
 const badgeStyles: Record<string, string> = {
@@ -31,6 +32,7 @@ export default function ProjectCard({
   priceRange,
   id,
   badge,
+  locationLabel,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -38,11 +40,11 @@ export default function ProjectCard({
 
   return (
     <article
-      className="group overflow-hidden rounded-[1.75rem] border border-[rgba(90,78,62,0.14)] bg-[rgba(255,253,248,0.92)] shadow-[0_28px_90px_-65px_rgba(31,44,43,0.7)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_38px_95px_-55px_rgba(31,44,43,0.75)]"
+      className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[rgba(90,78,62,0.14)] bg-[rgba(255,253,248,0.92)] shadow-[0_28px_90px_-65px_rgba(31,44,43,0.7)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_38px_95px_-55px_rgba(31,44,43,0.75)]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative h-72 overflow-hidden bg-[rgba(231,199,166,0.26)]">
+      <div className="relative h-60 overflow-hidden bg-[rgba(231,199,166,0.26)]">
         <img
           alt={title}
           className="h-full w-full object-cover transition-transform duration-700"
@@ -81,19 +83,19 @@ export default function ProjectCard({
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 p-5">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/14 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+          <div className="inline-flex max-w-full items-center gap-2 rounded-full bg-white/14 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
             <MapPin className="h-3.5 w-3.5" />
-            Growth corridor location
+            <span className="truncate">{locationLabel ?? "Growth corridor location"}</span>
           </div>
         </div>
       </div>
 
-      <div className="space-y-6 p-6 md:p-7">
-        <div className="space-y-3">
-          <h3 className="text-2xl font-semibold text-[color:var(--brand-ink)] transition-colors duration-300 group-hover:text-[color:var(--brand-deep)]">
+      <div className="flex h-full flex-col gap-5 p-5 md:p-6">
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold text-[color:var(--brand-ink)] transition-colors duration-300 group-hover:text-[color:var(--brand-deep)]">
             {title}
           </h3>
-          <p className="text-sm leading-7 text-[rgba(31,44,43,0.72)] md:text-base">{description}</p>
+          <p className="text-xs leading-6 text-[rgba(31,44,43,0.72)] md:text-sm">{description}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
@@ -111,7 +113,7 @@ export default function ProjectCard({
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="mt-auto flex flex-col gap-3 sm:flex-row">
           <Button
             className="flex-1 bg-[linear-gradient(135deg,_var(--brand),_var(--brand-deep))] text-white"
             onClick={() => navigate(`/project/${id}`)}

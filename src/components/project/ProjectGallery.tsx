@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -69,7 +69,7 @@ export default function ProjectGallery() {
               key={idx}
               onClick={() => setCurrent(idx)}
               className={`relative h-24 rounded-lg overflow-hidden border-2 transition-all ${
-                idx === current ? 'border-[#d4af37]' : 'border-gray-200'
+                idx === current ? 'border-[#b26243]' : 'border-gray-200'
               }`}
             >
               <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
@@ -80,12 +80,14 @@ export default function ProjectGallery() {
 
       {/* Virtual Tour */}
       <div className="bg-[#f8f9fa] p-6 rounded-lg text-center">
-        <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">360° Virtual Tour</h3>
-        <p className="text-gray-600 mb-6">Experience the project in immersive 360° panoramic view</p>
-        <Button className="bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold">
+        <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">360Â° Virtual Tour</h3>
+        <p className="text-gray-600 mb-6">Experience the project in immersive 360Â° panoramic view</p>
+        <Button className="bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold">
           Launch Virtual Tour
         </Button>
       </div>
     </div>
   );
 }
+
+

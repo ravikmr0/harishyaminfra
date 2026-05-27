@@ -14,7 +14,7 @@ export default function BrandMark({
   const containerClass = compact ? "gap-3" : "gap-4";
   const monogramClass = compact ? "h-11 w-11 rounded-2xl text-sm" : "h-14 w-14 rounded-[1.35rem] text-base";
   const titleClass = compact ? "text-lg" : "text-xl md:text-2xl";
-  const eyebrowClass = compact ? "text-[9px] tracking-[0.26em]" : "text-[10px] tracking-[0.32em]";
+  const eyebrowClass = compact ? "text-[9px] tracking-[0.24em]" : "text-[10px] tracking-[0.28em]";
 
   return (
     <div className={cn("inline-flex items-center", containerClass, className)}>
@@ -27,13 +27,13 @@ export default function BrandMark({
             : "border-[rgba(141,74,51,0.18)] bg-[linear-gradient(135deg,_rgba(178,98,67,0.14),_rgba(231,199,166,0.42))] text-[color:var(--brand-ink)]",
         )}
       >
-        <span className="font-accent font-extrabold uppercase tracking-[0.34em]">HI</span>
+        <span className="font-accent font-extrabold uppercase tracking-[0.28em]">HI</span>
       </div>
 
       <div className="min-w-0">
         <p
           className={cn(
-            "font-accent font-semibold uppercase",
+            "font-accent font-semibold uppercase leading-none",
             eyebrowClass,
             inverted ? "text-white/65" : "text-[rgba(31,44,43,0.56)]",
           )}
@@ -42,7 +42,7 @@ export default function BrandMark({
         </p>
         <p
           className={cn(
-            "font-display leading-none",
+            "font-display leading-none tracking-[-0.03em]",
             titleClass,
             inverted ? "text-white" : "text-[color:var(--brand-ink)]",
           )}

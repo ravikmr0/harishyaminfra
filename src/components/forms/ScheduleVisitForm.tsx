@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -42,7 +42,7 @@ export default function ScheduleVisitForm({ onClose }: ScheduleVisitFormProps) {
   if (submitted) {
     return (
       <div className="text-center py-8">
-        <div className="text-4xl mb-4">✓</div>
+        <div className="text-4xl mb-4">âœ“</div>
         <p className="text-lg font-semibold text-[#1a2332] mb-2">Booking Confirmed!</p>
         <p className="text-gray-600">We'll send you confirmation details via email</p>
       </div>
@@ -112,10 +112,10 @@ export default function ScheduleVisitForm({ onClose }: ScheduleVisitFormProps) {
                 <SelectValue placeholder="Select budget" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="50-75">₹50L - ₹75L</SelectItem>
-                <SelectItem value="75-100">₹75L - ₹1Cr</SelectItem>
-                <SelectItem value="100-150">₹1Cr - ₹1.5Cr</SelectItem>
-                <SelectItem value="150+">₹1.5Cr+</SelectItem>
+                <SelectItem value="50-75">â‚¹50L - â‚¹75L</SelectItem>
+                <SelectItem value="75-100">â‚¹75L - â‚¹1Cr</SelectItem>
+                <SelectItem value="100-150">â‚¹1Cr - â‚¹1.5Cr</SelectItem>
+                <SelectItem value="150+">â‚¹1.5Cr+</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -218,7 +218,7 @@ export default function ScheduleVisitForm({ onClose }: ScheduleVisitFormProps) {
         ) : (
           <Button
             type="submit"
-            className="flex-1 bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold"
+            className="flex-1 bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold"
           >
             Confirm Booking
           </Button>
@@ -227,3 +227,5 @@ export default function ScheduleVisitForm({ onClose }: ScheduleVisitFormProps) {
     </form>
   );
 }
+
+

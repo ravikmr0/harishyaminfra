@@ -1,4 +1,4 @@
-import { Zap, Leaf, Dumbbell, ShoppingCart, Utensils, Waves } from 'lucide-react';
+﻿import { Zap, Leaf, Dumbbell, ShoppingCart, Utensils, Waves } from 'lucide-react';
 
 interface Amenity {
   icon: any;
@@ -49,7 +49,7 @@ export default function ProjectAmenities() {
           const Icon = amenity.icon;
           return (
             <div key={idx} className="bg-white border border-gray-200 rounded-lg p-5 md:p-6 hover:shadow-lg transition-shadow">
-              <Icon className="h-12 w-12 text-[#d4af37] mb-4" />
+              <Icon className="h-12 w-12 text-[#b26243] mb-4" />
               <h3 className="text-xl font-bold text-[#1a2332] mb-2">{amenity.name}</h3>
               <p className="text-gray-600">{amenity.description}</p>
             </div>
@@ -59,3 +59,4 @@ export default function ProjectAmenities() {
     </div>
   );
 }
+

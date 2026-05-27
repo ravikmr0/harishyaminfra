@@ -1,4 +1,4 @@
-import { MapPin, Clock, Navigation } from 'lucide-react';
+﻿import { MapPin, Clock, Navigation } from 'lucide-react';
 
 interface ConnectivityItem {
   icon: React.ReactNode;
@@ -10,42 +10,42 @@ interface ConnectivityItem {
 
 const connectivityData: ConnectivityItem[] = [
   {
-    icon: <Navigation className="h-8 w-8 text-[#d4af37]" />,
+    icon: <Navigation className="h-8 w-8 text-[#b26243]" />,
     title: 'Noida International Airport',
     distance: '25 km',
     time: '35-40 mins',
     description: 'Direct connectivity via expressway'
   },
   {
-    icon: <MapPin className="h-8 w-8 text-[#d4af37]" />,
+    icon: <MapPin className="h-8 w-8 text-[#b26243]" />,
     title: 'Delhi City Center',
     distance: '35 km',
     time: '45-50 mins',
     description: 'Via NH-24 and expressway'
   },
   {
-    icon: <MapPin className="h-8 w-8 text-[#d4af37]" />,
+    icon: <MapPin className="h-8 w-8 text-[#b26243]" />,
     title: 'Metro Station',
     distance: '8 km',
     time: '15 mins',
     description: 'Nearest metro connectivity'
   },
   {
-    icon: <MapPin className="h-8 w-8 text-[#d4af37]" />,
+    icon: <MapPin className="h-8 w-8 text-[#b26243]" />,
     title: 'Shopping Mall',
     distance: '5 km',
     time: '10 mins',
     description: 'Premium retail destinations'
   },
   {
-    icon: <MapPin className="h-8 w-8 text-[#d4af37]" />,
+    icon: <MapPin className="h-8 w-8 text-[#b26243]" />,
     title: 'Hospital',
     distance: '3 km',
     time: '8 mins',
     description: 'Multi-specialty healthcare'
   },
   {
-    icon: <MapPin className="h-8 w-8 text-[#d4af37]" />,
+    icon: <MapPin className="h-8 w-8 text-[#b26243]" />,
     title: 'School & College',
     distance: '2 km',
     time: '5 mins',
@@ -70,7 +70,7 @@ export default function ProjectConnectivity() {
           {connectivityData.map((item, idx) => (
             <div
               key={idx}
-              className="bg-gradient-to-br from-[#f8f9fa] to-white p-5 md:p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-[#d4af37] transition-all duration-300"
+              className="bg-gradient-to-br from-[#f8f9fa] to-white p-5 md:p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-[#b26243] transition-all duration-300"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 bg-[#1a2332]/10 p-3 rounded-lg">
@@ -82,11 +82,11 @@ export default function ProjectConnectivity() {
                   </h3>
                   <div className="space-y-1 mb-3">
                     <div className="flex items-center gap-2 text-sm">
-                      <MapPin className="h-4 w-4 text-[#d4af37]" />
+                      <MapPin className="h-4 w-4 text-[#b26243]" />
                       <span className="font-semibold text-[#1a2332]">{item.distance}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
-                      <Clock className="h-4 w-4 text-[#d4af37]" />
+                      <Clock className="h-4 w-4 text-[#b26243]" />
                       <span className="text-gray-600">{item.time}</span>
                     </div>
                   </div>
@@ -106,19 +106,19 @@ export default function ProjectConnectivity() {
               </h3>
               <ul className="space-y-2.5">
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#b26243] rounded-full mt-2 flex-shrink-0"></div>
                   <span>Direct access to Noida International Airport</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#b26243] rounded-full mt-2 flex-shrink-0"></div>
                   <span>Close proximity to business districts</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#b26243] rounded-full mt-2 flex-shrink-0"></div>
                   <span>Well-connected via metro and highways</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-[#d4af37] rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-[#b26243] rounded-full mt-2 flex-shrink-0"></div>
                   <span>Surrounded by premium amenities</span>
                 </li>
               </ul>
@@ -135,3 +135,4 @@ export default function ProjectConnectivity() {
     </section>
   );
 }
+

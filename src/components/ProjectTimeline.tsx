@@ -1,4 +1,4 @@
-import { CheckCircle } from 'lucide-react';
+﻿import { CheckCircle } from 'lucide-react';
 
 interface TimelineItem {
   phase: string;
@@ -38,7 +38,7 @@ export default function ProjectTimeline() {
   return (
     <div className="relative">
       {/* Timeline Line */}
-      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#d4af37] to-gray-300"></div>
+      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#b26243] to-gray-300"></div>
 
       {/* Timeline Items */}
       <div className="space-y-8">
@@ -47,13 +47,13 @@ export default function ProjectTimeline() {
             {/* Content */}
             <div className={`w-full md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
               <div className={`bg-white p-6 rounded-lg shadow-md border-l-4 ${
-                item.status === 'completed' ? 'border-[#d4af37]' :
+                item.status === 'completed' ? 'border-[#b26243]' :
                 item.status === 'in-progress' ? 'border-blue-500' :
                 'border-gray-300'
               }`}>
                 <div className="flex items-center gap-2 mb-2">
                   {item.status === 'completed' && (
-                    <CheckCircle className="h-5 w-5 text-[#d4af37]" />
+                    <CheckCircle className="h-5 w-5 text-[#b26243]" />
                   )}
                   <h3 className="font-bold text-[#1a2332]">{item.phase}</h3>
                 </div>
@@ -65,7 +65,7 @@ export default function ProjectTimeline() {
             {/* Center Dot */}
             <div className="hidden md:flex w-0 justify-center">
               <div className={`w-4 h-4 rounded-full border-4 ${
-                item.status === 'completed' ? 'bg-[#d4af37] border-white' :
+                item.status === 'completed' ? 'bg-[#b26243] border-white' :
                 item.status === 'in-progress' ? 'bg-blue-500 border-white' :
                 'bg-gray-300 border-white'
               }`}></div>
@@ -79,3 +79,4 @@ export default function ProjectTimeline() {
     </div>
   );
 }
+

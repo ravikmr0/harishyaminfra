@@ -75,7 +75,7 @@ export default function Header() {
               return (
                 <button
                   key={link.href}
-                  className={`rounded-full px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                  className={`font-accent rounded-full px-4 py-2.5 text-[0.94rem] font-semibold tracking-[0.01em] transition-all duration-300 ${
                     active
                       ? "bg-[color:var(--brand-ink)] text-white shadow-[0_18px_40px_-28px_rgba(31,44,43,0.9)]"
                       : "text-[rgba(31,44,43,0.72)] hover:bg-[rgba(231,199,166,0.34)] hover:text-[color:var(--brand-ink)]"
@@ -99,7 +99,7 @@ export default function Header() {
                 placeholder="Search projects or locations"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="h-11 w-full rounded-full border border-[rgba(90,78,62,0.14)] bg-white/70 px-11 pr-4 text-sm text-[color:var(--brand-ink)] outline-none transition-all duration-300 placeholder:text-[rgba(31,44,43,0.42)] focus:border-[rgba(178,98,67,0.35)] focus:bg-white"
+                className="font-body h-11 w-full rounded-full border border-[rgba(90,78,62,0.14)] bg-white/70 px-11 pr-4 text-[0.95rem] tracking-[-0.01em] text-[color:var(--brand-ink)] outline-none transition-all duration-300 placeholder:text-[rgba(31,44,43,0.42)] focus:border-[rgba(178,98,67,0.35)] focus:bg-white"
               />
             </form>
 
@@ -141,7 +141,7 @@ export default function Header() {
                 placeholder="Search projects or locations"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="h-11 w-full rounded-full border border-[rgba(90,78,62,0.14)] bg-white/75 px-11 pr-4 text-sm text-[color:var(--brand-ink)] outline-none transition-all duration-300 placeholder:text-[rgba(31,44,43,0.42)] focus:border-[rgba(178,98,67,0.35)]"
+                className="font-body h-11 w-full rounded-full border border-[rgba(90,78,62,0.14)] bg-white/75 px-11 pr-4 text-[0.95rem] tracking-[-0.01em] text-[color:var(--brand-ink)] outline-none transition-all duration-300 placeholder:text-[rgba(31,44,43,0.42)] focus:border-[rgba(178,98,67,0.35)]"
               />
             </form>
 
@@ -152,7 +152,7 @@ export default function Header() {
                 return (
                   <button
                     key={link.href}
-                    className={`rounded-[1.1rem] px-4 py-3 text-left text-sm font-semibold transition-all duration-300 ${
+                    className={`font-accent rounded-[1.1rem] px-4 py-3 text-left text-[0.94rem] font-semibold tracking-[0.01em] transition-all duration-300 ${
                       active
                         ? "bg-[rgba(40,71,66,0.9)] text-white shadow-[0_18px_40px_-28px_rgba(31,44,43,0.85)]"
                         : "bg-white/60 text-[rgba(31,44,43,0.76)] hover:bg-[rgba(231,199,166,0.34)] hover:text-[color:var(--brand-ink)]"

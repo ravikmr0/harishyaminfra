@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -25,7 +25,7 @@ export default function CallbackForm({ onClose }: CallbackFormProps) {
   if (submitted) {
     return (
       <div className="text-center py-8">
-        <div className="text-4xl mb-4">✓</div>
+        <div className="text-4xl mb-4">âœ“</div>
         <p className="text-lg font-semibold text-[#1a2332] mb-2">Thank You!</p>
         <p className="text-gray-600">We'll call you back shortly</p>
       </div>
@@ -82,9 +82,10 @@ export default function CallbackForm({ onClose }: CallbackFormProps) {
         </Select>
       </div>
 
-      <Button type="submit" className="w-full bg-[#d4af37] hover:bg-[#c9a227] text-[#1a2332] font-semibold">
+      <Button type="submit" className="w-full bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold">
         Request Callback
       </Button>
     </form>
   );
 }
+
