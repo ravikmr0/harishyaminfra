@@ -26,7 +26,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/8 bg-[linear-gradient(160deg,_rgba(31,44,43,0.98),_rgba(40,71,66,0.96)_45%,_rgba(141,74,51,0.94))] text-white shadow-[0_40px_120px_-70px_rgba(0,0,0,0.85)]">
         <div className="grid gap-7 px-6 py-8 md:px-10 md:py-10 lg:grid-cols-[1.2fr,0.8fr,0.8fr,1fr]">
           <div className="space-y-4">
-            <BrandMark inverted />
+            <div className="flex items-center gap-3">
+              <BrandMark />
+              <div>
+                <p className="font-display text-lg md:text-xl font-semibold text-white leading-tight">Harishyam Infra</p>
+                <p className="font-accent text-xs text-white/70 tracking-wide">Pvt. Ltd.</p>
+              </div>
+            </div>
             <p className="font-body max-w-md text-[0.95rem] leading-7 text-white/70">
               Thoughtful plotted developments, stronger infrastructure choices, and a buying journey designed to feel
               clear from first call to final site visit.
@@ -34,13 +40,13 @@ export default function Footer() {
             <div className="grid gap-3 sm:grid-cols-2">
               <Button
                 className="bg-white text-[color:var(--brand-ink)] hover:bg-white/90"
-                onClick={() => window.open("https://wa.me/919540074200", "_blank")}
+                onClick={() => window.open("https://wa.me/919625219769", "_blank")}
               >
                 Start on WhatsApp
               </Button>
               <Button
                 className="border-white/20 bg-white/10 text-white hover:bg-white/16"
-                onClick={() => (window.location.href = "tel:+919540074200")}
+                onClick={() => (window.location.href = "tel:+919625219769")}
                 variant="outline"
               >
                 Call Sales
@@ -95,7 +101,7 @@ export default function Footer() {
             <div className="space-y-3 text-white/72">
               <div className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 text-[color:var(--brand-soft)]" />
-                <span className="font-body text-[0.92rem] leading-7">+91 9540074200</span>
+                <span className="font-body text-[0.92rem] leading-7">+91 9625219769</span>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 text-[color:var(--brand-soft)]" />

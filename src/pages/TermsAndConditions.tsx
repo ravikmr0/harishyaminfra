@@ -2,7 +2,7 @@
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
+      <section id="terms-hero" className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Terms & Conditions</h1>
           <p className="text-base text-gray-300">Last updated: January 2024</p>
@@ -14,14 +14,14 @@
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <div className="space-y-5">
-              <div>
+              <div id="agreement-to-terms">
                 <h2 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">1. Agreement to Terms</h2>
                 <p className="text-gray-700 leading-relaxed text-sm">
                   By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                 </p>
               </div>
 
-              <div>
+              <div id="use-license">
                 <h2 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">2. Use License</h2>
                 <p className="text-gray-700 leading-relaxed mb-3 text-sm">
                   Permission is granted to temporarily download one copy of the materials (information or software) on Harishyam Infra's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
@@ -70,7 +70,7 @@
                 </p>
               </div>
 
-              <div>
+              <div id="governing-law">
                 <h2 className="text-3xl font-bold text-[#1a2332] mb-4 font-playfair">8. Governing Law</h2>
                 <p className="text-gray-700 leading-relaxed">
                   These terms and conditions are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
@@ -85,7 +85,7 @@
                 <div className="bg-[#f8f9fa] p-6 rounded-lg mt-4 border-l-4 border-[#b26243]">
                   <p className="text-gray-700"><strong>Harishyam Infra</strong></p>
                   <p className="text-gray-700">Email: legal@harishyaminfra.com</p>
-                  <p className="text-gray-700">Phone: +91 9540074200</p>
+                  <p className="text-gray-700">Phone: +91 9625219769</p>
                   <p className="text-gray-700">Address: Office Tower-A, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201304, India</p>
                 </div>
               </div>

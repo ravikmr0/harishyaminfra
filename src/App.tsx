@@ -16,13 +16,15 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsAndConditions from "@/pages/TermsAndConditions";
 import BrochureDownloads from "@/pages/BrochureDownloads";
 import AgentsTeam from "@/pages/AgentsTeam";
+import ScrollToTop from "@/components/ScrollToTop";
 
 function App() {
   return (
     <Suspense fallback={<p>Loading...</p>}>
       <div className="site-page flex min-h-screen flex-col">
+        <ScrollToTop />
         <Header />
-        <main className="flex-1 pt-2 md:pt-2">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

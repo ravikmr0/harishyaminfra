@@ -1,5 +1,6 @@
 ﻿import { Phone, Mail, MapPin, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { slugify } from "@/lib/utils";
 
 export default function AgentsTeam() {
   const agents = [
@@ -68,7 +69,7 @@ export default function AgentsTeam() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
+      <section id="agents-hero" className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Our Sales Team</h1>
           <p className="text-base text-gray-300 max-w-2xl mx-auto">Meet our experienced agents ready to assist you</p>
@@ -76,11 +77,15 @@ export default function AgentsTeam() {
       </section>
 
       {/* Team Grid */}
-      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section id="sales-team-directory" className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
             {agents.map((agent, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#b26243]">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-t-4 border-[#b26243]"
+                id={slugify(agent.name)}
+              >
                 {/* Image Section */}
                 <div className="relative h-40 bg-gradient-to-br from-[#b26243]/20 to-[#8d4a33]/20 flex items-center justify-center">
                   <img src={agent.image} alt={agent.name} className="w-28 h-28 rounded-full" />
@@ -129,7 +134,7 @@ export default function AgentsTeam() {
       </section>
 
       {/* Stats Section */}
-      <section className="section-shell-tight bg-[#1a2332] text-white">
+      <section id="agents-stats" className="section-shell-tight bg-[#1a2332] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 card-grid text-center">
             <div>
@@ -153,7 +158,7 @@ export default function AgentsTeam() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-shell-tight bg-gradient-to-r from-[#b26243] to-[#8d4a33]">
+      <section id="agents-cta" className="section-shell-tight bg-gradient-to-r from-[#b26243] to-[#8d4a33]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-4 font-playfair">Ready to Find Your Dream Property?</h2>
           <p className="text-lg text-[#1a2332]/80 mb-6">Connect with our team today for personalized assistance</p>

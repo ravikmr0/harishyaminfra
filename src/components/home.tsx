@@ -10,6 +10,7 @@ import ProjectConnectivity from "./ProjectConnectivity";
 import ProjectShowcaseSlider from "./ProjectShowcaseSlider";
 import StickyInquiryBar from "./StickyInquiryBar";
 import ScheduleVisitForm from "./forms/ScheduleVisitForm";
+import { slugify } from "@/lib/utils";
 
 const heroSlides = [
   {
@@ -60,11 +61,12 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <section className="relative h-[460px] overflow-hidden bg-cover bg-center sm:h-[540px] md:h-[620px] lg:h-[78vh] xl:h-[88vh]">
+      <section id="site-hero" className="relative h-[460px] overflow-hidden bg-cover bg-center sm:h-[540px] md:h-[620px] lg:h-[78vh] xl:h-[88vh]">
         {heroSlides.map((slide, idx) => (
           <div
             key={idx}
             className="absolute inset-0 transition-opacity duration-1000"
+            id={slugify(slide.title)}
             style={{
               backgroundImage: `url(${slide.image})`,
               backgroundSize: "cover",

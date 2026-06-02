@@ -1,5 +1,6 @@
 ﻿import { Download, FileText, Image, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { slugify } from "@/lib/utils";
 
 export default function BrochureDownloads() {
   const brochures = [
@@ -50,7 +51,7 @@ export default function BrochureDownloads() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
+      <section id="brochures-hero" className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Brochures & Downloads</h1>
           <p className="text-base text-gray-300 max-w-2xl mx-auto">Access detailed project information and resources</p>
@@ -58,13 +59,17 @@ export default function BrochureDownloads() {
       </section>
 
       {/* Downloads Section */}
-      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section id="download-library" className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
             {brochures.map((brochure, index) => {
               const Icon = brochure.icon;
               return (
-                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 border-t-4 border-[#b26243]">
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 border-t-4 border-[#b26243]"
+                  id={slugify(brochure.title)}
+                >
                   <div className="bg-gradient-to-br from-[#b26243]/10 to-[#8d4a33]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="h-8 w-8 text-[#b26243]" />
                   </div>
@@ -88,7 +93,7 @@ export default function BrochureDownloads() {
       </section>
 
       {/* Info Section */}
-      <section className="section-shell-tight bg-[#1a2332] text-white">
+      <section id="brochures-support" className="section-shell-tight bg-[#1a2332] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 content-grid">
             <div>

@@ -1,5 +1,6 @@
 ﻿import { Star, Quote } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { slugify } from "@/lib/utils";
 
 export default function Testimonials() {
   const testimonials = [
@@ -43,7 +44,7 @@ export default function Testimonials() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
+      <section id="testimonials-hero" className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Client Testimonials</h1>
           <p className="text-base text-gray-300 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with Harishyam Infra</p>
@@ -51,13 +52,16 @@ export default function Testimonials() {
       </section>
 
       {/* Testimonials Carousel */}
-      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section id="client-testimonials" className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-6xl mx-auto">
           <Carousel className="w-full">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 h-full border-t-4 border-[#b26243]">
+                  <div
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-5 h-full border-t-4 border-[#b26243]"
+                    id={slugify(testimonial.name)}
+                  >
                     <div className="flex items-center gap-3 mb-4">
                       <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full" />
                       <div>
@@ -85,7 +89,7 @@ export default function Testimonials() {
       </section>
 
       {/* Stats Section */}
-      <section className="section-shell-tight bg-[#1a2332] text-white">
+      <section id="testimonial-stats" className="section-shell-tight bg-[#1a2332] text-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 card-grid text-center">
             <div>

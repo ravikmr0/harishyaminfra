@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { slugify } from "@/lib/utils";
 
 export default function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -21,7 +22,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+91 9540074200',
+      details: '+91 9625219769',
       subtext: 'Mon - Fri, 9 AM - 6 PM'
     },
     {
@@ -44,10 +45,29 @@ export default function Contact() {
     },
   ];
 
+  const faqs = [
+    {
+      q: 'What are the payment options available?',
+      a: 'We offer flexible payment plans including down payment, installments, and full payment options.'
+    },
+    {
+      q: 'How long does the booking process take?',
+      a: 'The booking process typically takes 2-3 days after document verification.'
+    },
+    {
+      q: 'Are the projects Government approved?',
+      a: 'Yes, all our projects are Government approved and registered with the authorities.'
+    },
+    {
+      q: 'What is the possession timeline?',
+      a: 'Possession timelines vary by project. Please contact us for specific details.'
+    },
+  ];
+
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2d3e50] text-white">
+      <section id="contact-hero" className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2d3e50] text-white">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-2 font-playfair">Contact Us</h1>
           <p className="text-lg text-gray-300">Get in touch with our team</p>
@@ -55,7 +75,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="section-shell bg-white">
+      <section id="contact-info" className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 card-grid">
             {contactInfo.map((info, idx) => {
@@ -74,11 +94,11 @@ export default function Contact() {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="section-shell bg-[#f8f9fa]">
+      <section id="contact-form" className="section-shell bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 content-grid">
             {/* Form */}
-            <div>
+            <div id="office-location">
               <h2 className="text-2xl font-bold text-[#1a2332] mb-3 font-playfair">Send us a Message</h2>
               
               {submitted && (
@@ -173,29 +193,12 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-shell bg-white">
+      <section id="faq" className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-[#1a2332] text-center mb-5 md:mb-6 font-playfair">Frequently Asked Questions</h2>
           <div className="grid md:grid-cols-2 card-grid">
-            {[
-              {
-                q: 'What are the payment options available?',
-                a: 'We offer flexible payment plans including down payment, installments, and full payment options.'
-              },
-              {
-                q: 'How long does the booking process take?',
-                a: 'The booking process typically takes 2-3 days after document verification.'
-              },
-              {
-                q: 'Are the projects Government approved?',
-                a: 'Yes, all our projects are Government approved and registered with the authorities.'
-              },
-              {
-                q: 'What is the possession timeline?',
-                a: 'Possession timelines vary by project. Please contact us for specific details.'
-              },
-            ].map((faq, idx) => (
-              <div key={idx} className="bg-[#f8f9fa] p-4 md:p-5 rounded-lg">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="bg-[#f8f9fa] p-4 md:p-5 rounded-lg" id={slugify(faq.q)}>
                 <h3 className="font-bold text-[#1a2332] text-sm mb-2">{faq.q}</h3>
                 <p className="text-gray-700 text-xs">{faq.a}</p>
               </div>

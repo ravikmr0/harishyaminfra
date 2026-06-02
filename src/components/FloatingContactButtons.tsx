@@ -1,33 +1,31 @@
 import { MessageCircle, Phone } from "lucide-react";
 
 export default function FloatingContactButtons() {
-  const phoneNumber = "+919540074200";
-  const whatsappNumber = "919540074200";
+  const phoneNumber = "+919625219769";
+  const whatsappNumber = "919625219769";
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
       <a
         aria-label="Contact via WhatsApp"
-        className="group inline-flex items-center gap-3 rounded-full border border-white/60 bg-[rgba(255,253,248,0.92)] px-4 py-3 text-[color:var(--brand-ink)] shadow-[0_24px_60px_-35px_rgba(31,44,43,0.9)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
+        className="inline-flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/70 bg-white text-[#25D366] shadow-[0_24px_60px_-28px_rgba(37,211,102,0.6)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-green-50 hover:shadow-[0_28px_70px_-26px_rgba(37,211,102,0.8)]"
         href={`https://wa.me/${whatsappNumber}`}
         rel="noopener noreferrer"
         target="_blank"
+        title="WhatsApp"
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_30px_-20px_rgba(37,211,102,0.9)]">
-          <MessageCircle className="h-5 w-5" />
-        </span>
-        <span className="hidden text-sm font-semibold sm:inline">WhatsApp</span>
+        <MessageCircle className="h-7 w-7" />
+        <span className="sr-only">WhatsApp</span>
       </a>
 
       <a
         aria-label="Call us"
-        className="group inline-flex items-center gap-3 rounded-full border border-white/60 bg-[rgba(255,253,248,0.92)] px-4 py-3 text-[color:var(--brand-ink)] shadow-[0_24px_60px_-35px_rgba(31,44,43,0.9)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
+        className="inline-flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/70 bg-white text-[color:var(--brand-deep)] shadow-[0_24px_60px_-28px_rgba(178,98,67,0.6)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-amber-50 hover:shadow-[0_28px_70px_-26px_rgba(178,98,67,0.8)]"
         href={`tel:${phoneNumber}`}
+        title="Call Sales"
       >
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[linear-gradient(135deg,_var(--brand),_var(--brand-deep))] text-white shadow-[0_14px_30px_-20px_rgba(178,98,67,0.9)]">
-          <Phone className="h-5 w-5" />
-        </span>
-        <span className="hidden text-sm font-semibold sm:inline">Call Sales</span>
+        <Phone className="h-7 w-7" />
+        <span className="sr-only">Call Sales</span>
       </a>
     </div>
   );

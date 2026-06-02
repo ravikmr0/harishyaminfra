@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { ArrowUpRight, Heart, MapPin } from "lucide-react";
+import {
+  ArrowUpRight,
+  Heart,
+  MapPin,
+  Check,
+  ChevronRight,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
@@ -13,15 +19,22 @@ interface ProjectCardProps {
   id: string;
   badge?: string;
   locationLabel?: string;
+  highlights?: string[];
 }
 
 const badgeStyles: Record<string, string> = {
   Featured: "bg-[rgba(178,98,67,0.14)] text-[color:var(--brand-deep)]",
   Premium: "bg-[rgba(40,71,66,0.16)] text-[color:var(--brand-forest)]",
   Flagship: "bg-[rgba(231,199,166,0.42)] text-[color:var(--brand-ink)]",
+  "Premium Plus": "bg-[rgba(231,199,166,0.35)] text-[color:var(--brand-ink)]",
   Commercial: "bg-[rgba(29,78,216,0.12)] text-[#1d4ed8]",
   Community: "bg-[rgba(34,197,94,0.12)] text-[#15803d]",
   "New Release": "bg-[rgba(245,158,11,0.16)] text-[#b45309]",
+  "New Launch": "bg-[rgba(245,158,11,0.16)] text-[#b45309]",
+  Luxury: "bg-[rgba(178,98,67,0.18)] text-[color:var(--brand-deep)]",
+  "Green Living": "bg-[rgba(34,197,94,0.14)] text-[#15803d]",
+  "Community Living": "bg-[rgba(34,197,94,0.12)] text-[#15803d]",
+  "Strategic Location": "bg-[rgba(29,78,216,0.12)] text-[#1d4ed8]",
 };
 
 export default function ProjectCard({
@@ -33,10 +46,14 @@ export default function ProjectCard({
   id,
   badge,
   locationLabel,
+  highlights = [],
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
   const navigate = useNavigate();
+
+  // Display first 3 highlights
+  const displayedHighlights = highlights.slice(0, 3);
 
   return (
     <article
@@ -44,6 +61,7 @@ export default function ProjectCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* Image Section */}
       <div className="relative h-60 overflow-hidden bg-[rgba(231,199,166,0.26)]">
         <img
           alt={title}
@@ -53,6 +71,7 @@ export default function ProjectCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(31,44,43,0.78)] via-transparent to-transparent" />
 
+        {/* Badge and Favorite Button */}
         <div className="absolute inset-x-0 top-0 flex items-start justify-between p-4">
           {badge ? (
             <span
@@ -82,6 +101,7 @@ export default function ProjectCard({
           </button>
         </div>
 
+        {/* Location Label */}
         <div className="absolute bottom-0 left-0 right-0 p-5">
           <div className="inline-flex max-w-full items-center gap-2 rounded-full bg-white/14 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
             <MapPin className="h-3.5 w-3.5" />
@@ -90,39 +110,76 @@ export default function ProjectCard({
         </div>
       </div>
 
-      <div className="flex h-full flex-col gap-5 p-5 md:p-6">
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-[color:var(--brand-ink)] transition-colors duration-300 group-hover:text-[color:var(--brand-deep)]">
+      {/* Content Section */}
+      <div className="flex h-full flex-col gap-4 p-5 md:p-6">
+        {/* Title and Description */}
+        <div className="space-y-1.5">
+          <h3 className="text-lg font-bold text-[color:var(--brand-ink)] transition-colors duration-300 group-hover:text-[color:var(--brand-deep)]">
             {title}
           </h3>
-          <p className="text-xs leading-6 text-[rgba(31,44,43,0.72)] md:text-sm">{description}</p>
+          <p className="text-xs leading-5 text-[rgba(31,44,43,0.65)] md:text-sm">
+            {description}
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <div className="rounded-[1.25rem] border border-[rgba(90,78,62,0.12)] bg-white/75 p-4">
-            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[rgba(31,44,43,0.42)]">
+        {/* Key Highlights Section */}
+        {displayedHighlights.length > 0 && (
+          <div className="space-y-2">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-[rgba(31,44,43,0.45)]">
+              Key Highlights
+            </p>
+            <div className="grid grid-cols-1 gap-1.5">
+              {displayedHighlights.map((highlight, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 rounded-lg bg-gradient-to-r from-[rgba(231,199,166,0.1)] to-transparent px-3 py-2 transition-all duration-300 hover:from-[rgba(231,199,166,0.2)] hover:to-[rgba(231,199,166,0.05)]"
+                >
+                  <Check className="h-3.5 w-3.5 flex-shrink-0 text-[color:var(--brand-deep)]" />
+                  <span className="text-xs font-medium text-[rgba(31,44,43,0.75)]">
+                    {highlight}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Specs Grid */}
+        <div className="grid grid-cols-2 gap-3 py-1">
+          <div className="relative overflow-hidden rounded-lg border border-[rgba(90,78,62,0.12)] bg-gradient-to-br from-white/80 to-[rgba(231,199,166,0.08)] p-3.5 transition-all duration-300 hover:border-[rgba(178,98,67,0.2)] hover:shadow-md">
+            <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[rgba(31,44,43,0.45)]">
               Plot Range
             </p>
-            <p className="text-lg font-semibold text-[color:var(--brand-ink)]">{plotSizes}</p>
+            <p className="text-base font-bold text-[color:var(--brand-ink)]">
+              {plotSizes}
+            </p>
           </div>
-          <div className="rounded-[1.25rem] border border-[rgba(178,98,67,0.16)] bg-[rgba(231,199,166,0.26)] p-4">
-            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-deep)]">
+          <div className="relative overflow-hidden rounded-lg border border-[rgba(178,98,67,0.18)] bg-gradient-to-br from-[rgba(231,199,166,0.12)] to-[rgba(178,98,67,0.05)] p-3.5 transition-all duration-300 hover:border-[rgba(178,98,67,0.3)] hover:shadow-md">
+            <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-[color:var(--brand-deep)]">
               Price Start
             </p>
-            <p className="text-lg font-semibold text-[color:var(--brand-deep)]">{priceRange}</p>
+            <p className="text-base font-bold text-[color:var(--brand-deep)]">
+              {priceRange}
+            </p>
           </div>
         </div>
 
-        <div className="mt-auto flex flex-col gap-3 sm:flex-row">
+        {/* Action Buttons */}
+        <div className="mt-auto flex flex-col gap-2 pt-2">
           <Button
-            className="flex-1 bg-[linear-gradient(135deg,_var(--brand),_var(--brand-deep))] text-white"
+            className="w-full gap-1.5 bg-[linear-gradient(135deg,_var(--brand),_var(--brand-deep))] text-sm font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-[rgba(178,98,67,0.3)]"
             onClick={() => navigate(`/project/${id}`)}
           >
-            View Details
-            <ArrowUpRight className="ml-2 h-4 w-4" />
+            View Full Details
+            <ArrowUpRight className="h-4 w-4" />
           </Button>
-          <Button className="flex-1" onClick={() => navigate("/contact")} variant="outline">
+          <Button
+            className="w-full gap-1.5 text-sm font-semibold transition-all duration-300 hover:bg-[rgba(231,199,166,0.15)]"
+            onClick={() => navigate("/contact")}
+            variant="outline"
+          >
             Request Pricing
+            <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
       </div>

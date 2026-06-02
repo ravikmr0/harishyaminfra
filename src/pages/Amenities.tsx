@@ -1,5 +1,7 @@
 ﻿import { Wifi, Zap, Leaf, Dumbbell, Utensils, Shield, Waves, Trees } from 'lucide-react';
 
+import { slugify } from "@/lib/utils";
+
 export default function Amenities() {
   const amenities = [
     {
@@ -25,7 +27,7 @@ export default function Amenities() {
   return (
     <div className="bg-white">
       {/* Hero Section with Background Image */}
-      <section className="relative px-4 py-14 md:py-16 text-white overflow-hidden">
+      <section id="amenities-hero" className="relative px-4 py-14 md:py-16 text-white overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-fixed"
@@ -48,14 +50,17 @@ export default function Amenities() {
       </section>
 
       {/* Amenities Grid */}
-      <section className="section-shell bg-gradient-to-b from-white via-[#f8f9fa] to-white relative overflow-hidden">
+      <section id="amenity-collections" className="section-shell bg-gradient-to-b from-white via-[#f8f9fa] to-white relative overflow-hidden">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-3" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, #b26243 1px, transparent 1px)', backgroundSize: '50px 50px'}}></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           {amenities.map((category, idx) => (
             <div key={idx} className="mb-7 md:mb-9">
-              <h2 className="text-3xl font-bold text-[#1a2332] mb-5 font-playfair text-center">
+              <h2
+                className="text-3xl font-bold text-[#1a2332] mb-5 font-playfair text-center"
+                id={slugify(category.category)}
+              >
                 {category.category}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 card-grid">
@@ -65,6 +70,7 @@ export default function Amenities() {
                     <div 
                       key={itemIdx} 
                       className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border-l-4 border-[#b26243] group hover:scale-105 hover:-translate-y-2"
+                      id={slugify(item.name)}
                     >
                       {/* Icon Section with Gradient Background */}
                       <div className="h-24 bg-gradient-to-br from-[#b26243]/15 to-[#8d4a33]/10 flex items-center justify-center relative overflow-hidden">
@@ -88,7 +94,7 @@ export default function Amenities() {
       </section>
 
       {/* Features Highlight */}
-      <section className="section-shell-tight bg-[#1a2332] text-white relative overflow-hidden">
+      <section id="amenities-stats" className="section-shell-tight bg-[#1a2332] text-white relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#b26243]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#b26243]/5 rounded-full blur-3xl"></div>

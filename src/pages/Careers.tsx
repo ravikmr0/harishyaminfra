@@ -1,5 +1,6 @@
 ﻿import { Briefcase, MapPin, DollarSign, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { slugify } from "@/lib/utils";
 
 export default function Careers() {
   const jobs = [
@@ -56,7 +57,7 @@ export default function Careers() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
+      <section id="careers-hero" className="section-shell-hero bg-gradient-to-r from-[#1a2332] to-[#2c3e50] text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-2 font-playfair">Join Our Team</h1>
           <p className="text-base text-gray-300 max-w-2xl mx-auto">Build your career with India's leading real estate developer</p>
@@ -64,7 +65,7 @@ export default function Careers() {
       </section>
 
       {/* Why Join Us */}
-      <section className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
+      <section id="why-join-harishyam" className="section-shell bg-gradient-to-b from-white to-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-5 md:mb-6 text-center font-playfair">Why Join Harishyam Infra?</h2>
           <div className="grid md:grid-cols-4 card-grid">
@@ -101,12 +102,16 @@ export default function Careers() {
       </section>
 
       {/* Open Positions */}
-      <section className="section-shell bg-white">
+      <section id="open-positions" className="section-shell bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-8 md:mb-10 text-center font-playfair">Open Positions</h2>
           <div className="grid gap-5 md:gap-6">
             {jobs.map((job, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border-l-4 border-[#b26243]">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border-l-4 border-[#b26243]"
+                id={slugify(job.title)}
+              >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                   <div>
                     <h3 className="text-2xl font-bold text-[#1a2332] mb-2 font-playfair">{job.title}</h3>
@@ -137,7 +142,7 @@ export default function Careers() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-shell-tight bg-gradient-to-r from-[#b26243] to-[#8d4a33]">
+      <section id="careers-cta" className="section-shell-tight bg-gradient-to-r from-[#b26243] to-[#8d4a33]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-[#1a2332] mb-4 font-playfair">Don't see your role?</h2>
           <p className="text-lg text-[#1a2332]/80 mb-6">Send us your resume and we'll keep it on file for future opportunities</p>

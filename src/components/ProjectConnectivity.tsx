@@ -1,5 +1,7 @@
 ﻿import { MapPin, Clock, Navigation } from 'lucide-react';
 
+import { slugify } from "@/lib/utils";
+
 interface ConnectivityItem {
   icon: React.ReactNode;
   title: string;
@@ -55,7 +57,7 @@ const connectivityData: ConnectivityItem[] = [
 
 export default function ProjectConnectivity() {
   return (
-    <section className="section-shell bg-[#f8f9fa]">
+    <section id="project-connectivity" className="section-shell bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto">
         <div className="section-heading">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1a2332] mb-3 md:mb-4 font-playfair">
@@ -71,6 +73,7 @@ export default function ProjectConnectivity() {
             <div
               key={idx}
               className="bg-gradient-to-br from-[#f8f9fa] to-white p-5 md:p-6 rounded-lg border border-gray-200 hover:shadow-lg hover:border-[#b26243] transition-all duration-300"
+              id={slugify(item.title)}
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 bg-[#1a2332]/10 p-3 rounded-lg">
