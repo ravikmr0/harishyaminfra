@@ -18,8 +18,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-<<<<<<< HEAD
+  { 
     id: "shri-hari-vatika",
     title: "Shri Hari Vatika Phase 1",
     subtitle: "Approved plotted addresses with fast corridor access",
@@ -179,7 +178,7 @@ export const projects: Project[] = [
       rentalIncome: "Rs. 20,000/month",
     },
   },
-=======
+  {
     id: 'shri-hari-vatika',
     name: 'Shri Hari Vatika',
     description: 'Premium residential project with modern amenities',
@@ -189,28 +188,28 @@ export const projects: Project[] = [
       {
         title: 'Project Video',
         type: 'video',
-        url: '/videos/shriharivatika.mp4',
+        url: '/public/projects/shriharivatika/shriharivatika.mp4',
         filename: 'shriharivatika.mp4'
       },
       {
         title: 'Project Brochure',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-brochure.pdf'
+        url: '/public/projects/shriharivatika/brochure_shri_hari_vatika.pdf'
       },
       {
         title: 'Development Map Layout',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-layout.pdf'
+        url: '/public/projects/shriharivatika/layout_shri_hari_vatika.pdf.pdf'
       },
       {
         title: 'Payment Plan',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-payment-plan.pdf'
+        url: '/public/projects/shriharivatika/payment_planshri_hari_vatika.pdf'
       },
       {
         title: 'YEIDA Master Plan 2041',
         type: 'pdf',
-        url: '/documents/yeida-master-plan-2041.pdf'
+        url: '/public/projects/shriharivatika/yeida_master_plan_2041.pdf'
       }
     ]
   },
@@ -221,26 +220,32 @@ export const projects: Project[] = [
     description: 'Expansion of Shri Hari Vatika with enhanced features',
     featured: true,
     status: 'ongoing',
-    documents: [
+   documents: [
+      {
+        title: 'Project Video',
+        type: 'video',
+        url: '/public/projects/shriharivatika/shriharivatika.mp4',
+        filename: 'shriharivatika.mp4'
+      },
       {
         title: 'Project Brochure',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-phase2-brochure.pdf'
+        url: '/public/projects/shriharivatika/brochure_shri_hari_vatika.pdf'
       },
       {
         title: 'Development Map Layout',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-phase2-layout.pdf'
+        url: '/public/projects/shriharivatika/layout_shri_hari_vatika.pdf.pdf'
       },
       {
         title: 'Payment Plan',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-phase2-payment-plan.pdf'
+        url: '/public/projects/shriharivatika/payment_planshri_hari_vatika.pdf'
       },
       {
         title: 'YEIDA Master Plan 2041',
         type: 'pdf',
-        url: '/documents/yeida-master-plan-2041.pdf'
+        url: '/public/projects/shriharivatika/yeida_master_plan_2041.pdf'
       }
     ]
   },
@@ -253,24 +258,30 @@ export const projects: Project[] = [
     status: 'ongoing',
     documents: [
       {
+        title: 'Project Video',
+        type: 'video',
+        url: '/public/projects/shriharivatika/shriharivatika.mp4',
+        filename: 'shriharivatika.mp4'
+      },
+      {
         title: 'Project Brochure',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-phase3-brochure.pdf'
+        url: '/public/projects/shriharivatika/brochure_shri_hari_vatika.pdf'
       },
       {
         title: 'Development Map Layout',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-phase3-layout.pdf'
+        url: '/public/projects/shriharivatika/layout_shri_hari_vatika.pdf.pdf'
       },
       {
         title: 'Payment Plan',
         type: 'pdf',
-        url: '/documents/shri-hari-vatika-phase3-payment-plan.pdf'
+        url: '/public/projects/shriharivatika/payment_planshri_hari_vatika.pdf'
       },
       {
         title: 'YEIDA Master Plan 2041',
         type: 'pdf',
-        url: '/documents/yeida-master-plan-2041.pdf'
+        url: '/public/projects/shriharivatika/yeida_master_plan_2041.pdf'
       }
     ]
   },
@@ -284,51 +295,28 @@ export const projects: Project[] = [
       {
         title: 'Project Video',
         type: 'video',
-        url: '/videos/virindavan.mp4',
+        url: '/public/projects/merovrindavandham/virindavan.mp4',
         filename: 'virindavan.mp4'
       },
       {
         title: 'Project Brochure',
         type: 'pdf',
-        url: '/documents/mero-vrindavan-brochure.pdf'
+        url: '/public/projects/merovrindavandham/brochure_mero_vrindavan_dham.pdf'
       },
       {
         title: 'Development Map Layout',
         type: 'pdf',
-        url: '/documents/mero-vrindavan-layout.pdf'
+        url: '/public/projects/merovrindavandham/layout.jpeg'
       },
       {
         title: 'Payment Plan',
         type: 'pdf',
-        url: '/documents/mero-vrindavan-payment-plan.pdf'
+        url: '/public/projects/merovrindavandham/payment_mero_vrindavan_dham.pdf'
       },
       {
         title: 'YEIDA Master Plan 2041',
         type: 'pdf',
-        url: '/documents/yeida-master-plan-2041.pdf'
-      }
-    ]
-  },
-  {
-    id: 'hari-shyam-township',
-    name: 'Hari Shyam Township',
-    description: 'Comprehensive township development project',
-    status: 'ongoing',
-    documents: [
-      {
-        title: 'Project Brochure',
-        type: 'pdf',
-        url: '/documents/hari-shyam-township-brochure.pdf'
-      },
-      {
-        title: 'Development Map Layout',
-        type: 'pdf',
-        url: '/documents/hari-shyam-township-layout.pdf'
-      },
-      {
-        title: 'Payment Plan',
-        type: 'pdf',
-        url: '/documents/hari-shyam-township-payment-plan.pdf'
+        url: '/public/projects/shriharivatika/yeida_master_plan_2041.pdf'
       }
     ]
   },
@@ -341,16 +329,15 @@ export const projects: Project[] = [
       {
         title: 'Land Details',
         type: 'pdf',
-        url: '/documents/agricultural-land-details.pdf'
+        url: '/public/projects/shriharivatika/brochure_shri_hari_vatika.pdf'
       },
       {
         title: 'Layout Plan',
         type: 'pdf',
-        url: '/documents/agricultural-land-layout.pdf'
+        url: '/public/projects/merovrindavandham/layout.jpeg'
       }
     ]
   }
->>>>>>> 27f50d5b7583f580752c78e0fd8a21674764ae71
 ];
 
 export interface LegalDocument {
@@ -366,21 +353,21 @@ export const legalDocuments: LegalDocument[] = [
     id: 'legal-1',
     title: '12 Salana',
     category: 'Land Records',
-    url: '/legal/12-salana.pdf',
+    url: '/public/legal_documents/12-salana.pdf',
     dateAdded: '2026-06-01'
   },
   {
     id: 'legal-2',
     title: 'Khatauni',
     category: 'Land Records',
-    url: '/legal/khatauni.pdf',
+    url: '/public/legal_documents/khatauni.pdf',
     dateAdded: '2026-06-01'
   },
   {
     id: 'legal-3',
     title: 'Happy Client Registry',
     category: 'Client Documentation',
-    url: '/legal/happy-client-registry.pdf',
+    url: '/public/legal_documents/happy-client-registry_1.pdf',
     dateAdded: '2026-06-01'
   }
 ];
