@@ -11,9 +11,9 @@ import {
 
 export default function About() {
   const stats = [
-    { icon: TrendingUp, label: '15+ Years', value: 'Industry Experience' },
-    { icon: Users, label: '500+', value: 'Happy Customers' },
-    { icon: Award, label: '10+', value: 'Projects Delivered' },
+    { icon: TrendingUp, label: '10 Years', value: 'Industry Experience' },
+    { icon: Users, label: '500', value: 'Happy Customers' },
+    { icon: Award, label: '10', value: 'Projects Delivered' },
     { icon: Heart, label: '100%', value: 'Customer Commitment' },
   ];
 
@@ -44,13 +44,13 @@ export default function About() {
     {
       name: 'Sudheer Kumar',
       role: 'Founder & CEO',
-      image: '/about/sudheer.jpeg',
+      image: '/about/sudheer.png',
       bio: 'Leads the company vision with a strong focus on trust, long-term growth, and customer value.',
     },
     {
       name: 'Anubhav Sharma',
       role: 'Managing Director',
-      image: '/about/anubhav.jpeg',
+      image: '/about/anubhav.png',
       bio: 'Drives operations and execution with disciplined leadership and a professional client-first approach.',
     },
   ];
@@ -64,13 +64,13 @@ export default function About() {
     },
     {
       name: 'Dushant',
-      role: 'Sales Executive',
+      role: 'Senior Sales Manager',
       image: '/about/dushant.jpeg',
       bio: 'Helps buyers evaluate options confidently with responsive communication and dependable support.',
     },
     {
       name: 'Gyanendra',
-      role: 'Sales Executive',
+      role: 'Field Manager',
       image: '/about/gyanendra.jpeg',
       bio: 'Focuses on transparent conversations and a seamless experience from enquiry to site visit.',
     },
@@ -88,7 +88,7 @@ export default function About() {
     },
     {
       name: 'Soniya',
-      role: 'Sales Executive',
+      role: 'Senior Manager',
       image: '/about/soniya.jpeg',
       bio: 'Provides attentive client assistance with polished communication and reliable coordination.',
     },
@@ -141,7 +141,7 @@ export default function About() {
           <div className="content-stack">
             <span className="page-kicker-light">Who We Are</span>
             <h2 className="page-title-dark mt-4">
-              A professional real estate company committed to quality, transparency, and service.
+              A professional real estate company.
             </h2>
             <p className="page-copy-dark">
               For more than a decade, Harishyam Infra has focused on creating premium residential opportunities and

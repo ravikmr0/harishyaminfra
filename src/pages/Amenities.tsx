@@ -1,25 +1,20 @@
-﻿import { Wifi, Zap, Leaf, Dumbbell, Utensils, Shield, Waves, Trees } from 'lucide-react';
+﻿import { Home, Trees, ShieldCheck, Route, GraduationCap, Zap, Waves, Droplets, Shield } from 'lucide-react';
 
 import { slugify } from "@/lib/utils";
 
 export default function Amenities() {
   const amenities = [
     {
-      category: 'Recreation',
+      category: 'Township Amenities',
       items: [
-        { icon: Dumbbell, name: 'Fitness Center', desc: 'State-of-the-art gym with modern equipment' },
-        { icon: Waves, name: 'Swimming Pool', desc: 'Olympic-size pool with aqua aerobics' },
-        { icon: Trees, name: 'Jogging Track', desc: '2km landscaped jogging track' },
-        { icon: Utensils, name: 'Community Hall', desc: 'Multi-purpose event space' }
-      ]
-    },
-    {
-      category: 'Lifestyle',
-      items: [
-        { icon: Leaf, name: 'Green Spaces', desc: 'Lush gardens and landscaped parks' },
-        { icon: Wifi, name: 'High-Speed WiFi', desc: 'Fiber optic connectivity throughout' },
-        { icon: Zap, name: 'Smart Homes', desc: 'IoT-enabled smart home systems' },
-        { icon: Shield, name: '24/7 Security', desc: 'CCTV surveillance and trained staff' }
+        { icon: Home, name: 'Gated Township', desc: 'Secure and planned community living' },
+        { icon: GraduationCap, name: 'School within Township', desc: 'Quality education within walking distance' },
+        { icon: Trees, name: 'Green Park & Open Spaces', desc: 'Beautiful green environments for relaxation' },
+        { icon: ShieldCheck, name: 'Boundary Wall', desc: 'Boundary wall on all sides for privacy' },
+        { icon: Zap, name: '24×7 Electricity', desc: 'Uninterrupted power supply availability' },
+        { icon: Waves, name: 'Drainage System', desc: 'Well-planned water management system' },
+        { icon: Route, name: 'Wide Roads', desc: '40ft Main, 30ft Internal, 25ft Connecting' },
+        { icon: Shield, name: '24×7 Security', desc: 'Security guard & monitoring round-the-clock' }
       ]
     }
   ];
@@ -102,7 +97,7 @@ export default function Amenities() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-4 card-grid text-center">
             <div className="group hover:scale-110 transition-transform duration-300">
-              <p className="text-4xl font-bold text-[#b26243] mb-2 group-hover:text-white transition-colors duration-300">50+</p>
+              <p className="text-4xl font-bold text-[#b26243] mb-2 group-hover:text-white transition-colors duration-300">8+</p>
               <p className="text-gray-300">Premium Amenities</p>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">

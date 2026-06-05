@@ -15,29 +15,29 @@ import { slugify } from "@/lib/utils";
 const heroSlides = [
   {
     image: "https://www.constructionworld.in/assets/uploads/img_33356_1775110924.webp",
-    eyebrow: "Infrastructure Advantage",
-    title: "Close to Noida International Airport",
+    eyebrow: "",
+    title: "Noida International Airport",
     description:
       "Benefit from strong regional connectivity and long-term growth potential near one of North India's most important upcoming aviation and business hubs.",
   },
   {
-    image: "https://niu.edu.in/wp-content/uploads/2025/03/DJI_0014-1.webp",
+    image: "/public/images/university.jpeg",
     eyebrow: "Education Hub",
-    title: "Well Connected to Noida International University",
+    title: "Noida International University",
     description:
       "A location near a prominent academic destination adds everyday convenience, supports rental demand, and strengthens the area's residential appeal.",
   },
   {
-    image: "https://imperiastructures.com/wp-content/uploads/2025/02/Yamuna-expressway.webp",
+    image: "/public/images/yamuna.png",
     eyebrow: "Planned Development Zone",
-    title: "Strategic Presence in the Yamuna Expressway Authority Corridor",
+    title: " Yamuna Expressway Region",
     description:
       "Positioned within a fast-developing YEIDA region shaped by infrastructure, industrial expansion, and planned urban growth.",
   },
   {
-    image: "https://jewarpropmart.com/wp-content/uploads/2025/04/image_2023_09_26T09_54_37_469Z.png",
+    image: "/public/projects/shriharivatika/shriharivatika_full.png",
     eyebrow: "Featured Township",
-    title: "Discover Shri Hari Vatika Township",
+    title: "Shri Hari Vatika Township",
     description:
       "A thoughtfully planned plotted development designed for premium living, smart investment, and a future-ready lifestyle in a high-potential location.",
   },
