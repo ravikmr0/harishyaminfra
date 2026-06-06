@@ -403,7 +403,7 @@ const aboutDocuments: SearchDocument[] = [
     description: "Managing Director driving operations and execution with disciplined leadership and a client-first approach.",
     category: "Team",
     href: sectionHref("/about", "Anubhav Sharma"),
-    image: "/about/anubhav.jpeg",
+    image: "/about/anubhav.png",
     tags: ["managing director", "operations", "leadership", "client-first"],
     content: "Anubhav Sharma is Managing Director leading operations and execution with disciplined client-first leadership.",
     popularity: 62,
@@ -751,7 +751,7 @@ const privacyAndTermsDocuments: SearchDocument[] = [
 
 const projectDocuments: SearchDocument[] = projects.map((project) => ({
   id: `project-${project.id}`,
-  title: project.title,
+  title: project.title ?? project.name,
   description: project.description,
   category: "Project",
   href: `/project/${project.id}`,
@@ -763,7 +763,7 @@ const projectDocuments: SearchDocument[] = projects.map((project) => ({
     project.badge,
     project.plotSizes,
     project.priceRange,
-    ...project.highlights,
+    ...(project.highlights ?? []),
   ],
   content: withContent(
     project.subtitle,
@@ -772,7 +772,7 @@ const projectDocuments: SearchDocument[] = projects.map((project) => ({
     project.plotSizes,
     project.priceRange,
     project.ratePerGaj,
-    project.highlights,
+    project.highlights ?? [],
     project.type,
     project.openSides,
     `Available plots ${project.availablePlots}`,

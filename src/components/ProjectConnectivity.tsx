@@ -104,10 +104,10 @@ export default function ProjectConnectivity() {
         <div className="mt-10 md:mt-12 bg-gradient-to-r from-[#1a2332] to-[#2d3e50] rounded-lg overflow-hidden shadow-lg">
           <div className="grid md:grid-cols-2">
             <div className="p-6 md:p-8 text-white flex flex-col justify-center">
-              <h3 className="text-3xl font-bold mb-4 font-playfair">
+              <h3 className="text-3xl font-bold mb-4 font-playfair text-white">
                 Prime Location Advantage
               </h3>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2.5 text-white">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-[#b26243] rounded-full mt-2 flex-shrink-0"></div>
                   <span>Direct access to Noida International Airport</span>

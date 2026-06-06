@@ -123,19 +123,6 @@ export default function About() {
 
   return (
     <div className="site-page">
-      <section id="about-hero" className="section-shell-hero">
-        <div className="mx-auto max-w-7xl">
-          <div className="page-hero">
-            <span className="page-kicker">About Harishyam Infra</span>
-            <h1 className="page-title mt-6">Built by people who value trust, clarity, and lasting relationships.</h1>
-            <p className="page-copy mt-4">
-              Harishyam Infra brings together experienced leadership and a dedicated sales team to help clients make
-              confident real estate decisions with complete peace of mind.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="who-we-are" className="section-shell">
         <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1fr_1.05fr]">
           <div className="content-stack">
@@ -229,7 +216,7 @@ export default function About() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-[320px] w-full rounded-[1.1rem] object-cover object-top"
+                    className="h-[420px] w-full rounded-[1.1rem] object-cover object-top md:h-[520px]"
                   />
                 </div>
                 <div className="mt-6">
@@ -261,7 +248,7 @@ export default function About() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="aspect-[4/5] w-full rounded-[1.25rem] object-cover object-top"
+                  className="aspect-[3/4] w-full rounded-[1.25rem] object-cover object-top"
                 />
                 <div className="mt-5">
                   <span className="label-chip">{member.role}</span>

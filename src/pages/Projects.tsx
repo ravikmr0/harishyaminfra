@@ -2,105 +2,13 @@
 import { Filter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ProjectCard from '@/components/ProjectCard';
-
-const allProjects = [
-  {
-    id: 'shri-hari-vatika',
-    title: 'Shri Hari Vatika Phase-1',
-    description: 'Exclusive luxury residential plots in a gated community with premium amenities',
-    image: '/public/projects/shriharivatika/phase_1.png',
-    plotSizes: '100 Gaj',
-    priceRange: 'Rs 16 Lac*',
-    ratePerGaj: '16 Lac / 100 Gaj',
-    registryAmount: '60%',
-    emiDetails: '40% in 20 Months',
-    monthlyEmi: 'Rs 30,000',
-    rentalIncome: 'Rs 10,000/month',
-    status: 'Active',
-    type: 'Residential',
-    openSides: '2-side',
-    badge: 'Premium',
-    highlights: ['Registry Available', 'Near Expressway', 'Gated Community'],
-  },
-  {
-    id: 'shri-hari-vatika-phase-2',
-    title: 'Shri Hari Vatika Phase-2',
-    description: 'Extended luxury development with enhanced infrastructure and premium facilities',
-    image: '/public/projects/shriharivatika/phase_2.png',
-    plotSizes: '100-150 Gaj',
-    priceRange: 'Rs 18 Lac*',
-    ratePerGaj: '18 Lac / 100 Gaj',
-    registryAmount: '60%',
-    emiDetails: '40% in 20 Months',
-    monthlyEmi: 'Rs 32,000',
-    rentalIncome: 'Rs 12,000/month',
-    status: 'Active',
-    type: 'Residential',
-    openSides: '2-side',
-    badge: 'New Launch',
-    highlights: ['Future Growth Zone', 'Loan Facility Available', 'Wide Roads'],
-  },
-  {
-    id: 'shri-hari-vatika-phase-3',
-    title: 'Shri Hari Vatika Phase-3',
-    description: 'Latest phase featuring ultra-premium plots with world-class amenities',
-    image: '/public/projects/shriharivatika/phase_3.png',
-    plotSizes: '120-200 Gaj',
-    priceRange: 'Rs 20 Lac*',
-    ratePerGaj: '20 Lac / 100 Gaj',
-    registryAmount: '60%',
-    emiDetails: '40% in 20 Months',
-    monthlyEmi: 'Rs 35,000',
-    rentalIncome: 'Rs 14,000/month',
-    status: 'Active',
-    type: 'Residential',
-    openSides: '3-side',
-    badge: 'Premium Plus',
-    highlights: ['Premium Edge Plots', 'Gated Community', 'Water & Electricity'],
-  },
-  {
-    id: 'mero-vrindavan-dham',
-    title: 'Mero Vrindavan Dham',
-    description: 'Exclusive community-centric development blending modern living with cultural heritage',
-    image: '/public/projects/merovrindavandham/layout.jpeg',
-    plotSizes: '90-110 Gaj',
-    priceRange: 'Rs 15 Lac*',
-    ratePerGaj: '15 Lac / 100 Gaj',
-    registryAmount: '60%',
-    emiDetails: '40% in 24 Months',
-    monthlyEmi: 'Rs 25,000',
-    rentalIncome: 'Rs 8,000/month',
-    status: 'Active',
-    type: 'Residential',
-    openSides: '2-side',
-    badge: 'Community Living',
-    highlights: ['Cultural Heritage', 'Community Spaces', 'Modern Living'],
-  },
-  {
-    id: 'agricultural-land',
-    title: 'Agricultural Land',
-    description: 'Premium agricultural land for farming and agricultural investments',
-    image: '/public/projects/shriharivatika/full_img2.jpeg',
-    plotSizes: '1-5 Acres',
-    priceRange: 'Rs 5-25 Lac*',
-    ratePerGaj: 'Variable',
-    registryAmount: '60%',
-    emiDetails: '40% in 24 Months',
-    monthlyEmi: 'Rs 15,000-50,000',
-    rentalIncome: 'Rs 5,000-15,000/month',
-    status: 'Active',
-    type: 'Agricultural',
-    openSides: '2-side',
-    badge: 'Investment',
-    highlights: ['Fertile Land', 'Irrigation Facility', 'Market Access'],
-  },
-];
+import { projects } from '@/data/projects';
 
 export default function Projects() {
   const [typeFilter, setTypeFilter] = useState('all');
   const [openSidesFilter, setOpenSidesFilter] = useState('all');
 
-  const filteredProjects = allProjects.filter(project => {
+  const filteredProjects = projects.filter(project => {
     const matchesType = typeFilter === 'all' || project.type === typeFilter;
     const matchesOpenSides = openSidesFilter === 'all' || project.openSides === openSidesFilter;
     return matchesType && matchesOpenSides;
@@ -223,17 +131,7 @@ export default function Projects() {
           {filteredProjects.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 card-grid">
               {filteredProjects.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  id={project.id}
-                  title={project.title}
-                  description={project.description}
-                  image={project.image}
-                  plotSizes={project.plotSizes}
-                  priceRange={project.priceRange}
-                  badge={project.badge}
-                  highlights={project.highlights}
-                />
+                <ProjectCard key={project.id} project={project} />
               ))}
             </div>
           ) : (

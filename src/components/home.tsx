@@ -21,21 +21,21 @@ const heroSlides = [
       "Benefit from strong regional connectivity and long-term growth potential near one of North India's most important upcoming aviation and business hubs.",
   },
   {
-    image: "/public/images/university.jpeg",
+    image: "/images/university.jpeg",
     eyebrow: "Education Hub",
     title: "Noida International University",
     description:
       "A location near a prominent academic destination adds everyday convenience, supports rental demand, and strengthens the area's residential appeal.",
   },
   {
-    image: "/public/images/yamuna.png",
+    image: "/images/yamuna.png",
     eyebrow: "Planned Development Zone",
     title: " Yamuna Expressway Region",
     description:
       "Positioned within a fast-developing YEIDA region shaped by infrastructure, industrial expansion, and planned urban growth.",
   },
   {
-    image: "/public/projects/shriharivatika/shriharivatika_full.png",
+    image: "/projects/shriharivatika/shriharivatika_full.png",
     eyebrow: "Featured Township",
     title: "Shri Hari Vatika Township",
     description:

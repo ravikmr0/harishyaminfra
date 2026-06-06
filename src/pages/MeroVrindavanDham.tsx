@@ -1,31 +1,23 @@
 import { Button } from '@/components/ui/button';
-import { CheckCircle, MapPin, Home, DollarSign, Calendar } from 'lucide-react';
+import { CheckCircle, MapPin, Home, DollarSign, Calendar, FileText, Play } from 'lucide-react';
 import ScrollToTop from '@/components/ScrollToTop';
+import { projects } from '@/data/projects';
 
 export default function MeroVrindavanDham() {
-  const projectDetails = {
-    id: 'mero-vrindavan-dham',
-    title: 'Mero Vrindavan Dham',
-    subtitle: 'Community-centric development with cultural heritage',
-    description: 'Exclusive community-centric development blending modern living with cultural heritage.',
-    heroImage: '/images/plots/shri-hari-vatika-4.jpg',
-  };
+  const project = projects.find(p => p.id === 'mero-vrindavan-dham');
 
-  const highlights = [
-    'Cultural Heritage',
-    'Community Spaces',
-    'Modern Living',
-    'Green Surroundings',
-    'Registry Available',
-    'Loan Facility Available',
-  ];
+  if (!project) {
+    return <div>Project not found</div>;
+  }
 
   const specifications = [
-    { label: 'Plot Sizes', value: '90-110 Gaj', icon: Home },
-    { label: 'Price Range', value: 'Rs 15 Lac*', icon: DollarSign },
-    { label: 'Registry Amount', value: '60%', icon: CheckCircle },
-    { label: 'EMI Period', value: '24 Months', icon: Calendar },
+    { label: 'Plot Sizes', value: project.plotSizes || 'N/A', icon: Home },
+    { label: 'Price Range', value: project.priceRange || 'N/A', icon: DollarSign },
+    { label: 'Registry Amount', value: project.paymentPlan?.registry || 'N/A', icon: CheckCircle },
+    { label: 'EMI Period', value: project.paymentPlan?.emiPeriod || 'N/A', icon: Calendar },
   ];
+
+  const videoDoc = project.documents.find(d => d.type === 'video');
 
   return (
     <div className="bg-white min-h-screen">
@@ -35,16 +27,16 @@ export default function MeroVrindavanDham() {
       <section className="relative h-96 md:h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a2332] to-[#2d3e50]"></div>
         <img 
-          src={projectDetails.heroImage} 
-          alt={projectDetails.title}
+          src={project.heroImage} 
+          alt={project.title}
           className="w-full h-full object-cover mix-blend-overlay opacity-70"
         />
         <div className="absolute inset-0 flex items-end">
           <div className="w-full px-4 py-8 md:py-16 max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white font-playfair mb-2">
-              {projectDetails.title}
+              {project.title}
             </h1>
-            <p className="text-lg text-gray-200">{projectDetails.subtitle}</p>
+            <p className="text-lg text-gray-200">{project.subtitle}</p>
           </div>
         </div>
       </section>
@@ -66,12 +58,30 @@ export default function MeroVrindavanDham() {
             })}
           </div>
 
+          {/* Video Section */}
+          {videoDoc && (
+            <div className="bg-gradient-to-br from-[#f8f9fa] to-[#eef1f5] p-8 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair flex items-center gap-2">
+                <Play className="h-6 w-6 text-[#b26243]" />
+                Project Video Tour
+              </h3>
+              <video 
+                controls 
+                className="w-full rounded-lg"
+                style={{ maxHeight: '500px', objectFit: 'cover' }}
+              >
+                <source src={videoDoc.url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )}
+
           {/* Overview */}
           <div className="space-y-6">
             <div>
               <h2 className="text-3xl font-bold text-[#1a2332] mb-3 font-playfair">Project Overview</h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                {projectDetails.description}
+                {project.description}
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Mero Vrindavan Dham is a unique residential development that celebrates community living while preserving cultural values. It's a place where traditional warmth meets modern convenience.
@@ -79,17 +89,19 @@ export default function MeroVrindavanDham() {
             </div>
 
             {/* Highlights */}
-            <div>
-              <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Key Highlights</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {highlights.map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-4 bg-[#f8f9fa] rounded-lg border border-gray-200">
-                    <CheckCircle className="h-5 w-5 text-[#b26243] flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{highlight}</span>
-                  </div>
-                ))}
+            {project.highlights && project.highlights.length > 0 && (
+              <div>
+                <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Key Highlights</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {project.highlights.map((highlight, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-4 bg-[#f8f9fa] rounded-lg border border-gray-200">
+                      <CheckCircle className="h-5 w-5 text-[#b26243] flex-shrink-0" />
+                      <span className="text-gray-700 font-medium">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Community Focus */}
@@ -118,31 +130,33 @@ export default function MeroVrindavanDham() {
           </div>
 
           {/* Investment Opportunity */}
-          <div className="bg-gradient-to-br from-[#f8f9fa] to-white p-8 rounded-lg border-2 border-[#b26243]">
-            <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Community Investment Opportunity</h3>
-            <p className="text-gray-700 mb-6">
-              Mero Vrindavan Dham offers a unique investment proposition combining affordability with lifestyle benefits. It's perfect for those who value community and cultural heritage.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Monthly EMI</p>
-                <p className="text-2xl font-bold text-[#b26243]">Rs 25,000</p>
+          {project.paymentPlan && (
+            <div className="bg-gradient-to-br from-[#f8f9fa] to-white p-8 rounded-lg border-2 border-[#b26243]">
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair">Community Investment Opportunity</h3>
+              <p className="text-gray-700 mb-6">
+                Mero Vrindavan Dham offers a unique investment proposition combining affordability with lifestyle benefits. It's perfect for those who value community and cultural heritage.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Monthly EMI</p>
+                  <p className="text-2xl font-bold text-[#b26243]">{project.paymentPlan.emiAmount}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600 mb-1">Estimated Rental Income</p>
+                  <p className="text-2xl font-bold text-[#b26243]">{project.paymentPlan.rentalIncome}</p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm text-gray-600 mb-1">Estimated Rental Income</p>
-                <p className="text-2xl font-bold text-[#b26243]">Rs 8,000/month</p>
-              </div>
+              <Button className="bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold px-8 py-2 h-auto">
+                Request More Information
+              </Button>
             </div>
-            <Button className="bg-[#b26243] hover:bg-[#8d4a33] text-white font-semibold px-8 py-2 h-auto">
-              Request More Information
-            </Button>
-          </div>
+          )}
 
           {/* Location Benefits */}
           <div>
             <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair flex items-center gap-2">
               <MapPin className="h-6 w-6 text-[#b26243]" />
-              Location Advantages
+              Location: {project.location}
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
               {[
@@ -157,6 +171,35 @@ export default function MeroVrindavanDham() {
               ))}
             </div>
           </div>
+
+          {/* Documents Section */}
+          {project.documents && project.documents.length > 0 && (
+            <div className="bg-gradient-to-br from-[#f8f9fa] to-[#eef1f5] p-8 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-bold text-[#1a2332] mb-4 font-playfair flex items-center gap-2">
+                <FileText className="h-6 w-6 text-[#b26243]" />
+                Project Documents
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {project.documents.map((doc, idx) => (
+                  doc.type === 'pdf' && (
+                    <a
+                      key={idx}
+                      href={doc.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 bg-white border border-gray-300 rounded-lg hover:border-[#b26243] hover:shadow-lg transition-all"
+                    >
+                      <FileText className="h-5 w-5 text-[#b26243] flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-[#1a2332]">{doc.title}</p>
+                        <p className="text-sm text-gray-600">{doc.filename || 'View Document'}</p>
+                      </div>
+                    </a>
+                  )
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

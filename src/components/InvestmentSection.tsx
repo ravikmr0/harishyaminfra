@@ -74,24 +74,24 @@ export default function InvestmentSection() {
 
         {/* Investment Details */}
         <div className="mb-8 rounded-xl bg-gradient-to-r from-[#1a2332] to-[#2c3e50] p-6 text-white md:p-7">
-          <h3 className="mb-6 font-display text-xl font-bold md:text-2xl">
+          <h3 className="mb-6 font-display text-xl font-bold text-white md:text-2xl">
             Investment Overview
           </h3>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="border-l-4 border-[#b26243] pl-4">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-300">Initial Investment</p>
-              <p className="font-display text-2xl font-bold md:text-3xl">₹9.6 Lac</p>
-              <p className="mt-2 text-sm text-gray-400">60% Registry Amount</p>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-white/90">Initial Investment</p>
+              <p className="font-display text-2xl font-bold text-white md:text-3xl">₹9.6 Lac</p>
+              <p className="mt-2 text-sm text-white/75">60% Registry Amount</p>
             </div>
             <div className="border-l-4 border-[#b26243] pl-4">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-300">Monthly EMI</p>
-              <p className="font-display text-2xl font-bold md:text-3xl">₹30,000</p>
-              <p className="mt-2 text-sm text-gray-400">20-30 Month Duration</p>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-white/90">Monthly EMI</p>
+              <p className="font-display text-2xl font-bold text-white md:text-3xl">₹30,000</p>
+              <p className="mt-2 text-sm text-white/75">20-30 Month Duration</p>
             </div>
             <div className="border-l-4 border-[#b26243] pl-4">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-300">Expected Returns</p>
-              <p className="font-display text-2xl font-bold text-[#b26243] md:text-3xl">₹3-5 Lac</p>
-              <p className="mt-2 text-sm text-gray-400">In 3-5 Years</p>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-white/90">Expected Returns</p>
+              <p className="font-display text-2xl font-bold text-white md:text-3xl">₹3-5 Lac</p>
+              <p className="mt-2 text-sm text-white/75">In 3-5 Years</p>
             </div>
           </div>
         </div>
